@@ -1,214 +1,117 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr" class="scroll-smooth">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Al Samad Online Quran Academy | Learn the Quran Online</title>
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Cinzel:wght@500;600;700&family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=Noto+Nastaliq+Urdu:wght@400;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        emeraldDeep: '#064E3B',
-                        midnightTeal: '#022C22',
-                        ivoryWarm: '#FAF8F3',
-                        antiqueGold: '#D4AF37',
-                        antiqueGoldDark: '#B59024',
-                        antiqueGoldSoft: '#C5A059',
-                    },
-                    fontFamily: {
-                        serifDisplay: ['"Cinzel"', '"Cormorant Garamond"', 'serif'],
-                        editorial: ['"Cormorant Garamond"', 'serif'],
-                        sansBody: ['"Plus Jakarta Sans"', 'sans-serif'],
-                        urdu: ['"Noto Nastaliq Urdu"', 'serif'],
-                        arabic: ['"Amiri"', 'serif'],
-                    }
-                }
-            }
-        }
-    </script>
-    <style>
-        .islamic-pattern { background-image: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%23D4AF37' stroke-width='0.75' stroke-opacity='0.14'%3E%3Cpath d='M40 0L49.5 30.5L80 40L49.5 49.5L40 80L30.5 49.5L0 40L30.5 30.5Z'/%3E%3Ccircle cx='40' cy='40' r='14'/%3E%3C/g%3E%3C/svg%3E"); }
-        .islamic-pattern-light { background-image: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%23064E3B' stroke-width='0.75' stroke-opacity='0.06'%3E%3Cpath d='M40 0L49.5 30.5L80 40L49.5 49.5L40 80L30.5 49.5L0 40L30.5 30.5Z'/%3E%3Ccircle cx='40' cy='40' r='14'/%3E%3C/g%3E%3C/svg%3E"); }
-    </style>
-</head>
-<body class="bg-ivoryWarm text-slate-800 antialiased">
-
-    <!-- TOP BAR (Teem & Zoom App Integrated) -->
-    <div class="bg-midnightTeal text-ivoryWarm/90 border-b border-antiqueGold/25 text-xs sm:text-sm relative z-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2 flex justify-between items-center">
-            <div class="flex items-center gap-4">
-                <a href="https://teem.pk" target="_blank" class="hover:text-antiqueGold flex items-center gap-1.5"><i class="fa-solid fa-comments text-emerald-400"></i> <span id="topTeemText">+92 324 1745886 (Teem)</span></a>
-                <span class="text-antiqueGold/40">|</span>
-                <a href="https://zoom.us" target="_blank" class="hover:text-antiqueGold flex items-center gap-1.5"><i class="fa-solid fa-video text-blue-400"></i> <span>Zoom Classes Available</span></a>
+<!-- ========================================== -->
+<!-- PROPER ADMIN LOGIN & DASHBOARD SYSTEM      -->
+<!-- ========================================== -->
+<div id="adminSection" class="max-w-7xl mx-auto px-4 py-8 bg-slate-900 text-white border-t border-antiqueGold/30 mt-10">
+    <div class="max-w-md mx-auto bg-slate-800 p-6 rounded-2xl border border-antiqueGold/50 shadow-xl">
+        <h3 class="text-xl font-bold text-antiqueGold mb-4 text-center"><i class="fa-solid fa-lock mr-2"></i> Admin Portal Login</h3>
+        <div id="loginFormContainer" class="space-y-4">
+            <div>
+                <label class="block text-xs font-semibold text-slate-300 mb-1">Admin Username</label>
+                <input type="text" id="adminUserField" placeholder="Enter username" class="w-full p-3 rounded-xl bg-slate-700 border border-slate-600 text-white text-sm focus:outline-none focus:border-antiqueGold">
             </div>
-            <!-- Client Admin Login Trigger Button -->
-            <button onclick="openClientAdminLogin()" class="text-xs text-antiqueGold underline hover:text-white flex items-center gap-1">
-                <i class="fa-solid fa-lock text-[10px]"></i> Client Admin Login
+            <div>
+                <label class="block text-xs font-semibold text-slate-300 mb-1">Admin Password</label>
+                <input type="password" id="adminPassField" placeholder="Enter password" class="w-full p-3 rounded-xl bg-slate-700 border border-slate-600 text-white text-sm focus:outline-none focus:border-antiqueGold">
+            </div>
+            <button onclick="processAdminLogin()" class="w-full py-3 bg-antiqueGold hover:bg-amber-500 text-slate-900 font-bold rounded-xl transition-all shadow-md text-sm">
+                Login to Dashboard
+            </button>
+        </div>
+
+        <!-- Dashboard Panel (Initially Hidden until login) -->
+        <div id="dashboardPanelContainer" class="hidden space-y-4">
+            <div class="flex items-center justify-between pb-3 border-b border-slate-700">
+                <span class="text-emerald-400 font-bold text-sm"><i class="fa-solid fa-circle-check mr-1"></i> Logged In Successfully</span>
+                <button onclick="processAdminLogout()" class="px-3 py-1 bg-red-600 hover:bg-red-700 text-white rounded-lg text-xs font-semibold">Logout</button>
+            </div>
+            <div>
+                <label class="block text-xs font-semibold text-slate-300 mb-1">Teem App Chat Link / Number</label>
+                <input type="text" id="dbTeemInput" class="w-full p-3 rounded-xl bg-slate-700 border border-slate-600 text-white text-sm">
+            </div>
+            <div>
+                <label class="block text-xs font-semibold text-slate-300 mb-1">Official Mobile Number</label>
+                <input type="text" id="dbPhoneInput" class="w-full p-3 rounded-xl bg-slate-700 border border-slate-600 text-white text-sm">
+            </div>
+            <div>
+                <label class="block text-xs font-semibold text-slate-300 mb-1">Upload Image / Experience Proof (No-Code)</label>
+                <input type="file" id="dbImageUploader" accept="image/*" class="w-full p-2 rounded-xl bg-slate-700 border border-slate-600 text-xs text-slate-300">
+            </div>
+            <button onclick="saveDashboardChanges()" class="w-full py-3 bg-emerald-600 hover:bg-emerald-700 text-white font-bold rounded-xl transition-all shadow-md text-sm">
+                Save Changes & Update Website
             </button>
         </div>
     </div>
+</div>
 
-    <!-- HEADER -->
-    <header class="sticky top-0 z-40 bg-ivoryWarm/95 backdrop-blur-md border-b border-antiqueGold/30 shadow-sm">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-20">
-            <a href="#home" class="flex items-center gap-3">
-                <div class="w-11 h-11 rounded-xl bg-gradient-to-br from-emeraldDeep to-midnightTeal border border-antiqueGold flex items-center justify-center text-antiqueGold">
-                    <i class="fa-solid fa-book-quran"></i>
-                </div>
-                <span class="brand-font font-bold text-midnightTeal">Al Samad Online Quran Academy</span>
-            </a>
-            <nav class="hidden lg:flex items-center gap-7 text-sm font-medium text-slate-700">
-                <a href="#home">Home</a>
-                <a href="#courses">Courses</a>
-                <a href="#demo-booking">Free Demo</a>
-            </nav>
-        </div>
-    </header>
+<script>
+    const CORRECT_USER = "alsamad_admin";
+    const CORRECT_PASS = "quran_admin_2026";
 
-    <!-- HERO SECTION -->
-    <section id="home" class="relative bg-gradient-to-br from-midnightTeal via-emeraldDeep to-midnightTeal text-ivoryWarm py-20">
-        <div class="absolute inset-0 islamic-pattern opacity-90 pointer-events-none"></div>
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <h1 class="text-4xl sm:text-6xl font-bold text-white mb-4">Learn the Quran with Al Samad Academy</h1>
-            <p class="text-antiqueGold text-lg mb-8">Make Quran learning easy and interactive via Teem App & Zoom.</p>
-            <div class="flex gap-4">
-                <a href="#demo-booking" class="px-7 py-4 rounded-xl bg-antiqueGold text-midnightTeal font-bold shadow-xl">Book Free Demo Class</a>
-                <a href="https://teem.pk" target="_blank" class="px-7 py-4 rounded-xl bg-white/10 border border-antiqueGold text-white font-semibold flex items-center gap-2"><i class="fa-solid fa-comments text-emerald-400"></i> Teem App Chat</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- FREE DEMO BOOKING SECTION -->
-    <section id="demo-booking" class="py-20 bg-ivoryWarm islamic-pattern-light">
-        <div class="max-w-3xl mx-auto px-4">
-            <div class="bg-white rounded-3xl p-8 shadow-xl border-2 border-antiqueGold/40">
-                <h3 class="text-2xl font-bold text-midnightTeal mb-6 text-center">Book Your Free Demo Class</h3>
-                <form id="inlineBookingForm" onsubmit="handleBookingSubmit(event)" class="space-y-4">
-                    <div>
-                        <label class="block text-sm font-semibold text-midnightTeal mb-1">Student Name *</label>
-                        <input type="text" id="inlineName" required placeholder="Enter full name" class="w-full p-3 rounded-xl border border-slate-300">
-                    </div>
-                    <div>
-                        <label class="block text-sm font-semibold text-midnightTeal mb-1">Teem App / Contact Number *</label>
-                        <input type="tel" id="inlineWhatsapp" required placeholder="+92 300 1234567" class="w-full p-3 rounded-xl border border-slate-300">
-                    </div>
-                    <button type="submit" class="w-full py-4 bg-emeraldDeep text-white font-bold rounded-xl shadow-lg flex items-center justify-center gap-2">
-                        <i class="fa-solid fa-comments text-emerald-400 text-xl"></i>
-                        <span>Confirm & Connect via Teem App</span>
-                    </button>
-                </form>
-            </div>
-        </div>
-    </section>
-
-    <!-- FOOTER -->
-    <footer class="bg-midnightTeal text-ivoryWarm/85 py-10 text-center text-xs">
-        <p>© 2026 Al Samad Online Quran Academy. All rights reserved.</p>
-    </footer>
-
-    <!-- ================================================= -->
-    <!-- CLIENT ADMIN LOGIN & DASHBOARD MODAL              -->
-    <!-- ================================================= -->
-    <div id="adminModal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-black/70 backdrop-blur-sm">
-        <div class="bg-slate-900 text-white rounded-3xl max-w-md w-full p-6 border border-antiqueGold shadow-2xl relative">
-            <button onclick="closeAdminModal()" class="absolute top-4 right-4 text-slate-400 hover:text-white"><i class="fa-solid fa-xmark text-lg"></i></button>
-            
-            <!-- Login View -->
-            <div id="modalLoginBox">
-                <h3 class="text-xl font-bold text-antiqueGold mb-4"><i class="fa-solid fa-lock mr-2"></i> Client Admin Login</h3>
-                <div class="space-y-3">
-                    <input type="text" id="modalUser" placeholder="Username" class="w-full p-3 rounded-xl bg-slate-800 border border-slate-700 text-sm">
-                    <input type="password" id="modalPass" placeholder="Password" class="w-full p-3 rounded-xl bg-slate-800 border border-slate-700 text-sm">
-                    <button onclick="verifyClientLogin()" class="w-full py-3 bg-antiqueGold text-slate-900 font-bold rounded-xl text-sm">Login</button>
-                </div>
-            </div>
-
-            <!-- Dashboard Control Panel View -->
-            <div id="modalDashboardBox" class="hidden space-y-4">
-                <div class="flex justify-between items-center pb-3 border-b border-slate-800">
-                    <span class="text-emerald-400 font-bold text-sm">Admin Dashboard Active</span>
-                    <button onclick="clientLogout()" class="px-3 py-1 bg-red-600 text-white rounded-lg text-xs">Logout</button>
-                </div>
-                <div>
-                    <label class="block text-xs text-slate-400 mb-1">Update Teem App / Contact Number</label>
-                    <input type="text" id="dashPhone" class="w-full p-3 rounded-xl bg-slate-800 border border-slate-700 text-sm" value="+923241745886">
-                </div>
-                <div>
-                    <label class="block text-xs text-slate-400 mb-1">Upload Image / Experience Proof (No-Code)</label>
-                    <input type="file" id="dashImage" accept="image/*" class="w-full p-2 rounded-xl bg-slate-800 border border-slate-700 text-xs">
-                </div>
-                <button onclick="saveDashboardSettings()" class="w-full py-3 bg-emerald-600 text-white font-bold rounded-xl text-sm">Save Changes & Update Site</button>
-            </div>
-        </div>
-    </div>
-
-    <!-- SCRIPT LOGIC -->
-    <script>
-        const ADMIN_USER = "alsamad_admin";
-        const ADMIN_PASS = "quran_admin_2026";
-
-        function openClientAdminLogin() {
-            document.getElementById("adminModal").classList.remove("hidden");
-            document.getElementById("adminModal").classList.add("flex");
-            if(localStorage.getItem("isClientLoggedIn") === "true") {
-                document.getElementById("modalLoginBox").classList.add("hidden");
-                document.getElementById("modalDashboardBox").classList.remove("hidden");
-            } else {
-                document.getElementById("modalLoginBox").classList.remove("hidden");
-                document.getElementById("modalDashboardBox").classList.add("hidden");
-            }
+    // Page Load پر چیک کریں کہ آیا پہلے سے لاگ ان ہے یا نہیں
+    document.addEventListener("DOMContentLoaded", () => {
+        let isLoggedIn = localStorage.getItem("isAdminLoggedIn") === "true";
+        if (isLoggedIn) {
+            showDashboardView();
         }
-
-        function closeAdminModal() {
-            document.getElementById("adminModal").classList.add("hidden");
-            document.getElementById("adminModal").classList.remove("flex");
+        
+        // اگر لوکل اسسٹوری میں Teem لنک محفوظ ہے تو اسے ویب سائٹ پر اپڈیٹ کر دیں
+        let savedTeem = localStorage.getItem("adminTeemLink");
+        if(savedTeem) {
+            document.querySelectorAll('a[href*="teem.pk"], a[href*="wa.me"]').forEach(el => {
+                el.href = savedTeem;
+            });
         }
+    });
 
-        function verifyClientLogin() {
-            let u = document.getElementById("modalUser").value.trim();
-            let p = document.getElementById("modalPass").value.trim();
-            if(u === ADMIN_USER && p === ADMIN_PASS) {
-                localStorage.setItem("isClientLoggedIn", "true");
-                alert("Login Successful!");
-                document.getElementById("modalLoginBox").classList.add("hidden");
-                document.getElementById("modalDashboardBox").classList.remove("hidden");
-            } else {
-                alert("Incorrect Username or Password!");
-            }
+    function processAdminLogin() {
+        let u = document.getElementById("adminUserField").value.trim();
+        let p = document.getElementById("adminPassField").value.trim();
+
+        if (u === CORRECT_USER && p === CORRECT_PASS) {
+            localStorage.setItem("isAdminLoggedIn", "true");
+            alert("Login Successful!");
+            showDashboardView();
+        } else {
+            alert("Incorrect Username or Password!");
         }
+    }
 
-        function clientLogout() {
-            localStorage.setItem("isClientLoggedIn", "false");
-            document.getElementById("modalLoginBox").classList.remove("hidden");
-            document.getElementById("modalDashboardBox").classList.add("hidden");
-            alert("Logged out successfully.");
-        }
+    function processAdminLogout() {
+        localStorage.setItem("isAdminLoggedIn", "false");
+        document.getElementById("loginFormContainer").classList.remove("hidden");
+        document.getElementById("dashboardPanelContainer").classList.add("hidden");
+        document.getElementById("adminUserField").value = "";
+        document.getElementById("adminPassField").value = "";
+        alert("Logged out successfully.");
+    }
 
-        function saveDashboardSettings() {
-            let pVal = document.getElementById("dashPhone").value;
-            localStorage.setItem("customPhone", pVal);
-            alert("Settings updated successfully!");
+    function showDashboardView() {
+        document.getElementById("loginFormContainer").classList.add("hidden");
+        document.getElementById("dashboardPanelContainer").classList.remove("hidden");
+        
+        // پرانی ویلیوز خانوں میں لوڈ کریں
+        document.getElementById("dbTeemInput").value = localStorage.getItem("adminTeemLink") || "https://teem.pk/your-link";
+        document.getElementById("dbPhoneInput").value = localStorage.getItem("adminPhone") || "+923032549945";
+    }
+
+    function saveDashboardChanges() {
+        let tVal = document.getElementById("dbTeemInput").value;
+        let pVal = document.getElementById("dbPhoneInput").value;
+        localStorage.setItem("adminTeemLink", tVal);
+        localStorage.setItem("adminPhone", pVal);
+
+        let fileInput = document.getElementById("dbImageUploader");
+        if (fileInput.files && fileInput.files[0]) {
+            let reader = new FileReader();
+            reader.onload = function(e) {
+                localStorage.setItem("customUploadedImage", e.target.result);
+                alert("Settings and Image saved successfully!");
+                location.reload();
+            };
+            reader.readAsDataURL(fileInput.files[0]);
+        } else {
+            alert("Settings saved successfully!");
             location.reload();
         }
-
-        // Teem App Booking Form Handler
-        function handleBookingSubmit(event) {
-            event.preventDefault();
-            let name = document.getElementById("inlineName").value;
-            let contact = document.getElementById("inlineWhatsapp").value;
-            let targetNum = localStorage.getItem("customPhone") || "923241745886";
-
-            let msg = `Assalam-o-Alaikum! Free Demo Class Request via Teem App:%0AName: ${encodeURIComponent(name)}%0AContact: ${encodeURIComponent(contact)}`;
-            window.open(`https://teem.pk/?chat=${targetNum}&text=${msg}`, '_blank');
-        }
+    }
     </script>
-</body>
-</html>
