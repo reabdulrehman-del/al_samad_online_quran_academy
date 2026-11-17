@@ -6,11 +6,9 @@
     <title>Al Samad Online Quran Academy | Learn the Quran Online</title>
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Cinzel:wght@500;600;700&family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=Noto+Nastaliq+Urdu:wght@400;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
     <script>
@@ -36,502 +34,175 @@
             }
         }
     </script>
-
     <style>
-        html[lang="en"], html[lang="fr"], html[lang="es"], html[lang="de"] { font-family: 'Plus Jakarta Sans', sans-serif; }
-        html[lang="en"] .heading-font, html[lang="fr"] .heading-font, html[lang="es"] .heading-font, html[lang="de"] .heading-font { font-family: 'Cormorant Garamond', Georgia, serif; letter-spacing: -0.01em; }
-        html[lang="en"] .brand-font, html[lang="fr"] .brand-font, html[lang="es"] .brand-font, html[lang="de"] .brand-font { font-family: 'Cinzel', serif; }
-        html[lang="ur"] { font-family: 'Noto Nastaliq Urdu', serif; }
-        html[lang="ur"] body, html[lang="ur"] p, html[lang="ur"] span, html[lang="ur"] button, html[lang="ur"] a, html[lang="ur"] input, html[lang="ur"] select, html[lang="ur"] label { font-family: 'Noto Nastaliq Urdu', serif !important; line-height: 2.2 !important; }
-        html[lang="ur"] .heading-font, html[lang="ur"] .brand-font { font-family: 'Noto Nastaliq Urdu', serif !important; line-height: 2.0 !important; }
-        html[lang="ar"] { font-family: 'Amiri', serif; }
-        html[lang="ar"] body, html[lang="ar"] p, html[lang="ar"] span, html[lang="ar"] button, html[lang="ar"] a, html[lang="ar"] input, html[lang="ar"] select, html[lang="ar"] label { font-family: 'Amiri', serif !important; line-height: 1.85 !important; }
-        .islamic-pattern { background-image: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%23D4AF37' stroke-width='0.75' stroke-opacity='0.14'%3E%3Cpath d='M40 0L49.5 30.5L80 40L49.5 49.5L40 80L30.5 49.5L0 40L30.5 30.5Z'/%3E%3Ccircle cx='40' cy='40' r='14'/%3E%3Cpath d='M11.7 11.7L68.3 68.3M68.3 11.7L11.7 68.3'/%3E%3C/g%3E%3C/svg%3E"); }
-        .islamic-pattern-light { background-image: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%23064E3B' stroke-width='0.75' stroke-opacity='0.06'%3E%3Cpath d='M40 0L49.5 30.5L80 40L49.5 49.5L40 80L30.5 49.5L0 40L30.5 30.5Z'/%3E%3Ccircle cx='40' cy='40' r='14'/%3E%3Crect x='20' y='20' width='40' height='40' transform='rotate(45 40 40)'/%3E%3C/g%3E%3C/svg%3E"); }
-        .course-card { transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease; }
-        .course-card:hover { transform: translateY(-6px); border-color: #D4AF37; box-shadow: 0 20px 35px -10px rgba(6, 78, 59, 0.12), 0 0 20px rgba(212, 175, 55, 0.18); }
+        .islamic-pattern { background-image: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%23D4AF37' stroke-width='0.75' stroke-opacity='0.14'%3E%3Cpath d='M40 0L49.5 30.5L80 40L49.5 49.5L40 80L30.5 49.5L0 40L30.5 30.5Z'/%3E%3Ccircle cx='40' cy='40' r='14'/%3E%3C/g%3E%3C/svg%3E"); }
+        .islamic-pattern-light { background-image: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%23064E3B' stroke-width='0.75' stroke-opacity='0.06'%3E%3Cpath d='M40 0L49.5 30.5L80 40L49.5 49.5L40 80L30.5 49.5L0 40L30.5 30.5Z'/%3E%3Ccircle cx='40' cy='40' r='14'/%3E%3C/g%3E%3C/svg%3E"); }
     </style>
 </head>
-<body class="bg-ivoryWarm text-slate-800 antialiased selection:bg-antiqueGold selection:text-midnightTeal overflow-x-hidden">
+<body class="bg-ivoryWarm text-slate-800 antialiased">
 
-    <!-- ========================================================== -->
-    <!-- VIEW 1: PUBLIC VISITOR WEBSITE (عام لوگوں کے لیے انٹرفیس) -->
-    <!-- ========================================================== -->
-    <div id="publicWebsiteView">
-        <!-- TOP BAR -->
-        <div class="bg-midnightTeal text-ivoryWarm/90 border-b border-antiqueGold/25 text-xs sm:text-sm relative z-50">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2 flex flex-col md:flex-row items-center justify-between gap-2">
-                <div class="flex flex-wrap items-center justify-center gap-4 text-xs">
-                    <a id="topTeemLink1" href="https://teem.pk" target="_blank" rel="noopener" class="inline-flex items-center gap-1.5 hover:text-antiqueGold transition-colors">
-                        <i class="fa-solid fa-comments text-emerald-400 text-sm"></i>
-                        <span id="displayPhone1" dir="ltr">+92 324 1745886</span>
-                    </a>
-                    <span class="text-antiqueGold/40">|</span>
-                    <a id="topTeemLink2" href="https://teem.pk" target="_blank" rel="noopener" class="inline-flex items-center gap-1.5 hover:text-antiqueGold transition-colors">
-                        <i class="fa-solid fa-comments text-emerald-400 text-sm"></i>
-                        <span id="displayPhone2" dir="ltr">+92 316 0476714</span>
-                    </a>
-                </div>
-
-                <!-- Language Switcher -->
-                <div class="flex flex-wrap items-center justify-center gap-1 sm:gap-1.5">
-                    <button onclick="setLanguage('en')" data-lang-btn="en" class="lang-btn px-2.5 py-1 rounded-md text-xs font-medium bg-antiqueGold text-midnightTeal">🇬🇧 EN</button>
-                    <button onclick="setLanguage('ur')" data-lang-btn="ur" class="lang-btn px-2.5 py-1 rounded-md text-xs font-medium text-ivoryWarm/85 hover:bg-emeraldDeep">🇵🇰 اردو</button>
-                    <button onclick="setLanguage('ar')" data-lang-btn="ar" class="lang-btn px-2.5 py-1 rounded-md text-xs font-medium text-ivoryWarm/85 hover:bg-emeraldDeep">🇸🇦 العربية</button>
-                </div>
+    <!-- TOP BAR -->
+    <div class="bg-midnightTeal text-ivoryWarm/90 border-b border-antiqueGold/25 text-xs sm:text-sm relative z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2 flex justify-between items-center">
+            <div class="flex gap-4">
+                <a href="https://wa.me/923241745886" target="_blank" class="hover:text-antiqueGold"><i class="fa-brands fa-whatsapp text-emerald-400"></i> +92 324 1745886</a>
             </div>
-        </div>
-
-        <!-- HEADER -->
-        <header class="sticky top-0 z-40 bg-ivoryWarm/95 backdrop-blur-md border-b border-antiqueGold/30 shadow-sm">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="flex items-center justify-between h-20">
-                    <a href="#home" class="flex items-center gap-3">
-                        <div class="w-11 h-11 rounded-xl bg-gradient-to-br from-emeraldDeep to-midnightTeal border border-antiqueGold flex items-center justify-center shadow-md">
-                            <i class="fa-solid fa-book-quran text-antiqueGold text-xl"></i>
-                        </div>
-                        <div>
-                            <span id="siteMainTitle" class="brand-font block text-base sm:text-lg font-bold text-midnightTeal tracking-wide">Al Samad Online Quran Academy</span>
-                            <span id="siteSubTagline" class="block text-[11px] uppercase tracking-widest text-antiqueGoldDark font-semibold">Global Quranic Excellence</span>
-                        </div>
-                    </a>
-
-                    <nav class="hidden lg:flex items-center gap-7 text-sm font-medium text-slate-700">
-                        <a href="#home" class="hover:text-emeraldDeep">Home</a>
-                        <a href="#courses" class="hover:text-emeraldDeep">Courses</a>
-                        <a href="#experience-section" class="hover:text-emeraldDeep">Experience & Gallery</a>
-                        <a href="#demo-booking" class="hover:text-emeraldDeep">Free Demo</a>
-                    </nav>
-
-                    <div class="flex items-center gap-3">
-                        <a id="headerTeemBtn" href="https://teem.pk" target="_blank" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-emeraldDeep hover:bg-midnightTeal text-ivoryWarm border border-antiqueGold/60 text-sm font-semibold shadow-md">
-                            <i class="fa-solid fa-comments text-antiqueGold"></i>
-                            <span>Connect on Teem App</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </header>
-
-        <!-- HERO SECTION -->
-        <section id="home" class="relative bg-gradient-to-br from-midnightTeal via-emeraldDeep to-midnightTeal text-ivoryWarm overflow-hidden py-16 sm:py-24">
-            <div class="absolute inset-0 islamic-pattern opacity-90 pointer-events-none"></div>
-            <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-                <div class="lg:col-span-7 space-y-6">
-                    <div class="inline-flex items-center gap-3 px-4 py-1.5 rounded-full bg-white/10 border border-antiqueGold/40">
-                        <span class="text-antiqueGold font-arabic text-lg">بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيم</span>
-                        <span class="text-xs font-semibold uppercase tracking-wider text-antiqueGold">Free Demo Class Available!</span>
-                    </div>
-                    <h1 id="heroMainHeading" class="heading-font text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight">
-                        Learn the Quran with Al Samad Online Quran Academy
-                    </h1>
-                    <p id="heroMainDesc" class="text-base sm:text-lg text-ivoryWarm/85 leading-relaxed max-w-2xl">
-                        Make Quran learning easy, interactive, and meaningful from the comfort of your home with qualified male and female tutors worldwide.
-                    </p>
-                    <div class="pt-3 flex flex-col sm:flex-row gap-4">
-                        <a href="#demo-booking" class="px-7 py-4 rounded-xl bg-antiqueGold text-midnightTeal font-bold text-base shadow-xl text-center">
-                            Book Free Demo Class
-                        </a>
-                        <a id="heroTeemBtn" href="https://teem.pk" target="_blank" class="px-7 py-4 rounded-xl bg-white/10 hover:bg-white/15 text-white border border-antiqueGold/60 font-semibold text-base text-center flex items-center justify-center gap-2">
-                            <i class="fa-solid fa-comments text-emerald-400"></i>
-                            <span>Chat on Teem App</span>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Dynamic Featured Image Showcase -->
-                <div class="lg:col-span-5">
-                    <div class="rounded-3xl bg-white/10 border border-antiqueGold/40 p-4 backdrop-blur-md shadow-2xl">
-                        <img id="heroDisplayImage" src="https://images.unsplash.com/photo-1609599006353-e629aaabfeae?auto=format&fit=crop&w=800&q=80" alt="Quran Academy" class="w-full h-72 object-cover rounded-2xl border border-antiqueGold/30">
-                        <div class="p-4 text-center">
-                            <p class="font-arabic text-2xl text-antiqueGold mb-1">خَيْرُكُمْ مَنْ تَعَلَّمَ الْقُرْآنَ وَعَلَّمَهُ</p>
-                            <p class="text-xs text-ivoryWarm/80">"The best among you are those who learn the Quran and teach it."</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- COURSES SECTION -->
-        <section id="courses" class="py-20 bg-ivoryWarm islamic-pattern-light">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center max-w-3xl mx-auto mb-14">
-                    <h2 class="heading-font text-3xl sm:text-5xl font-bold text-midnightTeal">Our Quranic Courses</h2>
-                    <div class="w-24 h-1 bg-antiqueGold mx-auto my-4 rounded-full"></div>
-                </div>
-                <div id="dynamicCoursesGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- Courses loaded via JS -->
-                </div>
-            </div>
-        </section>
-
-        <!-- EXPERIENCE & GALLERY SECTION (Controlled by Client Dashboard) -->
-        <section id="experience-section" class="py-20 bg-white border-y border-antiqueGold/25">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center max-w-3xl mx-auto mb-14">
-                    <span class="px-4 py-1 rounded-full bg-emeraldDeep/10 text-emeraldDeep text-xs font-bold uppercase">Academy Credentials</span>
-                    <h2 class="heading-font text-3xl sm:text-5xl font-bold text-midnightTeal mt-2">Teaching Experience & Highlights</h2>
-                </div>
-                <div id="dynamicExperienceList" class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <!-- Experience items added from Dashboard appear here -->
-                </div>
-            </div>
-        </section>
-
-        <!-- DEMO BOOKING FORM (Redirects to Teem App) -->
-        <section id="demo-booking" class="py-20 bg-midnightTeal text-white">
-            <div class="max-w-3xl mx-auto px-4 sm:px-6">
-                <div class="bg-ivoryWarm text-slate-800 rounded-3xl p-8 shadow-2xl border-2 border-antiqueGold">
-                    <h3 class="heading-font text-3xl font-bold text-midnightTeal text-center mb-6">Book Your Free Trial Class</h3>
-                    <form onsubmit="submitToTeemApp(event)" class="space-y-4">
-                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                            <input type="text" id="custName" required placeholder="Student Full Name *" class="w-full p-3.5 rounded-xl border border-slate-300">
-                            <input type="text" id="custCountry" required placeholder="Country / Timezone *" class="w-full p-3.5 rounded-xl border border-slate-300">
-                        </div>
-                        <select id="custCourse" class="w-full p-3.5 rounded-xl border border-slate-300">
-                            <option value="Noorani Qaida & Nazra">Noorani Qaida & Nazra Quran</option>
-                            <option value="Quran with Tajweed">Quran with Tajweed</option>
-                            <option value="Hifz-ul-Quran">Hifz-ul-Quran</option>
-                            <option value="Islamic Studies & Hadees">Islamic Studies & Hadees</option>
-                        </select>
-                        <button type="submit" class="w-full py-4 rounded-xl bg-emeraldDeep hover:bg-midnightTeal text-white font-bold text-base shadow-lg flex items-center justify-center gap-2">
-                            <i class="fa-solid fa-comments text-antiqueGold"></i>
-                            <span>Confirm & Connect via Teem App</span>
-                        </button>
-                    </form>
-                </div>
-            </div>
-        </section>
-
-        <!-- FOOTER (With Discreet Client Admin Portal Link) -->
-        <footer class="bg-midnightTeal text-ivoryWarm/80 border-t border-antiqueGold/30 py-10">
-            <div class="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs">
-                <p>© 2026 <span id="footerAcademyName">Al Samad Online Quran Academy</span>. All Rights Reserved.</p>
-                <!-- Secret Client Login Trigger -->
-                <button onclick="switchToAdminPortal()" class="text-ivoryWarm/40 hover:text-antiqueGold transition-colors flex items-center gap-1.5">
-                    <i class="fa-solid fa-lock text-[10px]"></i>
-                    <span>Client Portal</span>
-                </button>
-            </div>
-        </footer>
-    </div>
-
-    <!-- =================================================================== -->
-    <!-- VIEW 2: SEPARATE CLIENT ADMIN LOGIN & DASHBOARD INTERFACE           -->
-    <!-- (یہ انٹرفیس صرف کلائنٹ کو لاگ ان کرنے کے لیے الگ نظر آئے گا)          -->
-    <!-- =================================================================== -->
-    <div id="adminPortalView" class="hidden min-h-screen bg-slate-900 text-white flex flex-col justify-center items-center p-4">
-        
-        <!-- Back to Live Website Button -->
-        <div class="w-full max-w-4xl flex justify-between items-center mb-6">
-            <button onclick="switchToPublicSite()" class="px-4 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-antiqueGold text-sm font-semibold flex items-center gap-2 border border-slate-700">
-                <i class="fa-solid fa-arrow-left"></i>
-                <span>View Live Website</span>
+            <!-- Client Admin Login Trigger Button -->
+            <button onclick="openClientAdminLogin()" class="text-xs text-antiqueGold underline hover:text-white flex items-center gap-1">
+                <i class="fa-solid fa-lock text-[10px]"></i> Client Admin Login
             </button>
-            <span class="text-xs text-slate-400">Secure Client Management System</span>
         </div>
+    </div>
 
-        <!-- SCREEN A: LOGIN BOX (اگر کلائنٹ لاگ ان نہیں ہے) -->
-        <div id="clientLoginScreen" class="w-full max-w-md bg-slate-800 p-8 rounded-3xl border border-antiqueGold/40 shadow-2xl space-y-6">
-            <div class="text-center space-y-2">
-                <div class="w-16 h-16 rounded-2xl bg-emeraldDeep border border-antiqueGold mx-auto flex items-center justify-center text-antiqueGold text-2xl shadow-lg">
-                    <i class="fa-solid fa-user-shield"></i>
+    <!-- HEADER -->
+    <header class="sticky top-0 z-40 bg-ivoryWarm/95 backdrop-blur-md border-b border-antiqueGold/30 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-20">
+            <a href="#home" class="flex items-center gap-3">
+                <div class="w-11 h-11 rounded-xl bg-gradient-to-br from-emeraldDeep to-midnightTeal border border-antiqueGold flex items-center justify-center text-antiqueGold">
+                    <i class="fa-solid fa-book-quran"></i>
                 </div>
-                <h2 class="text-2xl font-bold text-white">Client Admin Login</h2>
-                <p class="text-xs text-slate-400">Sign in to manage website content, images, and experience without coding.</p>
-            </div>
-
-            <form onsubmit="handleClientLogin(event)" class="space-y-4">
-                <div>
-                    <label class="block text-xs font-semibold text-slate-300 mb-1.5">Username</label>
-                    <input type="text" id="loginUsername" required placeholder="Enter your username" class="w-full p-3.5 rounded-xl bg-slate-900 border border-slate-700 text-white text-sm focus:border-antiqueGold outline-none">
-                </div>
-                <div>
-                    <label class="block text-xs font-semibold text-slate-300 mb-1.5">Password</label>
-                    <input type="password" id="loginPassword" required placeholder="Enter your password" class="w-full p-3.5 rounded-xl bg-slate-900 border border-slate-700 text-white text-sm focus:border-antiqueGold outline-none">
-                </div>
-                <button type="submit" class="w-full py-3.5 rounded-xl bg-antiqueGold hover:bg-amber-400 text-midnightTeal font-bold text-sm shadow-lg transition-all">
-                    Login to Dashboard
-                </button>
-            </form>
+                <span class="brand-font font-bold text-midnightTeal">Al Samad Online Quran Academy</span>
+            </a>
+            <nav class="hidden lg:flex items-center gap-7 text-sm font-medium text-slate-700">
+                <a href="#home">Home</a>
+                <a href="#courses">Courses</a>
+                <a href="#demo-booking">Free Demo</a>
+            </nav>
         </div>
+    </header>
 
-        <!-- SCREEN B: FULL NO-CODE DASHBOARD (لاگ ان ہونے کے بعد کلائنٹ کا اصل کنٹرول پینل) -->
-        <div id="clientDashboardScreen" class="hidden w-full max-w-4xl bg-slate-800 rounded-3xl border border-antiqueGold/40 shadow-2xl overflow-hidden">
-            <div class="bg-emeraldDeep p-6 flex flex-wrap items-center justify-between gap-4 border-b border-antiqueGold/30">
-                <div>
-                    <h2 class="text-xl sm:text-2xl font-bold text-white flex items-center gap-2">
-                        <i class="fa-solid fa-sliders text-antiqueGold"></i>
-                        <span>Website Control Dashboard</span>
-                    </h2>
-                    <p class="text-xs text-ivoryWarm/80">Any changes saved here will appear live on your website.</p>
-                </div>
-                <button onclick="handleClientLogout()" class="px-4 py-2 rounded-xl bg-red-600 hover:bg-red-700 text-white text-xs font-bold flex items-center gap-2">
-                    <i class="fa-solid fa-right-from-bracket"></i>
-                    <span>Logout</span>
-                </button>
-            </div>
+    <!-- HERO SECTION -->
+    <section id="home" class="relative bg-gradient-to-br from-midnightTeal via-emeraldDeep to-midnightTeal text-ivoryWarm py-20">
+        <div class="absolute inset-0 islamic-pattern opacity-90 pointer-events-none"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <h1 class="text-4xl sm:text-6xl font-bold text-white mb-4">Learn the Quran with Al Samad Academy</h1>
+            <p class="text-antiqueGold text-lg mb-8">Make Quran learning easy and interactive from home.</p>
+            <a href="#demo-booking" class="px-7 py-4 rounded-xl bg-antiqueGold text-midnightTeal font-bold shadow-xl">Book Free Demo Class</a>
+        </div>
+    </section>
 
-            <div class="p-6 sm:p-8 space-y-8">
-                <!-- 1. Basic Info & Teem App Settings -->
-                <div class="bg-slate-900/60 p-6 rounded-2xl border border-slate-700 space-y-4">
-                    <h3 class="text-base font-bold text-antiqueGold border-b border-slate-700 pb-2">1. Academy Name & Teem App Contact</h3>
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                        <div>
-                            <label class="block text-xs text-slate-300 mb-1">Academy Title</label>
-                            <input type="text" id="editAcademyName" class="w-full p-3 rounded-xl bg-slate-800 border border-slate-600 text-sm">
-                        </div>
-                        <div>
-                            <label class="block text-xs text-slate-300 mb-1">Teem App Link / Contact URL</label>
-                            <input type="text" id="editTeemUrl" class="w-full p-3 rounded-xl bg-slate-800 border border-slate-600 text-sm" placeholder="https://teem.pk/your-id">
-                        </div>
-                        <div>
-                            <label class="block text-xs text-slate-300 mb-1">Primary Display Number</label>
-                            <input type="text" id="editPhone1" class="w-full p-3 rounded-xl bg-slate-800 border border-slate-600 text-sm">
-                        </div>
-                        <div>
-                            <label class="block text-xs text-slate-300 mb-1">Secondary Display Number</label>
-                            <input type="text" id="editPhone2" class="w-full p-3 rounded-xl bg-slate-800 border border-slate-600 text-sm">
-                        </div>
+    <!-- FREE DEMO BOOKING SECTION (Original WhatsApp Form) -->
+    <section id="demo-booking" class="py-20 bg-ivoryWarm islamic-pattern-light">
+        <div class="max-w-3xl mx-auto px-4">
+            <div class="bg-white rounded-3xl p-8 shadow-xl border-2 border-antiqueGold/40">
+                <h3 class="text-2xl font-bold text-midnightTeal mb-6 text-center">Book Your Free Demo Class</h3>
+                <form id="inlineBookingForm" onsubmit="handleBookingSubmit(event)" class="space-y-4">
+                    <div>
+                        <label class="block text-sm font-semibold text-midnightTeal mb-1">Student Name *</label>
+                        <input type="text" id="inlineName" required placeholder="Enter full name" class="w-full p-3 rounded-xl border border-slate-300">
                     </div>
-                </div>
-
-                <!-- 2. Upload Main Hero Photo (No-Code) -->
-                <div class="bg-slate-900/60 p-6 rounded-2xl border border-slate-700 space-y-4">
-                    <h3 class="text-base font-bold text-antiqueGold border-b border-slate-700 pb-2">2. Upload / Change Main Banner Photo</h3>
-                    <input type="file" id="editHeroImage" accept="image/*" class="w-full p-2.5 rounded-xl bg-slate-800 border border-slate-600 text-xs text-slate-300">
-                </div>
-
-                <!-- 3. Add Experience / Certificate / Achievement (No-Code) -->
-                <div class="bg-slate-900/60 p-6 rounded-2xl border border-slate-700 space-y-4">
-                    <h3 class="text-base font-bold text-antiqueGold border-b border-slate-700 pb-2">3. Add New Experience or Achievement</h3>
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                        <input type="text" id="newExpTitle" placeholder="Experience Title (e.g. 10 Years Tajweed Expert)" class="w-full p-3 rounded-xl bg-slate-800 border border-slate-600 text-sm">
-                        <input type="file" id="newExpImage" accept="image/*" class="w-full p-2.5 rounded-xl bg-slate-800 border border-slate-600 text-xs">
+                    <div>
+                        <label class="block text-sm font-semibold text-midnightTeal mb-1">WhatsApp Number *</label>
+                        <input type="tel" id="inlineWhatsapp" required placeholder="+1 234 567 8900" class="w-full p-3 rounded-xl border border-slate-300">
                     </div>
-                    <textarea id="newExpDesc" rows="2" placeholder="Write experience details here..." class="w-full p-3 rounded-xl bg-slate-800 border border-slate-600 text-sm"></textarea>
-                    <button type="button" onclick="addNewExperienceItem()" class="px-5 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold">
-                        + Add Experience Card
+                    <button type="submit" class="w-full py-4 bg-emeraldDeep text-white font-bold rounded-xl shadow-lg flex items-center justify-center gap-2">
+                        <i class="fa-brands fa-whatsapp text-emerald-400 text-xl"></i>
+                        <span>Confirm & Open WhatsApp</span>
                     </button>
-                </div>
+                </form>
+            </div>
+        </div>
+    </section>
 
-                <!-- Save All Button -->
-                <button onclick="saveAllClientSettings()" class="w-full py-4 rounded-xl bg-antiqueGold hover:bg-amber-400 text-midnightTeal font-bold text-base shadow-xl">
-                    Save & Publish All Changes Live
-                </button>
+    <!-- FOOTER -->
+    <footer class="bg-midnightTeal text-ivoryWarm/85 py-10 text-center text-xs">
+        <p>© 2026 Al Samad Online Quran Academy. All rights reserved.</p>
+    </footer>
+
+    <!-- ================================================= -->
+    <!-- CLIENT ADMIN LOGIN & DASHBOARD MODAL (Hidden Popup) -->
+    <!-- ================================================= -->
+    <div id="adminModal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-black/70 backdrop-blur-sm">
+        <div class="bg-slate-900 text-white rounded-3xl max-w-md w-full p-6 border border-antiqueGold shadow-2xl relative">
+            <button onclick="closeAdminModal()" class="absolute top-4 right-4 text-slate-400 hover:text-white"><i class="fa-solid fa-xmark text-lg"></i></button>
+            
+            <!-- Login View -->
+            <div id="modalLoginBox">
+                <h3 class="text-xl font-bold text-antiqueGold mb-4"><i class="fa-solid fa-lock mr-2"></i> Client Admin Login</h3>
+                <div class="space-y-3">
+                    <input type="text" id="modalUser" placeholder="Username" class="w-full p-3 rounded-xl bg-slate-800 border border-slate-700 text-sm">
+                    <input type="password" id="modalPass" placeholder="Password" class="w-full p-3 rounded-xl bg-slate-800 border border-slate-700 text-sm">
+                    <button onclick="verifyClientLogin()" class="w-full py-3 bg-antiqueGold text-slate-900 font-bold rounded-xl text-sm">Login</button>
+                </div>
+            </div>
+
+            <!-- Dashboard Control Panel View (Shows after correct login) -->
+            <div id="modalDashboardBox" class="hidden space-y-4">
+                <div class="flex justify-between items-center pb-3 border-b border-slate-800">
+                    <span class="text-emerald-400 font-bold text-sm">Admin Dashboard Active</span>
+                    <button onclick="clientLogout()" class="px-3 py-1 bg-red-600 text-white rounded-lg text-xs">Logout</button>
+                </div>
+                <div>
+                    <label class="block text-xs text-slate-400 mb-1">Update WhatsApp Number</label>
+                    <input type="text" id="dashPhone" class="w-full p-3 rounded-xl bg-slate-800 border border-slate-700 text-sm" value="+923241745886">
+                </div>
+                <div>
+                    <label class="block text-xs text-slate-400 mb-1">Upload Image / Experience Proof (No-Code)</label>
+                    <input type="file" id="dashImage" accept="image/*" class="w-full p-2 rounded-xl bg-slate-800 border border-slate-700 text-xs">
+                </div>
+                <button onclick="saveDashboardSettings()" class="w-full py-3 bg-emerald-600 text-white font-bold rounded-xl text-sm">Save Changes & Update Site</button>
             </div>
         </div>
     </div>
 
-    <!-- ========================================================== -->
-    <!-- JAVASCRIPT LOGIC: SEPARATE INTERFACES & NO-CODE CMS        -->
-    <!-- ========================================================== -->
+    <!-- SCRIPT LOGIC -->
     <script>
-        // کلائنٹ کے لاگ ان کریڈینشلز (آپ انہیں یہاں سے تبدیل کر سکتے ہیں)
-        const CLIENT_CREDENTIALS = {
-            username: "alsamad_admin",
-            password: "quran_admin_2026"
-        };
+        const ADMIN_USER = "alsamad_admin";
+        const ADMIN_PASS = "quran_admin_2026";
 
-        // ڈیفالٹ ڈیٹا
-        const defaultSiteData = {
-            academyName: "Al Samad Online Quran Academy",
-            teemUrl: "https://teem.pk",
-            phone1: "+92 324 1745886",
-            phone2: "+92 316 0476714",
-            heroImage: "https://images.unsplash.com/photo-1609599006353-e629aaabfeae?auto=format&fit=crop&w=800&q=80",
-            experiences: [
-                {
-                    title: "Certified Qira'at & Tajweed Mentorship",
-                    desc: "Over 8+ years of online teaching experience across UK, USA, and Canada with 100% student satisfaction.",
-                    image: "https://images.unsplash.com/photo-1584286595398-a59f21d313f5?auto=format&fit=crop&w=600&q=80"
-                }
-            ]
-        };
-
-        const defaultCourses = [
-            { title: "Noorani Qaida & Nazra Quran", desc: "Master Arabic letters, harakat, and fluent Quran reading from the basics." },
-            { title: "Quran with Tajweed & Masnoon Duas", desc: "Beautify your recitation with proper Makharij rules and daily supplications." },
-            { title: "Translation & Tafseer (Urdu & English)", desc: "Understand the divine message with word-for-word translation and explanation." },
-            { title: "Basics of Islamic Studies", desc: "Learn Five Pillars of Islam, Wudu, complete Salah method, and Islamic manners." },
-            { title: "Hadees Shareef Studies", desc: "Study authentic sayings of Prophet Muhammad ﷺ for daily ethical guidance." },
-            { title: "Hifz-ul-Quran Program", desc: "Structured memorization of Juz Amma, selected Surahs, or complete Quran." }
-        ];
-
-        // ویب سائٹ لوڈ ہوتے ہی چیک کریں کہ کون سا انٹرفیس دکھانا ہے
-        document.addEventListener("DOMContentLoaded", () => {
-            loadSavedSiteContent();
-
-            // اگر لنک کے آخر میں ?admin=true لکھا ہو تو براہ راست کلائنٹ پورٹل کھلے
-            const urlParams = new URLSearchParams(window.location.search);
-            if (urlParams.get('admin') === 'true') {
-                switchToAdminPortal();
-            }
-        });
-
-        // محفوظ شدہ ڈیٹا کو پبلک ویب سائٹ پر دکھائیں
-        function loadSavedSiteContent() {
-            const saved = JSON.parse(localStorage.getItem("alsamad_site_data")) || defaultSiteData;
-
-            document.getElementById("siteMainTitle").textContent = saved.academyName;
-            document.getElementById("footerAcademyName").textContent = saved.academyName;
-            document.getElementById("displayPhone1").textContent = saved.phone1;
-            document.getElementById("displayPhone2").textContent = saved.phone2;
-            document.getElementById("heroDisplayImage").src = saved.heroImage;
-
-            // تمام Teem App بٹنز کو اپ ڈیٹ کریں
-            document.querySelectorAll("#topTeemLink1, #topTeemLink2, #headerTeemBtn, #heroTeemBtn").forEach(btn => {
-                btn.href = saved.teemUrl;
-            });
-
-            // کورسز رینڈر کریں
-            const cGrid = document.getElementById("dynamicCoursesGrid");
-            cGrid.innerHTML = defaultCourses.map((c, i) => `
-                <div class="course-card bg-white rounded-3xl p-7 border border-antiqueGold/30 shadow-sm">
-                    <span class="text-xs font-bold text-antiqueGoldDark bg-antiqueGold/15 px-3 py-1 rounded-full">0${i + 1}</span>
-                    <h3 class="heading-font text-2xl font-bold text-midnightTeal mt-4 mb-2">${c.title}</h3>
-                    <p class="text-slate-600 text-sm leading-relaxed mb-5">${c.desc}</p>
-                    <a href="#demo-booking" class="inline-block px-4 py-2 rounded-xl bg-emeraldDeep text-white text-xs font-bold">Book Free Demo</a>
-                </div>
-            `).join("");
-
-            // ایکسپیرینس کارڈز رینڈر کریں
-            const expGrid = document.getElementById("dynamicExperienceList");
-            expGrid.innerHTML = saved.experiences.map(exp => `
-                <div class="bg-ivoryWarm rounded-3xl overflow-hidden border border-antiqueGold/30 shadow-sm flex flex-col sm:flex-row">
-                    <img src="${exp.image}" alt="${exp.title}" class="w-full sm:w-48 h-48 object-cover">
-                    <div class="p-6 flex flex-col justify-center">
-                        <h3 class="heading-font text-2xl font-bold text-midnightTeal mb-2">${exp.title}</h3>
-                        <p class="text-slate-600 text-sm leading-relaxed">${exp.desc}</p>
-                    </div>
-                </div>
-            `).join("");
-        }
-
-        // پبلک سائٹ چھپا کر الگ ایڈمن پورٹل دکھائیں
-        function switchToAdminPortal() {
-            document.getElementById("publicWebsiteView").classList.add("hidden");
-            document.getElementById("adminPortalView").classList.remove("hidden");
-
-            if (sessionStorage.getItem("client_authenticated") === "true") {
-                showClientDashboard();
+        function openClientAdminLogin() {
+            document.getElementById("adminModal").classList.remove("hidden");
+            document.getElementById("adminModal").classList.add("flex");
+            if(localStorage.getItem("isClientLoggedIn") === "true") {
+                document.getElementById("modalLoginBox").classList.add("hidden");
+                document.getElementById("modalDashboardBox").classList.remove("hidden");
             } else {
-                document.getElementById("clientLoginScreen").classList.remove("hidden");
-                document.getElementById("clientDashboardScreen").classList.add("hidden");
+                document.getElementById("modalLoginBox").classList.remove("hidden");
+                document.getElementById("modalDashboardBox").classList.add("hidden");
             }
         }
 
-        // ایڈمن پورٹل چھپا کر واپس عام لوگوں والی ویب سائٹ دکھائیں
-        function switchToPublicSite() {
-            document.getElementById("adminPortalView").classList.add("hidden");
-            document.getElementById("publicWebsiteView").classList.remove("hidden");
-            loadSavedSiteContent();
+        function closeAdminModal() {
+            document.getElementById("adminModal").classList.add("hidden");
+            document.getElementById("adminModal").classList.remove("flex");
         }
 
-        // کلائنٹ لاگ ان چیک
-        function handleClientLogin(e) {
-            e.preventDefault();
-            const u = document.getElementById("loginUsername").value.trim();
-            const p = document.getElementById("loginPassword").value.trim();
-
-            if (u === CLIENT_CREDENTIALS.username && p === CLIENT_CREDENTIALS.password) {
-                sessionStorage.setItem("client_authenticated", "true");
-                showClientDashboard();
+        function verifyClientLogin() {
+            let u = document.getElementById("modalUser").value.trim();
+            let p = document.getElementById("modalPass").value.trim();
+            if(u === ADMIN_USER && p === ADMIN_PASS) {
+                localStorage.setItem("isClientLoggedIn", "true");
+                alert("Login Successful!");
+                document.getElementById("modalLoginBox").classList.add("hidden");
+                document.getElementById("modalDashboardBox").classList.remove("hidden");
             } else {
-                alert("غلط یوزر نیم یا پاس ورڈ! براہ کرم درست معلومات درج کریں۔");
+                alert("Incorrect Username or Password!");
             }
         }
 
-        // لاگ آؤٹ
-        function handleClientLogout() {
-            sessionStorage.removeItem("client_authenticated");
-            document.getElementById("clientDashboardScreen").classList.add("hidden");
-            document.getElementById("clientLoginScreen").classList.remove("hidden");
-            document.getElementById("loginUsername").value = "";
-            document.getElementById("loginPassword").value = "";
+        function clientLogout() {
+            localStorage.setItem("isClientLoggedIn", "false");
+            document.getElementById("modalLoginBox").classList.remove("hidden");
+            document.getElementById("modalDashboardBox").classList.add("hidden");
+            alert("Logged out successfully.");
         }
 
-        // ڈیش بورڈ میں موجودہ ڈیٹا لوڈ کریں
-        function showClientDashboard() {
-            document.getElementById("clientLoginScreen").classList.add("hidden");
-            document.getElementById("clientDashboardScreen").classList.remove("hidden");
-
-            const saved = JSON.parse(localStorage.getItem("alsamad_site_data")) || defaultSiteData;
-            document.getElementById("editAcademyName").value = saved.academyName;
-            document.getElementById("editTeemUrl").value = saved.teemUrl;
-            document.getElementById("editPhone1").value = saved.phone1;
-            document.getElementById("editPhone2").value = saved.phone2;
+        function saveDashboardSettings() {
+            let pVal = document.getElementById("dashPhone").value;
+            localStorage.setItem("customPhone", pVal);
+            alert("Settings updated successfully!");
+            location.reload();
         }
 
-        // نیا ایکسپیرینس اور تصویر شامل کریں
-        function addNewExperienceItem() {
-            const title = document.getElementById("newExpTitle").value.trim();
-            const desc = document.getElementById("newExpDesc").value.trim();
-            const fileInput = document.getElementById("newExpImage");
+        // Original WhatsApp Form Handler
+        function handleBookingSubmit(event) {
+            event.preventDefault();
+            let name = document.getElementById("inlineName").value;
+            let whatsapp = document.getElementById("inlineWhatsapp").value;
+            let targetPhone = localStorage.getItem("customPhone") || "923241745886";
 
-            if (!title || !desc) {
-                alert("براہ کرم تجربے کا عنوان اور تفصیل لکھیں۔");
-                return;
-            }
-
-            const saved = JSON.parse(localStorage.getItem("alsamad_site_data")) || defaultSiteData;
-
-            if (fileInput.files && fileInput.files[0]) {
-                const reader = new FileReader();
-                reader.onload = function(e) {
-                    saved.experiences.push({ title, desc, image: e.target.result });
-                    localStorage.setItem("alsamad_site_data", JSON.stringify(saved));
-                    alert("نیا تجربہ اور تصویر کامیابی سے شامل ہو گئی ہے!");
-                    document.getElementById("newExpTitle").value = "";
-                    document.getElementById("newExpDesc").value = "";
-                };
-                reader.readAsDataURL(fileInput.files[0]);
-            } else {
-                saved.experiences.push({
-                    title,
-                    desc,
-                    image: "https://images.unsplash.com/photo-1584286595398-a59f21d313f5?auto=format&fit=crop&w=600&q=80"
-                });
-                localStorage.setItem("alsamad_site_data", JSON.stringify(saved));
-                alert("نیا تجربہ کامیابی سے شامل ہو گیا ہے!");
-            }
-        }
-
-        // تمام تبدیلیاں محفوظ کریں
-        function saveAllClientSettings() {
-            const saved = JSON.parse(localStorage.getItem("alsamad_site_data")) || defaultSiteData;
-            saved.academyName = document.getElementById("editAcademyName").value;
-            saved.teemUrl = document.getElementById("editTeemUrl").value;
-            saved.phone1 = document.getElementById("editPhone1").value;
-            saved.phone2 = document.getElementById("editPhone2").value;
-
-            const heroInput = document.getElementById("editHeroImage");
-            if (heroInput.files && heroInput.files[0]) {
-                const reader = new FileReader();
-                reader.onload = function(e) {
-                    saved.heroImage = e.target.result;
-                    localStorage.setItem("alsamad_site_data", JSON.stringify(saved));
-                    alert("تمام تبدیلیاں اور تصویر لائیو ویب سائٹ پر محفوظ ہو گئی ہیں!");
-                    switchToPublicSite();
-                };
-                reader.readAsDataURL(heroInput.files[0]);
-            } else {
-                localStorage.setItem("alsamad_site_data", JSON.stringify(saved));
-                alert("تمام تبدیلیاں لائیو ویب سائٹ پر محفوظ ہو گئی ہیں!");
-                switchToPublicSite();
-            }
-        }
-
-        // Teem App پر بکنگ بھیجنے کا فنکشن
-        function submitToTeemApp(e) {
-            e.preventDefault();
-            const saved = JSON.parse(localStorage.getItem("alsamad_site_data")) || defaultSiteData;
-            window.open(saved.teemUrl, "_blank");
-        }
-
-        function setLanguage(lang) {
-            document.documentElement.setAttribute("lang", lang);
-            document.documentElement.setAttribute("dir", (lang === "ur" || lang === "ar") ? "rtl" : "ltr");
+            let msg = `Assalam-o-Alaikum! Free Demo Class Request:%0AName: ${encodeURIComponent(name)}%0AWhatsApp: ${encodeURIComponent(whatsapp)}`;
+            window.open(`https://wa.me/${targetPhone}?text=${msg}`, '_blank');
         }
     </script>
 </body>
