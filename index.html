@@ -2324,6 +2324,108 @@
             if (e.target === syllabusModal) closeSyllabusModal();
             if (e.target === demoModal) closeDemoModal();
         });
+
+        // ==========================================
+// SECURE ADMIN DASHBOARD & TEEM APP INTEGRATION
+// ==========================================
+
+// یہاں آپ اپنا مرضی کا یوزر نیم اور پاسورڈ سیٹ کر سکتے ہیں
+const ADMIN_USER = "alsamad_admin";
+const ADMIN_PASS = "quran_admin_2026"; 
+
+// چیک کریں کہ ایڈمن لاگ ان ہے یا نہیں
+function checkAdminSession() {
+    return localStorage.getItem("isAdminLoggedIn") === "true";
+}
+
+// ایڈمن لاگ ان اور ڈیش بورڈ کھولنے کا فنکشن
+function openAdminLogin() {
+    if (checkAdminSession()) {
+        openAdminDashboard();
+        return;
+    }
+
+    let username = prompt("Enter Admin Username:");
+    let password = prompt("Enter Admin Password:");
+
+    if (username === ADMIN_USER && password === ADMIN_PASS) {
+        localStorage.setItem("isAdminLoggedIn", "true");
+        alert("Login Successful! Welcome to Admin Dashboard.");
+        openAdminDashboard();
+    } else {
+        alert("Access Denied! Incorrect Username or Password.");
+    }
+}
+
+// ڈیش بورڈ جہاں سے بغیر کوڈنگ کے نمبرز اور Teem App لنک تبدیل ہوں گے
+function openAdminDashboard() {
+    let currentTeem = localStorage.getItem("adminTeemLink") || "https://teem.pk/your-link";
+    let currentPhone = localStorage.getItem("adminPhone") || "+923032549945";
+
+    let dashboardWindow = window.open("", "_blank", "width=800,height=700");
+    dashboardWindow.document.write(`
+        <html>
+        <head>
+            <title>Al Samad Academy - Admin Control Panel</title>
+            <script src="https://cdn.tailwindcss.com"></script>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+        </head>
+        <body class="bg-slate-100 p-6 font-sans">
+            <div class="max-w-2xl mx-auto bg-white p-8 rounded-2xl shadow-xl border border-emerald-800">
+                <div class="flex items-center justify-between pb-4 border-b mb-6">
+                    <h2 class="text-2xl font-bold text-emerald-900"><i class="fa-solid fa-shield-halved text-amber-500 mr-2"></i> Admin Dashboard</h2>
+                    <button onclick="localStorage.removeItem('isAdminLoggedIn'); window.close();" class="px-4 py-2 bg-red-600 text-white rounded-lg text-sm font-semibold hover:bg-red-700">Logout</button>
+                </div>
+
+                <div class="space-y-4">
+                    <h3 class="font-bold text-lg text-slate-800">Teem App & Contact Settings</h3>
+                    <div>
+                        <label class="block text-sm font-semibold text-slate-700">Teem App Chat Link / Number:</label>
+                        <input type="text" id="teemInput" value="${currentTeem}" class="w-full p-3 border rounded-xl mt-1" placeholder="Enter Teem App link">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-semibold text-slate-700">Official Mobile Number:</label>
+                        <input type="text" id="phoneInput" value="${currentPhone}" class="w-full p-3 border rounded-xl mt-1">
+                    </div>
+
+                    <h3 class="font-bold text-lg text-slate-800 pt-4">Upload Images / Experience Proof (No-Code)</h3>
+                    <div>
+                        <label class="block text-sm font-semibold text-slate-700">Select Image:</label>
+                        <input type="file" id="imageUploader" accept="image/*" class="w-full p-2 border rounded-xl mt-1 bg-slate-50">
+                    </div>
+
+                    <button onclick="saveAdminChanges()" class="w-full py-3 bg-emerald-800 text-white font-bold rounded-xl hover:bg-emerald-900 transition-all shadow-lg mt-4">
+                        Save Changes & Update Website
+                    </button>
+                </div>
+            </div>
+
+            <script>
+                function saveAdminChanges() {
+                    let teemVal = document.getElementById('teemInput').value;
+                    let phoneVal = document.getElementById('phoneInput').value;
+                    localStorage.setItem("adminTeemLink", teemVal);
+                    localStorage.setItem("adminPhone", phoneVal);
+
+                    let fileInput = document.getElementById('imageUploader');
+                    if (fileInput.files && fileInput.files[0]) {
+                        let reader = new FileReader();
+                        reader.onload = function(e) {
+                            localStorage.setItem("customUploadedImage", e.target.result);
+                            alert("Settings and Image successfully updated!");
+                            window.location.reload();
+                        };
+                        reader.readAsDataURL(fileInput.files[0]);
+                    } else {
+                        alert("Settings successfully updated!");
+                        window.location.reload();
+                    }
+                }
+            </script>
+        </body>
+        </html>
+    `);
+}
     </script>
 </body>
 </html>
