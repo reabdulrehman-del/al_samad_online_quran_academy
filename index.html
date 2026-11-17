@@ -6,11 +6,11 @@
     <title>Al Samad Online Quran Academy | Learn the Quran Online</title>
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Google Fonts: Cinzel, Cormorant Garamond, Plus Jakarta Sans, Noto Nastaliq Urdu, Amiri -->
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Cinzel:wght@500;600;700&family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=Noto+Nastaliq+Urdu:wght@400;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <!-- Font Awesome for crisp icons -->
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
     <script>
@@ -38,2494 +38,501 @@
     </script>
 
     <style>
-        /* Dynamic Typography based on active language */
-        html[lang="en"], html[lang="fr"], html[lang="es"], html[lang="de"] {
-            font-family: 'Plus Jakarta Sans', sans-serif;
-        }
-        html[lang="en"] .heading-font,
-        html[lang="fr"] .heading-font,
-        html[lang="es"] .heading-font,
-        html[lang="de"] .heading-font {
-            font-family: 'Cormorant Garamond', Georgia, serif;
-            letter-spacing: -0.01em;
-        }
-        html[lang="en"] .brand-font,
-        html[lang="fr"] .brand-font,
-        html[lang="es"] .brand-font,
-        html[lang="de"] .brand-font {
-            font-family: 'Cinzel', serif;
-        }
-
-        /* Urdu RTL Typography adjustments for Nastaliq line-height & readability */
-        html[lang="ur"] {
-            font-family: 'Noto Nastaliq Urdu', serif;
-        }
-        html[lang="ur"] body, html[lang="ur"] p, html[lang="ur"] span, html[lang="ur"] button, html[lang="ur"] a, html[lang="ur"] input, html[lang="ur"] select, html[lang="ur"] label {
-            font-family: 'Noto Nastaliq Urdu', serif !important;
-            line-height: 2.2 !important;
-        }
-        html[lang="ur"] .heading-font, html[lang="ur"] .brand-font {
-            font-family: 'Noto Nastaliq Urdu', serif !important;
-            line-height: 2.0 !important;
-        }
-
-        /* Arabic RTL Typography */
-        html[lang="ar"] {
-            font-family: 'Amiri', serif;
-        }
-        html[lang="ar"] body, html[lang="ar"] p, html[lang="ar"] span, html[lang="ar"] button, html[lang="ar"] a, html[lang="ar"] input, html[lang="ar"] select, html[lang="ar"] label {
-            font-family: 'Amiri', serif !important;
-            line-height: 1.85 !important;
-        }
-        html[lang="ar"] .heading-font, html[lang="ar"] .brand-font {
-            font-family: 'Amiri', serif !important;
-            line-height: 1.65 !important;
-        }
-
-        /* Subtle Islamic Geometric Arabesque SVG Pattern Overlay */
-        .islamic-pattern {
-            background-image: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%23D4AF37' stroke-width='0.75' stroke-opacity='0.14'%3E%3Cpath d='M40 0L49.5 30.5L80 40L49.5 49.5L40 80L30.5 49.5L0 40L30.5 30.5Z'/%3E%3Ccircle cx='40' cy='40' r='14'/%3E%3Cpath d='M11.7 11.7L68.3 68.3M68.3 11.7L11.7 68.3'/%3E%3C/g%3E%3C/svg%3E");
-        }
-
-        .islamic-pattern-light {
-            background-image: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%23064E3B' stroke-width='0.75' stroke-opacity='0.06'%3E%3Cpath d='M40 0L49.5 30.5L80 40L49.5 49.5L40 80L30.5 49.5L0 40L30.5 30.5Z'/%3E%3Ccircle cx='40' cy='40' r='14'/%3E%3Crect x='20' y='20' width='40' height='40' transform='rotate(45 40 40)'/%3E%3C/g%3E%3C/svg%3E");
-        }
-
-        /* Course card luxury gold hover glow */
-        .course-card {
-            transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.35s ease, border-color 0.35s ease;
-        }
-        .course-card:hover {
-            transform: translateY(-6px);
-            border-color: #D4AF37;
-            box-shadow: 0 20px 35px -10px rgba(6, 78, 59, 0.12), 0 0 20px rgba(212, 175, 55, 0.18);
-        }
-
-        /* Custom subtle scrollbar */
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-        ::-webkit-scrollbar-track {
-            background: #FAF8F3;
-        }
-        ::-webkit-scrollbar-thumb {
-            background: #064E3B;
-            border-radius: 4px;
-        }
-        ::-webkit-scrollbar-thumb:hover {
-            background: #D4AF37;
-        }
+        html[lang="en"], html[lang="fr"], html[lang="es"], html[lang="de"] { font-family: 'Plus Jakarta Sans', sans-serif; }
+        html[lang="en"] .heading-font, html[lang="fr"] .heading-font, html[lang="es"] .heading-font, html[lang="de"] .heading-font { font-family: 'Cormorant Garamond', Georgia, serif; letter-spacing: -0.01em; }
+        html[lang="en"] .brand-font, html[lang="fr"] .brand-font, html[lang="es"] .brand-font, html[lang="de"] .brand-font { font-family: 'Cinzel', serif; }
+        html[lang="ur"] { font-family: 'Noto Nastaliq Urdu', serif; }
+        html[lang="ur"] body, html[lang="ur"] p, html[lang="ur"] span, html[lang="ur"] button, html[lang="ur"] a, html[lang="ur"] input, html[lang="ur"] select, html[lang="ur"] label { font-family: 'Noto Nastaliq Urdu', serif !important; line-height: 2.2 !important; }
+        html[lang="ur"] .heading-font, html[lang="ur"] .brand-font { font-family: 'Noto Nastaliq Urdu', serif !important; line-height: 2.0 !important; }
+        html[lang="ar"] { font-family: 'Amiri', serif; }
+        html[lang="ar"] body, html[lang="ar"] p, html[lang="ar"] span, html[lang="ar"] button, html[lang="ar"] a, html[lang="ar"] input, html[lang="ar"] select, html[lang="ar"] label { font-family: 'Amiri', serif !important; line-height: 1.85 !important; }
+        .islamic-pattern { background-image: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%23D4AF37' stroke-width='0.75' stroke-opacity='0.14'%3E%3Cpath d='M40 0L49.5 30.5L80 40L49.5 49.5L40 80L30.5 49.5L0 40L30.5 30.5Z'/%3E%3Ccircle cx='40' cy='40' r='14'/%3E%3Cpath d='M11.7 11.7L68.3 68.3M68.3 11.7L11.7 68.3'/%3E%3C/g%3E%3C/svg%3E"); }
+        .islamic-pattern-light { background-image: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%23064E3B' stroke-width='0.75' stroke-opacity='0.06'%3E%3Cpath d='M40 0L49.5 30.5L80 40L49.5 49.5L40 80L30.5 49.5L0 40L30.5 30.5Z'/%3E%3Ccircle cx='40' cy='40' r='14'/%3E%3Crect x='20' y='20' width='40' height='40' transform='rotate(45 40 40)'/%3E%3C/g%3E%3C/svg%3E"); }
+        .course-card { transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease; }
+        .course-card:hover { transform: translateY(-6px); border-color: #D4AF37; box-shadow: 0 20px 35px -10px rgba(6, 78, 59, 0.12), 0 0 20px rgba(212, 175, 55, 0.18); }
     </style>
 </head>
 <body class="bg-ivoryWarm text-slate-800 antialiased selection:bg-antiqueGold selection:text-midnightTeal overflow-x-hidden">
 
-    <!-- TOP LANGUAGE & CONTACT BAR -->
-    <div class="bg-midnightTeal text-ivoryWarm/90 border-b border-antiqueGold/25 text-xs sm:text-sm relative z-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2 flex flex-col md:flex-row items-center justify-between gap-2">
-            <!-- Quick Direct Numbers -->
-            <div class="flex flex-wrap items-center justify-center gap-4 text-xs">
-                <a href="https://wa.me/923241745886" target="_blank" rel="noopener" class="inline-flex items-center gap-1.5 hover:text-antiqueGold transition-colors">
-                    <i class="fa-brands fa-whatsapp text-emerald-400 text-sm"></i>
-                    <span dir="ltr">+92 324 1745886</span>
-                </a>
-                <span class="text-antiqueGold/40">|</span>
-                <a href="https://wa.me/923160476714" target="_blank" rel="noopener" class="inline-flex items-center gap-1.5 hover:text-antiqueGold transition-colors">
-                    <i class="fa-brands fa-whatsapp text-emerald-400 text-sm"></i>
-                    <span dir="ltr">+92 316 0476714</span>
-                </a>
-            </div>
+    <!-- ========================================================== -->
+    <!-- VIEW 1: PUBLIC VISITOR WEBSITE (عام لوگوں کے لیے انٹرفیس) -->
+    <!-- ========================================================== -->
+    <div id="publicWebsiteView">
+        <!-- TOP BAR -->
+        <div class="bg-midnightTeal text-ivoryWarm/90 border-b border-antiqueGold/25 text-xs sm:text-sm relative z-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2 flex flex-col md:flex-row items-center justify-between gap-2">
+                <div class="flex flex-wrap items-center justify-center gap-4 text-xs">
+                    <a id="topTeemLink1" href="https://teem.pk" target="_blank" rel="noopener" class="inline-flex items-center gap-1.5 hover:text-antiqueGold transition-colors">
+                        <i class="fa-solid fa-comments text-emerald-400 text-sm"></i>
+                        <span id="displayPhone1" dir="ltr">+92 324 1745886</span>
+                    </a>
+                    <span class="text-antiqueGold/40">|</span>
+                    <a id="topTeemLink2" href="https://teem.pk" target="_blank" rel="noopener" class="inline-flex items-center gap-1.5 hover:text-antiqueGold transition-colors">
+                        <i class="fa-solid fa-comments text-emerald-400 text-sm"></i>
+                        <span id="displayPhone2" dir="ltr">+92 316 0476714</span>
+                    </a>
+                </div>
 
-            <!-- Interactive Multi-Language Switcher -->
-            <div class="flex flex-wrap items-center justify-center gap-1 sm:gap-1.5" role="group" aria-label="Language Selector">
-                <span class="text-antiqueGold/80 text-xs me-1 hidden sm:inline"><i class="fa-solid fa-globe me-1"></i></span>
-                <button onclick="setLanguage('en')" data-lang-btn="en" class="lang-btn px-2.5 py-1 rounded-md text-xs font-medium transition-all bg-antiqueGold text-midnightTeal shadow-sm">
-                    🇬🇧 EN
-                </button>
-                <button onclick="setLanguage('ur')" data-lang-btn="ur" class="lang-btn px-2.5 py-1 rounded-md text-xs font-medium transition-all text-ivoryWarm/85 hover:bg-emeraldDeep hover:text-antiqueGold">
-                    🇵🇰 اردو
-                </button>
-                <button onclick="setLanguage('ar')" data-lang-btn="ar" class="lang-btn px-2.5 py-1 rounded-md text-xs font-medium transition-all text-ivoryWarm/85 hover:bg-emeraldDeep hover:text-antiqueGold">
-                    🇸🇦 العربية
-                </button>
-                <button onclick="setLanguage('fr')" data-lang-btn="fr" class="lang-btn px-2.5 py-1 rounded-md text-xs font-medium transition-all text-ivoryWarm/85 hover:bg-emeraldDeep hover:text-antiqueGold">
-                    🇫🇷 FR
-                </button>
-                <button onclick="setLanguage('es')" data-lang-btn="es" class="lang-btn px-2.5 py-1 rounded-md text-xs font-medium transition-all text-ivoryWarm/85 hover:bg-emeraldDeep hover:text-antiqueGold">
-                    🇪🇸 ES
-                </button>
-                <button onclick="setLanguage('de')" data-lang-btn="de" class="lang-btn px-2.5 py-1 rounded-md text-xs font-medium transition-all text-ivoryWarm/85 hover:bg-emeraldDeep hover:text-antiqueGold">
-                    🇩🇪 DE
-                </button>
-            </div>
-        </div>
-    </div>
-
-    <!-- STICKY NAVIGATION HEADER -->
-    <header class="sticky top-0 z-40 bg-ivoryWarm/95 backdrop-blur-md border-b border-antiqueGold/30 shadow-sm">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex items-center justify-between h-20">
-                <!-- Brand Emblem & Title -->
-                <a href="#home" class="flex items-center gap-3 group">
-                    <div class="w-11 h-11 rounded-xl bg-gradient-to-br from-emeraldDeep to-midnightTeal border border-antiqueGold flex items-center justify-center shadow-md group-hover:scale-105 transition-transform">
-                        <!-- Custom Islamic Octagram & Crescent Emblem -->
-                        <svg class="w-6 h-6 text-antiqueGold" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
-                            <path d="M12 2L14.8 7.2L20.5 6.5L18.2 12L20.5 17.5L14.8 16.8L12 22L9.2 16.8L3.5 17.5L5.8 12L3.5 6.5L9.2 7.2L12 2Z"/>
-                            <circle cx="12" cy="12" r="3.5"/>
-                        </svg>
-                    </div>
-                    <div>
-                        <span data-i18n="brandName" class="brand-font block text-base sm:text-lg font-bold text-midnightTeal tracking-wide">Al Samad Online Quran Academy</span>
-                        <span data-i18n="brandTagline" class="block text-[11px] uppercase tracking-widest text-antiqueGoldDark font-semibold">Global Quranic Excellence</span>
-                    </div>
-                </a>
-
-                <!-- Desktop Navigation Links -->
-                <nav class="hidden lg:flex items-center gap-7 text-sm font-medium text-slate-700">
-                    <a href="#home" data-i18n="navHome" class="hover:text-emeraldDeep transition-colors">Home</a>
-                    <a href="#courses" data-i18n="navCourses" class="hover:text-emeraldDeep transition-colors">Courses</a>
-                    <a href="#why-us" data-i18n="navWhyUs" class="hover:text-emeraldDeep transition-colors">Why Choose Us</a>
-                    <a href="#demo-booking" data-i18n="navFreeDemo" class="hover:text-emeraldDeep transition-colors">Free Demo</a>
-                    <a href="#faq" data-i18n="navFaq" class="hover:text-emeraldDeep transition-colors">FAQ</a>
-                </nav>
-
-                <!-- Header CTA & Mobile Menu Toggle -->
-                <div class="flex items-center gap-3">
-                    <button onclick="openDemoModal()" class="hidden sm:inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-emeraldDeep hover:bg-midnightTeal text-ivoryWarm border border-antiqueGold/60 text-sm font-semibold shadow-md hover:shadow-lg transition-all">
-                        <i class="fa-solid fa-calendar-check text-antiqueGold"></i>
-                        <span data-i18n="btnBookDemo">Book Free Demo Class</span>
-                    </button>
-                    <button id="mobileMenuBtn" onclick="toggleMobileMenu()" class="lg:hidden p-2.5 rounded-xl text-midnightTeal hover:bg-emeraldDeep/10 transition-colors" aria-label="Toggle Menu">
-                        <i class="fa-solid fa-bars text-xl"></i>
-                    </button>
+                <!-- Language Switcher -->
+                <div class="flex flex-wrap items-center justify-center gap-1 sm:gap-1.5">
+                    <button onclick="setLanguage('en')" data-lang-btn="en" class="lang-btn px-2.5 py-1 rounded-md text-xs font-medium bg-antiqueGold text-midnightTeal">🇬🇧 EN</button>
+                    <button onclick="setLanguage('ur')" data-lang-btn="ur" class="lang-btn px-2.5 py-1 rounded-md text-xs font-medium text-ivoryWarm/85 hover:bg-emeraldDeep">🇵🇰 اردو</button>
+                    <button onclick="setLanguage('ar')" data-lang-btn="ar" class="lang-btn px-2.5 py-1 rounded-md text-xs font-medium text-ivoryWarm/85 hover:bg-emeraldDeep">🇸🇦 العربية</button>
                 </div>
             </div>
         </div>
 
-        <!-- Mobile Dropdown Nav -->
-        <div id="mobileMenu" class="hidden lg:hidden bg-ivoryWarm border-t border-antiqueGold/20 px-4 pt-3 pb-5 space-y-2 shadow-lg">
-            <a href="#home" onclick="toggleMobileMenu()" data-i18n="navHome" class="block px-3 py-2 rounded-lg text-slate-800 hover:bg-emeraldDeep/10 font-medium">Home</a>
-            <a href="#courses" onclick="toggleMobileMenu()" data-i18n="navCourses" class="block px-3 py-2 rounded-lg text-slate-800 hover:bg-emeraldDeep/10 font-medium">Courses</a>
-            <a href="#why-us" onclick="toggleMobileMenu()" data-i18n="navWhyUs" class="block px-3 py-2 rounded-lg text-slate-800 hover:bg-emeraldDeep/10 font-medium">Why Choose Us</a>
-            <a href="#demo-booking" onclick="toggleMobileMenu()" data-i18n="navFreeDemo" class="block px-3 py-2 rounded-lg text-slate-800 hover:bg-emeraldDeep/10 font-medium">Free Demo</a>
-            <a href="#faq" onclick="toggleMobileMenu()" data-i18n="navFaq" class="block px-3 py-2 rounded-lg text-slate-800 hover:bg-emeraldDeep/10 font-medium">FAQ</a>
-            <div class="pt-2">
-                <button onclick="toggleMobileMenu(); openDemoModal();" class="w-full py-3 rounded-xl bg-emeraldDeep text-ivoryWarm border border-antiqueGold font-semibold flex items-center justify-center gap-2">
-                    <i class="fa-solid fa-calendar-check text-antiqueGold"></i>
-                    <span data-i18n="btnBookDemo">Book Free Demo Class</span>
-                </button>
-            </div>
-        </div>
-    </header>
+        <!-- HEADER -->
+        <header class="sticky top-0 z-40 bg-ivoryWarm/95 backdrop-blur-md border-b border-antiqueGold/30 shadow-sm">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex items-center justify-between h-20">
+                    <a href="#home" class="flex items-center gap-3">
+                        <div class="w-11 h-11 rounded-xl bg-gradient-to-br from-emeraldDeep to-midnightTeal border border-antiqueGold flex items-center justify-center shadow-md">
+                            <i class="fa-solid fa-book-quran text-antiqueGold text-xl"></i>
+                        </div>
+                        <div>
+                            <span id="siteMainTitle" class="brand-font block text-base sm:text-lg font-bold text-midnightTeal tracking-wide">Al Samad Online Quran Academy</span>
+                            <span id="siteSubTagline" class="block text-[11px] uppercase tracking-widest text-antiqueGoldDark font-semibold">Global Quranic Excellence</span>
+                        </div>
+                    </a>
 
-    <!-- 1. HERO SECTION -->
-    <section id="home" class="relative bg-gradient-to-br from-midnightTeal via-emeraldDeep to-midnightTeal text-ivoryWarm overflow-hidden">
-        <!-- Geometric Islamic Watermark Pattern -->
-        <div class="absolute inset-0 islamic-pattern opacity-90 pointer-events-none"></div>
-        <!-- Ambient Radial Gold Glow -->
-        <div class="absolute -top-24 -end-24 w-96 h-96 bg-antiqueGold/15 rounded-full blur-3xl pointer-events-none"></div>
-        <div class="absolute -bottom-24 -start-24 w-96 h-96 bg-emerald-400/10 rounded-full blur-3xl pointer-events-none"></div>
+                    <nav class="hidden lg:flex items-center gap-7 text-sm font-medium text-slate-700">
+                        <a href="#home" class="hover:text-emeraldDeep">Home</a>
+                        <a href="#courses" class="hover:text-emeraldDeep">Courses</a>
+                        <a href="#experience-section" class="hover:text-emeraldDeep">Experience & Gallery</a>
+                        <a href="#demo-booking" class="hover:text-emeraldDeep">Free Demo</a>
+                    </nav>
 
-        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 lg:py-28">
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-                <!-- Left Editorial Content -->
-                <div class="lg:col-span-7 space-y-6">
-                    <!-- Bismillah Calligraphy Accent -->
-                    <div class="inline-flex items-center gap-3 px-4 py-1.5 rounded-full bg-white/10 border border-antiqueGold/40 backdrop-blur-sm">
-                        <span class="text-antiqueGold font-arabic text-lg">بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيم</span>
-                        <span class="w-1.5 h-1.5 rounded-full bg-antiqueGold"></span>
-                        <span data-i18n="heroBadge" class="text-xs font-semibold uppercase tracking-wider text-antiqueGold">Free Demo Class Available!</span>
+                    <div class="flex items-center gap-3">
+                        <a id="headerTeemBtn" href="https://teem.pk" target="_blank" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-emeraldDeep hover:bg-midnightTeal text-ivoryWarm border border-antiqueGold/60 text-sm font-semibold shadow-md">
+                            <i class="fa-solid fa-comments text-antiqueGold"></i>
+                            <span>Connect on Teem App</span>
+                        </a>
                     </div>
+                </div>
+            </div>
+        </header>
 
-                    <h1 data-i18n="heroTitle" class="heading-font text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight">
+        <!-- HERO SECTION -->
+        <section id="home" class="relative bg-gradient-to-br from-midnightTeal via-emeraldDeep to-midnightTeal text-ivoryWarm overflow-hidden py-16 sm:py-24">
+            <div class="absolute inset-0 islamic-pattern opacity-90 pointer-events-none"></div>
+            <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-7 space-y-6">
+                    <div class="inline-flex items-center gap-3 px-4 py-1.5 rounded-full bg-white/10 border border-antiqueGold/40">
+                        <span class="text-antiqueGold font-arabic text-lg">بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيم</span>
+                        <span class="text-xs font-semibold uppercase tracking-wider text-antiqueGold">Free Demo Class Available!</span>
+                    </div>
+                    <h1 id="heroMainHeading" class="heading-font text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight">
                         Learn the Quran with Al Samad Online Quran Academy
                     </h1>
-
-                    <p data-i18n="heroSubtitle" class="text-lg sm:text-xl text-antiqueGold font-medium leading-relaxed">
-                        Make Quran learning easy, interactive, and meaningful from the comfort of your home.
+                    <p id="heroMainDesc" class="text-base sm:text-lg text-ivoryWarm/85 leading-relaxed max-w-2xl">
+                        Make Quran learning easy, interactive, and meaningful from the comfort of your home with qualified male and female tutors worldwide.
                     </p>
-
-                    <p data-i18n="heroDescription" class="text-base sm:text-lg text-ivoryWarm/85 leading-relaxed max-w-2xl">
-                        Whether you are starting from the basics or improving your Quran recitation, we are here to help you learn with proper pronunciation and confidence.
-                    </p>
-
-                    <!-- Prominent CTA Buttons -->
-                    <div class="pt-3 flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
-                        <button onclick="openDemoModal()" class="px-7 py-4 rounded-xl bg-gradient-to-r from-antiqueGold to-antiqueGoldSoft hover:from-amber-400 hover:to-antiqueGold text-midnightTeal font-bold text-base shadow-xl shadow-black/25 hover:scale-[1.02] transition-all flex items-center justify-center gap-2.5">
-                            <i class="fa-solid fa-sparkles"></i>
-                            <span data-i18n="btnBookDemo">Book Free Demo Class</span>
-                        </button>
-
-                        <button onclick="openWhatsAppSelector()" class="px-7 py-4 rounded-xl bg-white/10 hover:bg-white/15 text-white border border-antiqueGold/60 font-semibold text-base backdrop-blur-sm transition-all flex items-center justify-center gap-2.5">
-                            <i class="fa-brands fa-whatsapp text-emerald-400 text-xl"></i>
-                            <span data-i18n="btnChatWhatsapp">Chat on WhatsApp</span>
-                        </button>
-                    </div>
-
-                    <!-- Trust Indicators -->
-                    <div class="pt-6 border-t border-white/15 grid grid-cols-3 gap-4 max-w-xl">
-                        <div>
-                            <div class="text-2xl sm:text-3xl font-bold text-antiqueGold heading-font">1-on-1</div>
-                            <div data-i18n="stat1" class="text-xs sm:text-sm text-ivoryWarm/80">Live Interactive Classes</div>
-                        </div>
-                        <div>
-                            <div class="text-2xl sm:text-3xl font-bold text-antiqueGold heading-font">24/7</div>
-                            <div data-i18n="stat2" class="text-xs sm:text-sm text-ivoryWarm/80">Flexible Global Timings</div>
-                        </div>
-                        <div>
-                            <div class="text-2xl sm:text-3xl font-bold text-antiqueGold heading-font">100%</div>
-                            <div data-i18n="stat3" class="text-xs sm:text-sm text-ivoryWarm/80">Male & Female Tutors</div>
-                        </div>
+                    <div class="pt-3 flex flex-col sm:flex-row gap-4">
+                        <a href="#demo-booking" class="px-7 py-4 rounded-xl bg-antiqueGold text-midnightTeal font-bold text-base shadow-xl text-center">
+                            Book Free Demo Class
+                        </a>
+                        <a id="heroTeemBtn" href="https://teem.pk" target="_blank" class="px-7 py-4 rounded-xl bg-white/10 hover:bg-white/15 text-white border border-antiqueGold/60 font-semibold text-base text-center flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-comments text-emerald-400"></i>
+                            <span>Chat on Teem App</span>
+                        </a>
                     </div>
                 </div>
 
-                <!-- Right Luxury Editorial Card Showcase -->
+                <!-- Dynamic Featured Image Showcase -->
                 <div class="lg:col-span-5">
-                    <div class="relative rounded-3xl bg-gradient-to-b from-white/12 to-white/5 border border-antiqueGold/40 p-6 sm:p-8 backdrop-blur-md shadow-2xl">
-                        <!-- Ornamental Arch Header -->
-                        <div class="text-center pb-6 border-b border-antiqueGold/25">
-                            <div class="w-16 h-16 mx-auto mb-3 rounded-2xl bg-antiqueGold/20 border border-antiqueGold flex items-center justify-center text-antiqueGold text-2xl">
-                                <i class="fa-solid fa-book-quran"></i>
-                            </div>
-                            <p class="font-arabic text-2xl sm:text-3xl text-antiqueGold mb-2" dir="rtl">خَيْرُكُمْ مَنْ تَعَلَّمَ الْقُرْآنَ وَعَلَّمَهُ</p>
-                            <p data-i18n="hadithQuote" class="text-xs sm:text-sm text-ivoryWarm/85 italic">
-                                "The best among you are those who learn the Quran and teach it." — Sahih al-Bukhari
-                            </p>
-                        </div>
-
-                        <!-- Direct WhatsApp Quick Connect Box -->
-                        <div class="pt-6 space-y-3">
-                            <p data-i18n="quickConnectLabel" class="text-xs font-semibold uppercase tracking-wider text-antiqueGold text-center">
-                                Direct Admissions & WhatsApp Support
-                            </p>
-                            <a href="https://wa.me/923241745886?text=Assalam-o-Alaikum%20Al%20Samad%20Online%20Quran%20Academy!%20I%20would%20like%20to%20book%20a%20Free%20Demo%20Class." target="_blank" rel="noopener" class="flex items-center justify-between p-3.5 rounded-xl bg-midnightTeal/80 hover:bg-midnightTeal border border-antiqueGold/35 transition-all group">
-                                <div class="flex items-center gap-3">
-                                    <span class="w-9 h-9 rounded-lg bg-emerald-500/20 text-emerald-400 flex items-center justify-center">
-                                        <i class="fa-brands fa-whatsapp text-lg"></i>
-                                    </span>
-                                    <div>
-                                        <span data-i18n="admissionDesk1" class="block text-xs text-ivoryWarm/70">Admissions Desk I</span>
-                                        <span class="font-semibold text-sm text-white" dir="ltr">+92 324 1745886</span>
-                                    </div>
-                                </div>
-                                <i class="fa-solid fa-arrow-up-right-from-square text-antiqueGold text-xs group-hover:translate-x-0.5 transition-transform"></i>
-                            </a>
-
-                            <a href="https://wa.me/923160476714?text=Assalam-o-Alaikum%20Al%20Samad%20Online%20Quran%20Academy!%20I%20would%20like%20to%20book%20a%20Free%20Demo%20Class." target="_blank" rel="noopener" class="flex items-center justify-between p-3.5 rounded-xl bg-midnightTeal/80 hover:bg-midnightTeal border border-antiqueGold/35 transition-all group">
-                                <div class="flex items-center gap-3">
-                                    <span class="w-9 h-9 rounded-lg bg-emerald-500/20 text-emerald-400 flex items-center justify-center">
-                                        <i class="fa-brands fa-whatsapp text-lg"></i>
-                                    </span>
-                                    <div>
-                                        <span data-i18n="admissionDesk2" class="block text-xs text-ivoryWarm/70">Admissions Desk II</span>
-                                        <span class="font-semibold text-sm text-white" dir="ltr">+92 316 0476714</span>
-                                    </div>
-                                </div>
-                                <i class="fa-solid fa-arrow-up-right-from-square text-antiqueGold text-xs group-hover:translate-x-0.5 transition-transform"></i>
-                            </a>
+                    <div class="rounded-3xl bg-white/10 border border-antiqueGold/40 p-4 backdrop-blur-md shadow-2xl">
+                        <img id="heroDisplayImage" src="https://images.unsplash.com/photo-1609599006353-e629aaabfeae?auto=format&fit=crop&w=800&q=80" alt="Quran Academy" class="w-full h-72 object-cover rounded-2xl border border-antiqueGold/30">
+                        <div class="p-4 text-center">
+                            <p class="font-arabic text-2xl text-antiqueGold mb-1">خَيْرُكُمْ مَنْ تَعَلَّمَ الْقُرْآنَ وَعَلَّمَهُ</p>
+                            <p class="text-xs text-ivoryWarm/80">"The best among you are those who learn the Quran and teach it."</p>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- 3. COURSES & PROGRAMS SECTION ("What We Provide") -->
-    <section id="courses" class="py-20 sm:py-24 bg-ivoryWarm islamic-pattern-light relative">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <!-- Section Header -->
-            <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
-                <span data-i18n="coursesEyebrow" class="inline-block px-4 py-1 rounded-full bg-emeraldDeep/10 text-emeraldDeep border border-emeraldDeep/20 text-xs font-bold uppercase tracking-widest">
-                    Structured Curriculum
-                </span>
-                <h2 data-i18n="coursesHeading" class="heading-font text-3xl sm:text-4xl lg:text-5xl font-bold text-midnightTeal">
-                    What We Provide
-                </h2>
-                <div class="w-24 h-1 bg-gradient-to-r from-transparent via-antiqueGold to-transparent mx-auto rounded-full"></div>
-                <p data-i18n="coursesSubheading" class="text-slate-600 text-base sm:text-lg">
-                    Comprehensive, step-by-step Islamic and Quranic programs tailored for children, beginners, and adults across the globe.
-                </p>
+        <!-- COURSES SECTION -->
+        <section id="courses" class="py-20 bg-ivoryWarm islamic-pattern-light">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-14">
+                    <h2 class="heading-font text-3xl sm:text-5xl font-bold text-midnightTeal">Our Quranic Courses</h2>
+                    <div class="w-24 h-1 bg-antiqueGold mx-auto my-4 rounded-full"></div>
+                </div>
+                <div id="dynamicCoursesGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Courses loaded via JS -->
+                </div>
             </div>
+        </section>
 
-            <!-- 6 Courses Grid (Rendered dynamically so language switching & modal syllabus stay in complete sync) -->
-            <div id="coursesGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Populated by JavaScript -->
+        <!-- EXPERIENCE & GALLERY SECTION (Controlled by Client Dashboard) -->
+        <section id="experience-section" class="py-20 bg-white border-y border-antiqueGold/25">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-14">
+                    <span class="px-4 py-1 rounded-full bg-emeraldDeep/10 text-emeraldDeep text-xs font-bold uppercase">Academy Credentials</span>
+                    <h2 class="heading-font text-3xl sm:text-5xl font-bold text-midnightTeal mt-2">Teaching Experience & Highlights</h2>
+                </div>
+                <div id="dynamicExperienceList" class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Experience items added from Dashboard appear here -->
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- 4. KEY FEATURES & WHY CHOOSE US SECTION -->
-    <section id="why-us" class="py-20 sm:py-24 bg-white border-y border-antiqueGold/25 relative">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
-                <span data-i18n="whyEyebrow" class="inline-block px-4 py-1 rounded-full bg-antiqueGold/15 text-antiqueGoldDark border border-antiqueGold/30 text-xs font-bold uppercase tracking-widest">
-                    Academy Excellence
-                </span>
-                <h2 data-i18n="whyHeading" class="heading-font text-3xl sm:text-4xl lg:text-5xl font-bold text-midnightTeal">
-                    Why Choose Al Samad Academy
-                </h2>
-                <div class="w-24 h-1 bg-gradient-to-r from-transparent via-antiqueGold to-transparent mx-auto rounded-full"></div>
-                <p data-i18n="whySubheading" class="text-slate-600 text-base sm:text-lg">
-                    Dedicated mentorship combining traditional Tajweed mastery with modern, supportive online teaching tools.
-                </p>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
-                <!-- Feature 1 -->
-                <div class="p-7 rounded-2xl bg-ivoryWarm border border-antiqueGold/25 hover:border-antiqueGold transition-all shadow-sm">
-                    <div class="w-13 h-13 w-12 h-12 rounded-xl bg-emeraldDeep text-antiqueGold flex items-center justify-center text-xl mb-5 shadow">
-                        <i class="fa-solid fa-video"></i>
-                    </div>
-                    <h3 data-i18n="feat1Title" class="heading-font text-2xl font-bold text-midnightTeal mb-2">
-                        One-to-One Live Online Classes
-                    </h3>
-                    <p data-i18n="feat1Desc" class="text-slate-600 text-sm sm:text-base leading-relaxed">
-                        Personalized individual attention via Zoom, Skype, or Google Meet so every student learns at their own pace with immediate teacher feedback.
-                    </p>
-                </div>
-
-                <!-- Feature 2 -->
-                <div class="p-7 rounded-2xl bg-ivoryWarm border border-antiqueGold/25 hover:border-antiqueGold transition-all shadow-sm">
-                    <div class="w-12 h-12 rounded-xl bg-emeraldDeep text-antiqueGold flex items-center justify-center text-xl mb-5 shadow">
-                        <i class="fa-solid fa-children"></i>
-                    </div>
-                    <h3 data-i18n="feat2Title" class="heading-font text-2xl font-bold text-midnightTeal mb-2">
-                        Separate Classes for Kids & Adults
-                    </h3>
-                    <p data-i18n="feat2Desc" class="text-slate-600 text-sm sm:text-base leading-relaxed">
-                        Age-appropriate teaching methodologies—engaging and patient guidance for young learners, and respectful, structured lessons for busy adults.
-                    </p>
-                </div>
-
-                <!-- Feature 3 -->
-                <div class="p-7 rounded-2xl bg-ivoryWarm border border-antiqueGold/25 hover:border-antiqueGold transition-all shadow-sm">
-                    <div class="w-12 h-12 rounded-xl bg-emeraldDeep text-antiqueGold flex items-center justify-center text-xl mb-5 shadow">
-                        <i class="fa-solid fa-user-graduate"></i>
-                    </div>
-                    <h3 data-i18n="feat3Title" class="heading-font text-2xl font-bold text-midnightTeal mb-2">
-                        Qualified Male & Female Teachers
-                    </h3>
-                    <p data-i18n="feat3Desc" class="text-slate-600 text-sm sm:text-base leading-relaxed">
-                        Certified, experienced male and female Quran tutors fluent in Tajweed, Qira'at, and multilingual communication for sisters, children, and brothers.
-                    </p>
-                </div>
-
-                <!-- Feature 4 -->
-                <div class="p-7 rounded-2xl bg-ivoryWarm border border-antiqueGold/25 hover:border-antiqueGold transition-all shadow-sm">
-                    <div class="w-12 h-12 rounded-xl bg-emeraldDeep text-antiqueGold flex items-center justify-center text-xl mb-5 shadow">
-                        <i class="fa-solid fa-heart-circle-check"></i>
-                    </div>
-                    <h3 data-i18n="feat4Title" class="heading-font text-2xl font-bold text-midnightTeal mb-2">
-                        Easy, Friendly & Effective Teaching
-                    </h3>
-                    <p data-i18n="feat4Desc" class="text-slate-600 text-sm sm:text-base leading-relaxed">
-                        Encouraging, interactive screen-sharing lessons that build genuine confidence in Makharij (articulation points) and fluency without stress.
-                    </p>
-                </div>
-
-                <!-- Feature 5 -->
-                <div class="p-7 rounded-2xl bg-ivoryWarm border border-antiqueGold/25 hover:border-antiqueGold transition-all shadow-sm md:col-span-2 lg:col-span-2">
-                    <div class="flex flex-col sm:flex-row sm:items-center gap-5">
-                        <div class="w-14 h-14 shrink-0 rounded-xl bg-emeraldDeep text-antiqueGold flex items-center justify-center text-2xl shadow">
-                            <i class="fa-solid fa-clock"></i>
+        <!-- DEMO BOOKING FORM (Redirects to Teem App) -->
+        <section id="demo-booking" class="py-20 bg-midnightTeal text-white">
+            <div class="max-w-3xl mx-auto px-4 sm:px-6">
+                <div class="bg-ivoryWarm text-slate-800 rounded-3xl p-8 shadow-2xl border-2 border-antiqueGold">
+                    <h3 class="heading-font text-3xl font-bold text-midnightTeal text-center mb-6">Book Your Free Trial Class</h3>
+                    <form onsubmit="submitToTeemApp(event)" class="space-y-4">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <input type="text" id="custName" required placeholder="Student Full Name *" class="w-full p-3.5 rounded-xl border border-slate-300">
+                            <input type="text" id="custCountry" required placeholder="Country / Timezone *" class="w-full p-3.5 rounded-xl border border-slate-300">
                         </div>
-                        <div>
-                            <h3 data-i18n="feat5Title" class="heading-font text-2xl font-bold text-midnightTeal mb-2">
-                                Flexible 24/7 Global Timings
-                            </h3>
-                            <p data-i18n="feat5Desc" class="text-slate-600 text-sm sm:text-base leading-relaxed">
-                                Schedule morning, evening, or weekend classes around school and work—serving families across the USA, UK, Canada, Europe, Australia, UAE, and worldwide.
-                            </p>
-                            <div class="mt-3 flex flex-wrap gap-2 text-xs font-semibold text-emeraldDeep">
-                                <span class="px-2.5 py-1 rounded-md bg-emeraldDeep/10">🇺🇸 USA & Canada</span>
-                                <span class="px-2.5 py-1 rounded-md bg-emeraldDeep/10">🇬🇧 UK & Europe</span>
-                                <span class="px-2.5 py-1 rounded-md bg-emeraldDeep/10">🇦🇺 Australia</span>
-                                <span class="px-2.5 py-1 rounded-md bg-emeraldDeep/10">🇦🇪 UAE & GCC</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 5. FREE DEMO CLASS & INSTANT WHATSAPP ENROLLMENT SECTION -->
-    <section id="demo-booking" class="py-20 sm:py-24 bg-gradient-to-br from-midnightTeal via-emeraldDeep to-midnightTeal text-ivoryWarm relative overflow-hidden">
-        <div class="absolute inset-0 islamic-pattern opacity-80 pointer-events-none"></div>
-
-        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
-                <!-- Left Info & Direct WhatsApp Cards -->
-                <div class="lg:col-span-5 space-y-6">
-                    <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-antiqueGold/20 border border-antiqueGold text-antiqueGold text-xs font-bold uppercase tracking-wider">
-                        <i class="fa-solid fa-gift"></i>
-                        <span data-i18n="heroBadge">Free Demo Class Available!</span>
-                    </div>
-
-                    <h2 data-i18n="demoHeading" class="heading-font text-3xl sm:text-4xl lg:text-5xl font-bold text-white leading-tight">
-                        Start Your Quranic Journey With a Free Trial Class
-                    </h2>
-
-                    <p data-i18n="demoSubheading" class="text-ivoryWarm/85 text-base sm:text-lg leading-relaxed">
-                        Experience our one-on-one teaching methodology firsthand with zero obligation. Fill out the quick form or message us directly on WhatsApp to schedule your preferred time slot.
-                    </p>
-
-                    <!-- Direct Clickable WhatsApp Contact Cards -->
-                    <div class="space-y-4 pt-2">
-                        <h3 data-i18n="whatsappDirectTitle" class="text-sm font-bold uppercase tracking-wider text-antiqueGold">
-                            Instant WhatsApp Enrollment Lines
-                        </h3>
-
-                        <a href="https://wa.me/923241745886?text=Assalam-o-Alaikum!%20I%20want%20to%20enroll%20in%20a%20Free%20Demo%20Class%20at%20Al%20Samad%20Online%20Quran%20Academy." target="_blank" rel="noopener" class="block p-5 rounded-2xl bg-white/10 hover:bg-white/15 border border-antiqueGold/45 backdrop-blur-sm transition-all group">
-                            <div class="flex items-center justify-between">
-                                <div class="flex items-center gap-4">
-                                    <div class="w-12 h-12 rounded-xl bg-emerald-500 text-white flex items-center justify-center text-2xl shadow-lg">
-                                        <i class="fa-brands fa-whatsapp"></i>
-                                    </div>
-                                    <div>
-                                        <span data-i18n="whatsappLine1" class="block text-xs text-antiqueGold font-semibold uppercase">Primary WhatsApp Support</span>
-                                        <span class="text-lg sm:text-xl font-bold text-white tracking-wide" dir="ltr">+92 324 1745886</span>
-                                    </div>
-                                </div>
-                                <span class="px-3 py-1.5 rounded-lg bg-antiqueGold text-midnightTeal text-xs font-bold group-hover:scale-105 transition-transform" data-i18n="chatNowBtn">
-                                    Chat Now
-                                </span>
-                            </div>
-                        </a>
-
-                        <a href="https://wa.me/923160476714?text=Assalam-o-Alaikum!%20I%20want%20to%20enroll%20in%20a%20Free%20Demo%20Class%20at%20Al%20Samad%20Online%20Quran%20Academy." target="_blank" rel="noopener" class="block p-5 rounded-2xl bg-white/10 hover:bg-white/15 border border-antiqueGold/45 backdrop-blur-sm transition-all group">
-                            <div class="flex items-center justify-between">
-                                <div class="flex items-center gap-4">
-                                    <div class="w-12 h-12 rounded-xl bg-emerald-500 text-white flex items-center justify-center text-2xl shadow-lg">
-                                        <i class="fa-brands fa-whatsapp"></i>
-                                    </div>
-                                    <div>
-                                        <span data-i18n="whatsappLine2" class="block text-xs text-antiqueGold font-semibold uppercase">Secondary WhatsApp Support</span>
-                                        <span class="text-lg sm:text-xl font-bold text-white tracking-wide" dir="ltr">+92 316 0476714</span>
-                                    </div>
-                                </div>
-                                <span class="px-3 py-1.5 rounded-lg bg-antiqueGold text-midnightTeal text-xs font-bold group-hover:scale-105 transition-transform" data-i18n="chatNowBtn">
-                                    Chat Now
-                                </span>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Right Interactive Free Trial Booking Form -->
-                <div class="lg:col-span-7">
-                    <div class="bg-ivoryWarm text-slate-800 rounded-3xl p-6 sm:p-10 shadow-2xl border-2 border-antiqueGold/50">
-                        <div class="mb-6 pb-4 border-b border-slate-200">
-                            <h3 data-i18n="formTitle" class="heading-font text-2xl sm:text-3xl font-bold text-midnightTeal">
-                                Book Your Free Demo Class
-                            </h3>
-                            <p data-i18n="formSubtitle" class="text-sm text-slate-600 mt-1">
-                                Complete the details below to connect instantly with our academic coordinator on WhatsApp.
-                            </p>
-                        </div>
-
-                        <form id="inlineBookingForm" onsubmit="handleBookingSubmit(event, 'inline')" class="space-y-5">
-                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
-                                <!-- Student Name -->
-                                <div>
-                                    <label for="inlineName" data-i18n="labelStudentName" class="block text-sm font-semibold text-midnightTeal mb-1.5">Student Name *</label>
-                                    <input type="text" id="inlineName" required data-i18n-placeholder="phStudentName" placeholder="Enter student's full name" class="w-full px-4 py-3 rounded-xl bg-white border border-slate-300 focus:border-emeraldDeep focus:ring-2 focus:ring-emeraldDeep/20 outline-none transition-all text-sm">
-                                </div>
-
-                                <!-- Age Group -->
-                                <div>
-                                    <label for="inlineAge" data-i18n="labelAgeGroup" class="block text-sm font-semibold text-midnightTeal mb-1.5">Age Group *</label>
-                                    <select id="inlineAge" required class="w-full px-4 py-3 rounded-xl bg-white border border-slate-300 focus:border-emeraldDeep focus:ring-2 focus:ring-emeraldDeep/20 outline-none transition-all text-sm">
-                                        <option value="Kid" data-i18n="optKid">Kid (4 - 15 Years)</option>
-                                        <option value="Adult" data-i18n="optAdult">Adult (16+ Years)</option>
-                                    </select>
-                                </div>
-                            </div>
-
-                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
-                                <!-- Course Selection -->
-                                <div>
-                                    <label for="inlineCourse" data-i18n="labelCourse" class="block text-sm font-semibold text-midnightTeal mb-1.5">Select Course *</label>
-                                    <select id="inlineCourse" required class="course-select-dropdown w-full px-4 py-3 rounded-xl bg-white border border-slate-300 focus:border-emeraldDeep focus:ring-2 focus:ring-emeraldDeep/20 outline-none transition-all text-sm">
-                                        <!-- Dynamically populated -->
-                                    </select>
-                                </div>
-
-                                <!-- Preferred Teacher -->
-                                <div>
-                                    <label for="inlineTeacher" data-i18n="labelTeacher" class="block text-sm font-semibold text-midnightTeal mb-1.5">Preferred Teacher *</label>
-                                    <select id="inlineTeacher" required class="w-full px-4 py-3 rounded-xl bg-white border border-slate-300 focus:border-emeraldDeep focus:ring-2 focus:ring-emeraldDeep/20 outline-none transition-all text-sm">
-                                        <option value="Male Teacher" data-i18n="optMale">Male Teacher</option>
-                                        <option value="Female Teacher" data-i18n="optFemale">Female Teacher</option>
-                                    </select>
-                                </div>
-                            </div>
-
-                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
-                                <!-- Country / Timezone -->
-                                <div>
-                                    <label for="inlineCountry" data-i18n="labelCountry" class="block text-sm font-semibold text-midnightTeal mb-1.5">Country / Timezone *</label>
-                                    <input type="text" id="inlineCountry" required data-i18n-placeholder="phCountry" placeholder="e.g., UK (GMT), USA (EST), UAE" class="w-full px-4 py-3 rounded-xl bg-white border border-slate-300 focus:border-emeraldDeep focus:ring-2 focus:ring-emeraldDeep/20 outline-none transition-all text-sm">
-                                </div>
-
-                                <!-- Student WhatsApp Number -->
-                                <div>
-                                    <label for="inlineWhatsapp" data-i18n="labelWhatsapp" class="block text-sm font-semibold text-midnightTeal mb-1.5">Your WhatsApp Number *</label>
-                                    <input type="tel" id="inlineWhatsapp" required dir="ltr" placeholder="+1 234 567 8900" class="w-full px-4 py-3 rounded-xl bg-white border border-slate-300 focus:border-emeraldDeep focus:ring-2 focus:ring-emeraldDeep/20 outline-none transition-all text-sm">
-                                </div>
-                            </div>
-
-                            <!-- Choose Academy WhatsApp Coordinator -->
-                            <div>
-                                <label data-i18n="labelCoordinator" class="block text-sm font-semibold text-midnightTeal mb-2">Send Request To Academy WhatsApp:</label>
-                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                                    <label class="flex items-center gap-3 p-3 rounded-xl bg-white border border-slate-300 cursor-pointer hover:border-emeraldDeep transition-all">
-                                        <input type="radio" name="inlineDestPhone" value="923241745886" checked class="accent-emeraldDeep w-4 h-4">
-                                        <span class="text-sm font-semibold text-midnightTeal" dir="ltr">+92 324 1745886</span>
-                                    </label>
-                                    <label class="flex items-center gap-3 p-3 rounded-xl bg-white border border-slate-300 cursor-pointer hover:border-emeraldDeep transition-all">
-                                        <input type="radio" name="inlineDestPhone" value="923160476714" class="accent-emeraldDeep w-4 h-4">
-                                        <span class="text-sm font-semibold text-midnightTeal" dir="ltr">+92 316 0476714</span>
-                                    </label>
-                                </div>
-                            </div>
-
-                            <button type="submit" class="w-full py-4 rounded-xl bg-emeraldDeep hover:bg-midnightTeal text-white border border-antiqueGold font-bold text-base shadow-lg hover:shadow-xl transition-all flex items-center justify-center gap-2.5">
-                                <i class="fa-brands fa-whatsapp text-emerald-400 text-xl"></i>
-                                <span data-i18n="btnSubmitDemo">Confirm & Open WhatsApp</span>
-                            </button>
-                        </form>
-
-                        <!-- Confirmation State Box -->
-                        <div id="inlineSuccessBox" class="hidden mt-6 p-5 rounded-2xl bg-emerald-50 border border-emerald-300 text-emerald-950 space-y-2">
-                            <div class="flex items-center gap-2.5 font-bold text-emeraldDeep">
-                                <i class="fa-solid fa-circle-check text-xl"></i>
-                                <span data-i18n="confirmTitle">Demo Request Prepared!</span>
-                            </div>
-                            <p data-i18n="confirmMsg" class="text-sm">
-                                Your free demo details have been formatted for WhatsApp. If WhatsApp did not open automatically, click the button below:
-                            </p>
-                            <a id="inlineFallbackLink" href="#" target="_blank" rel="noopener" class="inline-flex items-center gap-2 mt-2 px-4 py-2 rounded-lg bg-emeraldDeep text-white text-xs font-bold">
-                                <i class="fa-brands fa-whatsapp"></i>
-                                <span data-i18n="openWhatsappAgain">Open WhatsApp Chat</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 6. TESTIMONIALS & INTERACTIVE FAQ SECTION -->
-    <section id="faq" class="py-20 sm:py-24 bg-ivoryWarm islamic-pattern-light">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <!-- Parent & Student Testimonials -->
-            <div class="mb-20">
-                <div class="text-center max-w-3xl mx-auto mb-12 space-y-3">
-                    <span data-i18n="testiEyebrow" class="inline-block px-4 py-1 rounded-full bg-emeraldDeep/10 text-emeraldDeep text-xs font-bold uppercase tracking-widest">
-                        Global Community
-                    </span>
-                    <h2 data-i18n="testiHeading" class="heading-font text-3xl sm:text-4xl font-bold text-midnightTeal">
-                        Trusted by Families Worldwide
-                    </h2>
-                </div>
-
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-7">
-                    <div class="bg-white p-7 rounded-2xl border border-antiqueGold/30 shadow-sm space-y-4">
-                        <div class="flex text-antiqueGold text-sm gap-1">
-                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                        </div>
-                        <p data-i18n="testi1Text" class="text-slate-600 text-sm sm:text-base italic leading-relaxed">
-                            "My two children started from Noorani Qaida and are now reading Nazra Quran fluently with proper Tajweed. Their teacher is remarkably patient and punctual."
-                        </p>
-                        <div class="pt-3 border-t border-slate-100">
-                            <div data-i18n="testi1Author" class="font-bold text-midnightTeal text-sm">Amina Siddiqui</div>
-                            <div data-i18n="testi1Loc" class="text-xs text-slate-500">London, United Kingdom</div>
-                        </div>
-                    </div>
-
-                    <div class="bg-white p-7 rounded-2xl border border-antiqueGold/30 shadow-sm space-y-4">
-                        <div class="flex text-antiqueGold text-sm gap-1">
-                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                        </div>
-                        <p data-i18n="testi2Text" class="text-slate-600 text-sm sm:text-base italic leading-relaxed">
-                            "As a working professional in Texas, the flexible evening timings made it possible for me to finally improve my Tajweed and understand Quran translation."
-                        </p>
-                        <div class="pt-3 border-t border-slate-100">
-                            <div data-i18n="testi2Author" class="font-bold text-midnightTeal text-sm">Tariq Mahmood</div>
-                            <div data-i18n="testi2Loc" class="text-xs text-slate-500">Houston, USA</div>
-                        </div>
-                    </div>
-
-                    <div class="bg-white p-7 rounded-2xl border border-antiqueGold/30 shadow-sm space-y-4">
-                        <div class="flex text-antiqueGold text-sm gap-1">
-                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                        </div>
-                        <p data-i18n="testi3Text" class="text-slate-600 text-sm sm:text-base italic leading-relaxed">
-                            "Having a dedicated female Quran teacher for myself and my daughter gave us complete comfort. Highly recommend Al Samad Online Quran Academy."
-                        </p>
-                        <div class="pt-3 border-t border-slate-100">
-                            <div data-i18n="testi3Author" class="font-bold text-midnightTeal text-sm">Fatima Al-Mansoor</div>
-                            <div data-i18n="testi3Loc" class="text-xs text-slate-500">Dubai, UAE</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Interactive FAQ Accordion -->
-            <div class="max-w-3xl mx-auto">
-                <div class="text-center mb-10 space-y-3">
-                    <span data-i18n="faqEyebrow" class="inline-block px-4 py-1 rounded-full bg-antiqueGold/20 text-antiqueGoldDark text-xs font-bold uppercase tracking-widest">
-                        Have Questions?
-                    </span>
-                    <h2 data-i18n="faqHeading" class="heading-font text-3xl sm:text-4xl font-bold text-midnightTeal">
-                        Frequently Asked Questions
-                    </h2>
-                </div>
-
-                <div id="faqContainer" class="space-y-4">
-                    <!-- Dynamically populated by JavaScript -->
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- PROFESSIONAL FOOTER -->
-    <footer class="bg-midnightTeal text-ivoryWarm/85 border-t-2 border-antiqueGold/40 pt-16 pb-10">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 pb-12 border-b border-white/10">
-                <!-- Col 1: Brand -->
-                <div class="space-y-4">
-                    <div class="flex items-center gap-3">
-                        <div class="w-10 h-10 rounded-xl bg-emeraldDeep border border-antiqueGold flex items-center justify-center text-antiqueGold">
-                            <i class="fa-solid fa-book-quran"></i>
-                        </div>
-                        <span data-i18n="brandName" class="brand-font text-lg font-bold text-white">Al Samad Online Quran Academy</span>
-                    </div>
-                    <p data-i18n="footerDesc" class="text-sm text-ivoryWarm/75 leading-relaxed">
-                        Making Quran learning easy, interactive, and meaningful from the comfort of your home with qualified male and female teachers worldwide.
-                    </p>
-                </div>
-
-                <!-- Col 2: Quick Links -->
-                <div>
-                    <h4 data-i18n="footerLinksTitle" class="text-antiqueGold font-bold uppercase tracking-wider text-xs mb-4">Quick Navigation</h4>
-                    <ul class="space-y-2.5 text-sm">
-                        <li><a href="#home" data-i18n="navHome" class="hover:text-antiqueGold transition-colors">Home</a></li>
-                        <li><a href="#courses" data-i18n="navCourses" class="hover:text-antiqueGold transition-colors">Courses</a></li>
-                        <li><a href="#why-us" data-i18n="navWhyUs" class="hover:text-antiqueGold transition-colors">Why Choose Us</a></li>
-                        <li><a href="#demo-booking" data-i18n="navFreeDemo" class="hover:text-antiqueGold transition-colors">Free Demo</a></li>
-                    </ul>
-                </div>
-
-                <!-- Col 3: Courses -->
-                <div>
-                    <h4 data-i18n="footerCoursesTitle" class="text-antiqueGold font-bold uppercase tracking-wider text-xs mb-4">Our Programs</h4>
-                    <ul id="footerCoursesList" class="space-y-2.5 text-sm">
-                        <!-- Dynamically populated -->
-                    </ul>
-                </div>
-
-                <!-- Col 4: Contact & WhatsApp -->
-                <div class="space-y-3">
-                    <h4 data-i18n="footerContactTitle" class="text-antiqueGold font-bold uppercase tracking-wider text-xs mb-4">24/7 WhatsApp Admissions</h4>
-                    <a href="https://wa.me/923241745886" target="_blank" rel="noopener" class="flex items-center gap-2.5 text-sm hover:text-antiqueGold transition-colors">
-                        <i class="fa-brands fa-whatsapp text-emerald-400 text-base"></i>
-                        <span dir="ltr">+92 324 1745886</span>
-                    </a>
-                    <a href="https://wa.me/923160476714" target="_blank" rel="noopener" class="flex items-center gap-2.5 text-sm hover:text-antiqueGold transition-colors">
-                        <i class="fa-brands fa-whatsapp text-emerald-400 text-base"></i>
-                        <span dir="ltr">+92 316 0476714</span>
-                    </a>
-                    <div class="pt-3">
-                        <button onclick="openDemoModal()" class="px-4 py-2.5 rounded-xl bg-antiqueGold text-midnightTeal text-xs font-bold hover:bg-amber-400 transition-colors">
-                            <span data-i18n="btnBookDemo">Book Free Demo Class</span>
-                        </button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-ivoryWarm/60">
-                <p>© <span id="currentYear"></span> <span data-i18n="brandName">Al Samad Online Quran Academy</span>. <span data-i18n="rightsReserved">All rights reserved.</span></p>
-                <p data-i18n="globalServe">Serving Students in USA, UK, Canada, Europe, Australia, UAE & Worldwide</p>
-            </div>
-        </div>
-    </footer>
-
-    <!-- FLOATING WHATSAPP WIDGET WITH BOTH NUMBERS -->
-    <div class="fixed bottom-5 end-5 z-50">
-        <!-- Expandable WhatsApp Menu -->
-        <div id="floatingWaMenu" class="hidden mb-3 w-72 rounded-2xl bg-white border border-antiqueGold shadow-2xl overflow-hidden">
-            <div class="bg-emeraldDeep text-white p-4">
-                <div class="flex items-center justify-between">
-                    <span data-i18n="waWidgetHeader" class="font-bold text-sm">Chat with Admissions</span>
-                    <button onclick="toggleFloatingWa()" class="text-white/80 hover:text-white">
-                        <i class="fa-solid fa-xmark"></i>
-                    </button>
-                </div>
-                <p data-i18n="waWidgetSub" class="text-xs text-ivoryWarm/80 mt-1">Select a WhatsApp line below:</p>
-            </div>
-            <div class="p-3 space-y-2 bg-ivoryWarm">
-                <a href="https://wa.me/923241745886?text=Assalam-o-Alaikum%20Al%20Samad%20Online%20Quran%20Academy!%20I%20have%20a%20question%20about%20Quran%20classes." target="_blank" rel="noopener" class="flex items-center gap-3 p-2.5 rounded-xl bg-white hover:bg-emerald-50 border border-slate-200 transition-colors">
-                    <i class="fa-brands fa-whatsapp text-emerald-600 text-2xl"></i>
-                    <div>
-                        <span data-i18n="admissionDesk1" class="block text-[11px] text-slate-500 font-semibold">Admissions Desk I</span>
-                        <span class="text-sm font-bold text-midnightTeal" dir="ltr">+92 324 1745886</span>
-                    </div>
-                </a>
-                <a href="https://wa.me/923160476714?text=Assalam-o-Alaikum%20Al%20Samad%20Online%20Quran%20Academy!%20I%20have%20a%20question%20about%20Quran%20classes." target="_blank" rel="noopener" class="flex items-center gap-3 p-2.5 rounded-xl bg-white hover:bg-emerald-50 border border-slate-200 transition-colors">
-                    <i class="fa-brands fa-whatsapp text-emerald-600 text-2xl"></i>
-                    <div>
-                        <span data-i18n="admissionDesk2" class="block text-[11px] text-slate-500 font-semibold">Admissions Desk II</span>
-                        <span class="text-sm font-bold text-midnightTeal" dir="ltr">+92 316 0476714</span>
-                    </div>
-                </a>
-            </div>
-        </div>
-
-        <!-- Floating Trigger Button -->
-        <button onclick="toggleFloatingWa()" aria-label="Chat on WhatsApp" class="ms-auto flex items-center gap-2.5 px-4 py-3.5 rounded-full bg-emerald-600 hover:bg-emerald-700 text-white shadow-2xl border-2 border-white transition-transform hover:scale-105">
-            <i class="fa-brands fa-whatsapp text-2xl"></i>
-            <span data-i18n="btnChatWhatsapp" class="font-bold text-sm hidden sm:inline">Chat on WhatsApp</span>
-        </button>
-    </div>
-
-    <!-- MODAL 1: COURSE SYLLABUS DETAILS DRAWER/MODAL -->
-    <div id="syllabusModal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-midnightTeal/75 backdrop-blur-sm">
-        <div class="bg-ivoryWarm rounded-3xl max-w-2xl w-full border-2 border-antiqueGold shadow-2xl overflow-hidden animate-fadeIn">
-            <div class="bg-gradient-to-r from-midnightTeal to-emeraldDeep text-white p-6 flex items-start justify-between gap-4">
-                <div>
-                    <span data-i18n="syllabusBadge" class="inline-block px-3 py-0.5 rounded-full bg-antiqueGold/20 text-antiqueGold text-xs font-bold uppercase tracking-wider mb-2">
-                        Course Syllabus & Overview
-                    </span>
-                    <h3 id="modalCourseTitle" class="heading-font text-2xl sm:text-3xl font-bold text-white"></h3>
-                </div>
-                <button onclick="closeSyllabusModal()" class="w-9 h-9 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center text-white transition-colors">
-                    <i class="fa-solid fa-xmark"></i>
-                </button>
-            </div>
-
-            <div class="p-6 sm:p-8 space-y-5 max-h-[75vh] overflow-y-auto">
-                <p id="modalCourseDesc" class="text-slate-700 text-base leading-relaxed"></p>
-
-                <div class="bg-white rounded-2xl p-5 border border-antiqueGold/30">
-                    <h4 data-i18n="syllabusHighlightsTitle" class="font-bold text-midnightTeal text-sm uppercase tracking-wider mb-3 flex items-center gap-2">
-                        <i class="fa-solid fa-list-check text-antiqueGoldDark"></i>
-                        <span>Key Learning Modules</span>
-                    </h4>
-                    <ul id="modalCourseModules" class="space-y-2.5 text-sm text-slate-700">
-                        <!-- Populated dynamically -->
-                    </ul>
-                </div>
-
-                <div class="grid grid-cols-2 gap-4 text-xs sm:text-sm">
-                    <div class="p-3.5 rounded-xl bg-emeraldDeep/5 border border-emeraldDeep/15">
-                        <span data-i18n="syllabusFormatLabel" class="block text-slate-500 font-medium">Class Format</span>
-                        <span data-i18n="syllabusFormatVal" class="font-bold text-midnightTeal">1-on-1 Live (Zoom / Meet / Skype)</span>
-                    </div>
-                    <div class="p-3.5 rounded-xl bg-emeraldDeep/5 border border-emeraldDeep/15">
-                        <span data-i18n="syllabusEligibilityLabel" class="block text-slate-500 font-medium">Eligibility</span>
-                        <span data-i18n="syllabusEligibilityVal" class="font-bold text-midnightTeal">Kids & Adults (All Levels)</span>
-                    </div>
-                </div>
-
-                <div class="pt-2 flex flex-col sm:flex-row gap-3">
-                    <button id="modalEnrollBtn" class="flex-1 py-3.5 px-6 rounded-xl bg-emeraldDeep hover:bg-midnightTeal text-white border border-antiqueGold font-bold text-sm flex items-center justify-center gap-2 shadow-md transition-all">
-                        <i class="fa-solid fa-calendar-check text-antiqueGold"></i>
-                        <span data-i18n="btnEnrollDemo">Enroll / Book Free Demo</span>
-                    </button>
-                    <button onclick="closeSyllabusModal()" class="py-3.5 px-6 rounded-xl bg-slate-200 hover:bg-slate-300 text-slate-800 font-semibold text-sm transition-colors">
-                        <span data-i18n="btnClose">Close</span>
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- MODAL 2: INTERACTIVE FREE DEMO BOOKING MODAL -->
-    <div id="demoModal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-midnightTeal/75 backdrop-blur-sm">
-        <div class="bg-ivoryWarm rounded-3xl max-w-xl w-full border-2 border-antiqueGold shadow-2xl overflow-hidden">
-            <div class="bg-gradient-to-r from-midnightTeal to-emeraldDeep text-white p-6 flex items-center justify-between">
-                <div>
-                    <span data-i18n="heroBadge" class="text-xs font-bold uppercase tracking-wider text-antiqueGold block">Free Demo Class Available!</span>
-                    <h3 data-i18n="btnBookDemo" class="heading-font text-2xl font-bold text-white">Book Free Demo Class</h3>
-                </div>
-                <button onclick="closeDemoModal()" class="w-9 h-9 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center text-white">
-                    <i class="fa-solid fa-xmark"></i>
-                </button>
-            </div>
-
-            <div class="p-6 max-h-[80vh] overflow-y-auto">
-                <form id="modalBookingForm" onsubmit="handleBookingSubmit(event, 'modal')" class="space-y-4">
-                    <div>
-                        <label for="modalName" data-i18n="labelStudentName" class="block text-xs font-bold text-midnightTeal mb-1">Student Name *</label>
-                        <input type="text" id="modalName" required data-i18n-placeholder="phStudentName" placeholder="Enter student's full name" class="w-full px-3.5 py-2.5 rounded-xl bg-white border border-slate-300 focus:border-emeraldDeep outline-none text-sm">
-                    </div>
-
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                        <div>
-                            <label for="modalAge" data-i18n="labelAgeGroup" class="block text-xs font-bold text-midnightTeal mb-1">Age Group *</label>
-                            <select id="modalAge" required class="w-full px-3.5 py-2.5 rounded-xl bg-white border border-slate-300 focus:border-emeraldDeep outline-none text-sm">
-                                <option value="Kid" data-i18n="optKid">Kid (4 - 15 Years)</option>
-                                <option value="Adult" data-i18n="optAdult">Adult (16+ Years)</option>
-                            </select>
-                        </div>
-
-                        <div>
-                            <label for="modalTeacher" data-i18n="labelTeacher" class="block text-xs font-bold text-midnightTeal mb-1">Preferred Teacher *</label>
-                            <select id="modalTeacher" required class="w-full px-3.5 py-2.5 rounded-xl bg-white border border-slate-300 focus:border-emeraldDeep outline-none text-sm">
-                                <option value="Male Teacher" data-i18n="optMale">Male Teacher</option>
-                                <option value="Female Teacher" data-i18n="optFemale">Female Teacher</option>
-                            </select>
-                        </div>
-                    </div>
-
-                    <div>
-                        <label for="modalCourse" data-i18n="labelCourse" class="block text-xs font-bold text-midnightTeal mb-1">Select Course *</label>
-                        <select id="modalCourse" required class="course-select-dropdown w-full px-3.5 py-2.5 rounded-xl bg-white border border-slate-300 focus:border-emeraldDeep outline-none text-sm">
-                            <!-- Dynamically populated -->
+                        <select id="custCourse" class="w-full p-3.5 rounded-xl border border-slate-300">
+                            <option value="Noorani Qaida & Nazra">Noorani Qaida & Nazra Quran</option>
+                            <option value="Quran with Tajweed">Quran with Tajweed</option>
+                            <option value="Hifz-ul-Quran">Hifz-ul-Quran</option>
+                            <option value="Islamic Studies & Hadees">Islamic Studies & Hadees</option>
                         </select>
-                    </div>
+                        <button type="submit" class="w-full py-4 rounded-xl bg-emeraldDeep hover:bg-midnightTeal text-white font-bold text-base shadow-lg flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-comments text-antiqueGold"></i>
+                            <span>Confirm & Connect via Teem App</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
 
+        <!-- FOOTER (With Discreet Client Admin Portal Link) -->
+        <footer class="bg-midnightTeal text-ivoryWarm/80 border-t border-antiqueGold/30 py-10">
+            <div class="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs">
+                <p>© 2026 <span id="footerAcademyName">Al Samad Online Quran Academy</span>. All Rights Reserved.</p>
+                <!-- Secret Client Login Trigger -->
+                <button onclick="switchToAdminPortal()" class="text-ivoryWarm/40 hover:text-antiqueGold transition-colors flex items-center gap-1.5">
+                    <i class="fa-solid fa-lock text-[10px]"></i>
+                    <span>Client Portal</span>
+                </button>
+            </div>
+        </footer>
+    </div>
+
+    <!-- =================================================================== -->
+    <!-- VIEW 2: SEPARATE CLIENT ADMIN LOGIN & DASHBOARD INTERFACE           -->
+    <!-- (یہ انٹرفیس صرف کلائنٹ کو لاگ ان کرنے کے لیے الگ نظر آئے گا)          -->
+    <!-- =================================================================== -->
+    <div id="adminPortalView" class="hidden min-h-screen bg-slate-900 text-white flex flex-col justify-center items-center p-4">
+        
+        <!-- Back to Live Website Button -->
+        <div class="w-full max-w-4xl flex justify-between items-center mb-6">
+            <button onclick="switchToPublicSite()" class="px-4 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-antiqueGold text-sm font-semibold flex items-center gap-2 border border-slate-700">
+                <i class="fa-solid fa-arrow-left"></i>
+                <span>View Live Website</span>
+            </button>
+            <span class="text-xs text-slate-400">Secure Client Management System</span>
+        </div>
+
+        <!-- SCREEN A: LOGIN BOX (اگر کلائنٹ لاگ ان نہیں ہے) -->
+        <div id="clientLoginScreen" class="w-full max-w-md bg-slate-800 p-8 rounded-3xl border border-antiqueGold/40 shadow-2xl space-y-6">
+            <div class="text-center space-y-2">
+                <div class="w-16 h-16 rounded-2xl bg-emeraldDeep border border-antiqueGold mx-auto flex items-center justify-center text-antiqueGold text-2xl shadow-lg">
+                    <i class="fa-solid fa-user-shield"></i>
+                </div>
+                <h2 class="text-2xl font-bold text-white">Client Admin Login</h2>
+                <p class="text-xs text-slate-400">Sign in to manage website content, images, and experience without coding.</p>
+            </div>
+
+            <form onsubmit="handleClientLogin(event)" class="space-y-4">
+                <div>
+                    <label class="block text-xs font-semibold text-slate-300 mb-1.5">Username</label>
+                    <input type="text" id="loginUsername" required placeholder="Enter your username" class="w-full p-3.5 rounded-xl bg-slate-900 border border-slate-700 text-white text-sm focus:border-antiqueGold outline-none">
+                </div>
+                <div>
+                    <label class="block text-xs font-semibold text-slate-300 mb-1.5">Password</label>
+                    <input type="password" id="loginPassword" required placeholder="Enter your password" class="w-full p-3.5 rounded-xl bg-slate-900 border border-slate-700 text-white text-sm focus:border-antiqueGold outline-none">
+                </div>
+                <button type="submit" class="w-full py-3.5 rounded-xl bg-antiqueGold hover:bg-amber-400 text-midnightTeal font-bold text-sm shadow-lg transition-all">
+                    Login to Dashboard
+                </button>
+            </form>
+        </div>
+
+        <!-- SCREEN B: FULL NO-CODE DASHBOARD (لاگ ان ہونے کے بعد کلائنٹ کا اصل کنٹرول پینل) -->
+        <div id="clientDashboardScreen" class="hidden w-full max-w-4xl bg-slate-800 rounded-3xl border border-antiqueGold/40 shadow-2xl overflow-hidden">
+            <div class="bg-emeraldDeep p-6 flex flex-wrap items-center justify-between gap-4 border-b border-antiqueGold/30">
+                <div>
+                    <h2 class="text-xl sm:text-2xl font-bold text-white flex items-center gap-2">
+                        <i class="fa-solid fa-sliders text-antiqueGold"></i>
+                        <span>Website Control Dashboard</span>
+                    </h2>
+                    <p class="text-xs text-ivoryWarm/80">Any changes saved here will appear live on your website.</p>
+                </div>
+                <button onclick="handleClientLogout()" class="px-4 py-2 rounded-xl bg-red-600 hover:bg-red-700 text-white text-xs font-bold flex items-center gap-2">
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                    <span>Logout</span>
+                </button>
+            </div>
+
+            <div class="p-6 sm:p-8 space-y-8">
+                <!-- 1. Basic Info & Teem App Settings -->
+                <div class="bg-slate-900/60 p-6 rounded-2xl border border-slate-700 space-y-4">
+                    <h3 class="text-base font-bold text-antiqueGold border-b border-slate-700 pb-2">1. Academy Name & Teem App Contact</h3>
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                         <div>
-                            <label for="modalCountry" data-i18n="labelCountry" class="block text-xs font-bold text-midnightTeal mb-1">Country / Timezone *</label>
-                            <input type="text" id="modalCountry" required data-i18n-placeholder="phCountry" placeholder="e.g., UK, USA, Canada, UAE" class="w-full px-3.5 py-2.5 rounded-xl bg-white border border-slate-300 focus:border-emeraldDeep outline-none text-sm">
+                            <label class="block text-xs text-slate-300 mb-1">Academy Title</label>
+                            <input type="text" id="editAcademyName" class="w-full p-3 rounded-xl bg-slate-800 border border-slate-600 text-sm">
                         </div>
-
                         <div>
-                            <label for="modalWhatsapp" data-i18n="labelWhatsapp" class="block text-xs font-bold text-midnightTeal mb-1">Your WhatsApp Number *</label>
-                            <input type="tel" id="modalWhatsapp" required dir="ltr" placeholder="+44 7700 900077" class="w-full px-3.5 py-2.5 rounded-xl bg-white border border-slate-300 focus:border-emeraldDeep outline-none text-sm">
+                            <label class="block text-xs text-slate-300 mb-1">Teem App Link / Contact URL</label>
+                            <input type="text" id="editTeemUrl" class="w-full p-3 rounded-xl bg-slate-800 border border-slate-600 text-sm" placeholder="https://teem.pk/your-id">
+                        </div>
+                        <div>
+                            <label class="block text-xs text-slate-300 mb-1">Primary Display Number</label>
+                            <input type="text" id="editPhone1" class="w-full p-3 rounded-xl bg-slate-800 border border-slate-600 text-sm">
+                        </div>
+                        <div>
+                            <label class="block text-xs text-slate-300 mb-1">Secondary Display Number</label>
+                            <input type="text" id="editPhone2" class="w-full p-3 rounded-xl bg-slate-800 border border-slate-600 text-sm">
                         </div>
                     </div>
-
-                    <div>
-                        <label data-i18n="labelCoordinator" class="block text-xs font-bold text-midnightTeal mb-1.5">Send Request To Academy WhatsApp:</label>
-                        <div class="grid grid-cols-2 gap-2.5">
-                            <label class="flex items-center gap-2 p-2.5 rounded-xl bg-white border border-slate-300 cursor-pointer">
-                                <input type="radio" name="modalDestPhone" value="923241745886" checked class="accent-emeraldDeep">
-                                <span class="text-xs font-bold text-midnightTeal" dir="ltr">+92 324 1745886</span>
-                            </label>
-                            <label class="flex items-center gap-2 p-2.5 rounded-xl bg-white border border-slate-300 cursor-pointer">
-                                <input type="radio" name="modalDestPhone" value="923160476714" class="accent-emeraldDeep">
-                                <span class="text-xs font-bold text-midnightTeal" dir="ltr">+92 316 0476714</span>
-                            </label>
-                        </div>
-                    </div>
-
-                    <button type="submit" class="w-full py-3.5 rounded-xl bg-emeraldDeep hover:bg-midnightTeal text-white border border-antiqueGold font-bold text-sm shadow-lg flex items-center justify-center gap-2">
-                        <i class="fa-brands fa-whatsapp text-emerald-400 text-lg"></i>
-                        <span data-i18n="btnSubmitDemo">Confirm & Open WhatsApp</span>
-                    </button>
-                </form>
-
-                <!-- Modal Confirmation Box -->
-                <div id="modalSuccessBox" class="hidden mt-4 p-4 rounded-xl bg-emerald-50 border border-emerald-300 text-emerald-950 space-y-2">
-                    <div class="flex items-center gap-2 font-bold text-emeraldDeep text-sm">
-                        <i class="fa-solid fa-circle-check"></i>
-                        <span data-i18n="confirmTitle">Demo Request Prepared!</span>
-                    </div>
-                    <p data-i18n="confirmMsg" class="text-xs">
-                        Your free demo details have been formatted for WhatsApp. If WhatsApp did not open automatically, click below:
-                    </p>
-                    <a id="modalFallbackLink" href="#" target="_blank" rel="noopener" class="inline-flex items-center gap-2 px-3.5 py-2 rounded-lg bg-emeraldDeep text-white text-xs font-bold">
-                        <i class="fa-brands fa-whatsapp"></i>
-                        <span data-i18n="openWhatsappAgain">Open WhatsApp Chat</span>
-                    </a>
                 </div>
+
+                <!-- 2. Upload Main Hero Photo (No-Code) -->
+                <div class="bg-slate-900/60 p-6 rounded-2xl border border-slate-700 space-y-4">
+                    <h3 class="text-base font-bold text-antiqueGold border-b border-slate-700 pb-2">2. Upload / Change Main Banner Photo</h3>
+                    <input type="file" id="editHeroImage" accept="image/*" class="w-full p-2.5 rounded-xl bg-slate-800 border border-slate-600 text-xs text-slate-300">
+                </div>
+
+                <!-- 3. Add Experience / Certificate / Achievement (No-Code) -->
+                <div class="bg-slate-900/60 p-6 rounded-2xl border border-slate-700 space-y-4">
+                    <h3 class="text-base font-bold text-antiqueGold border-b border-slate-700 pb-2">3. Add New Experience or Achievement</h3>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <input type="text" id="newExpTitle" placeholder="Experience Title (e.g. 10 Years Tajweed Expert)" class="w-full p-3 rounded-xl bg-slate-800 border border-slate-600 text-sm">
+                        <input type="file" id="newExpImage" accept="image/*" class="w-full p-2.5 rounded-xl bg-slate-800 border border-slate-600 text-xs">
+                    </div>
+                    <textarea id="newExpDesc" rows="2" placeholder="Write experience details here..." class="w-full p-3 rounded-xl bg-slate-800 border border-slate-600 text-sm"></textarea>
+                    <button type="button" onclick="addNewExperienceItem()" class="px-5 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold">
+                        + Add Experience Card
+                    </button>
+                </div>
+
+                <!-- Save All Button -->
+                <button onclick="saveAllClientSettings()" class="w-full py-4 rounded-xl bg-antiqueGold hover:bg-amber-400 text-midnightTeal font-bold text-base shadow-xl">
+                    Save & Publish All Changes Live
+                </button>
             </div>
         </div>
     </div>
 
-    <!-- COMPLETE MULTI-LANGUAGE DICTIONARY & APPLICATION LOGIC -->
+    <!-- ========================================================== -->
+    <!-- JAVASCRIPT LOGIC: SEPARATE INTERFACES & NO-CODE CMS        -->
+    <!-- ========================================================== -->
     <script>
-        const translations = {
-            en: {
-                dir: 'ltr',
-                brandName: 'Al Samad Online Quran Academy',
-                brandTagline: 'Global Quranic Excellence',
-                navHome: 'Home',
-                navCourses: 'Courses',
-                navWhyUs: 'Why Choose Us',
-                navFreeDemo: 'Free Demo',
-                navFaq: 'FAQ',
-                btnBookDemo: 'Book Free Demo Class',
-                btnChatWhatsapp: 'Chat on WhatsApp',
-                heroBadge: 'Free Demo Class Available!',
-                heroTitle: 'Learn the Quran with Al Samad Online Quran Academy',
-                heroSubtitle: 'Make Quran learning easy, interactive, and meaningful from the comfort of your home.',
-                heroDescription: 'Whether you are starting from the basics or improving your Quran recitation, we are here to help you learn with proper pronunciation and confidence.',
-                stat1: 'Live Interactive Classes',
-                stat2: 'Flexible Global Timings',
-                stat3: 'Male & Female Tutors',
-                hadithQuote: '"The best among you are those who learn the Quran and teach it." — Sahih al-Bukhari',
-                quickConnectLabel: 'Direct Admissions & WhatsApp Support',
-                admissionDesk1: 'Admissions Desk I',
-                admissionDesk2: 'Admissions Desk II',
-                coursesEyebrow: 'Structured Curriculum',
-                coursesHeading: 'What We Provide',
-                coursesSubheading: 'Comprehensive, step-by-step Islamic and Quranic programs tailored for children, beginners, and adults across the globe.',
-                btnViewSyllabus: 'View Syllabus',
-                btnEnrollDemo: 'Enroll / Free Demo',
-                syllabusBadge: 'Course Syllabus & Overview',
-                syllabusHighlightsTitle: 'Key Learning Modules',
-                syllabusFormatLabel: 'Class Format',
-                syllabusFormatVal: '1-on-1 Live (Zoom / Meet / Skype)',
-                syllabusEligibilityLabel: 'Eligibility',
-                syllabusEligibilityVal: 'Kids & Adults (All Levels)',
-                btnClose: 'Close',
-                whyEyebrow: 'Academy Excellence',
-                whyHeading: 'Why Choose Al Samad Academy',
-                whySubheading: 'Dedicated mentorship combining traditional Tajweed mastery with modern, supportive online teaching tools.',
-                feat1Title: 'One-to-One Live Online Classes',
-                feat1Desc: 'Personalized individual attention via Zoom, Skype, or Google Meet so every student learns at their own pace with immediate teacher feedback.',
-                feat2Title: 'Separate Classes for Kids & Adults',
-                feat2Desc: 'Age-appropriate teaching methodologies—engaging and patient guidance for young learners, and respectful, structured lessons for busy adults.',
-                feat3Title: 'Qualified Male & Female Teachers',
-                feat3Desc: 'Certified, experienced male and female Quran tutors fluent in Tajweed, Qira\'at, and multilingual communication for sisters, children, and brothers.',
-                feat4Title: 'Easy, Friendly & Effective Teaching',
-                feat4Desc: 'Encouraging, interactive screen-sharing lessons that build genuine confidence in Makharij (articulation points) and fluency without stress.',
-                feat5Title: 'Flexible 24/7 Global Timings',
-                feat5Desc: 'Schedule morning, evening, or weekend classes around school and work—serving families across the USA, UK, Canada, Europe, Australia, UAE, and worldwide.',
-                demoHeading: 'Start Your Quranic Journey With a Free Trial Class',
-                demoSubheading: 'Experience our one-on-one teaching methodology firsthand with zero obligation. Fill out the quick form or message us directly on WhatsApp to schedule your preferred time slot.',
-                whatsappDirectTitle: 'Instant WhatsApp Enrollment Lines',
-                whatsappLine1: 'Primary WhatsApp Support',
-                whatsappLine2: 'Secondary WhatsApp Support',
-                chatNowBtn: 'Chat Now',
-                formTitle: 'Book Your Free Demo Class',
-                formSubtitle: 'Complete the details below to connect instantly with our academic coordinator on WhatsApp.',
-                labelStudentName: 'Student Name *',
-                phStudentName: "Enter student's full name",
-                labelAgeGroup: 'Age Group *',
-                optKid: 'Kid (4 - 15 Years)',
-                optAdult: 'Adult (16+ Years)',
-                labelCourse: 'Select Course *',
-                labelTeacher: 'Preferred Teacher *',
-                optMale: 'Male Teacher',
-                optFemale: 'Female Teacher',
-                labelCountry: 'Country / Timezone *',
-                phCountry: 'e.g., UK (GMT), USA (EST), UAE',
-                labelWhatsapp: 'Your WhatsApp Number *',
-                labelCoordinator: 'Send Request To Academy WhatsApp:',
-                btnSubmitDemo: 'Confirm & Open WhatsApp',
-                confirmTitle: 'Demo Request Prepared!',
-                confirmMsg: 'Your free demo details have been formatted for WhatsApp. If WhatsApp did not open automatically, click the button below:',
-                openWhatsappAgain: 'Open WhatsApp Chat',
-                testiEyebrow: 'Global Community',
-                testiHeading: 'Trusted by Families Worldwide',
-                testi1Text: '"My two children started from Noorani Qaida and are now reading Nazra Quran fluently with proper Tajweed. Their teacher is remarkably patient and punctual."',
-                testi1Author: 'Amina Siddiqui',
-                testi1Loc: 'London, United Kingdom',
-                testi2Text: '"As a working professional in Texas, the flexible evening timings made it possible for me to finally improve my Tajweed and understand Quran translation."',
-                testi2Author: 'Tariq Mahmood',
-                testi2Loc: 'Houston, USA',
-                testi3Text: '"Having a dedicated female Quran teacher for myself and my daughter gave us complete comfort. Highly recommend Al Samad Online Quran Academy."',
-                testi3Author: 'Fatima Al-Mansoor',
-                testi3Loc: 'Dubai, UAE',
-                faqEyebrow: 'Have Questions?',
-                faqHeading: 'Frequently Asked Questions',
-                footerDesc: 'Making Quran learning easy, interactive, and meaningful from the comfort of your home with qualified male and female teachers worldwide.',
-                footerLinksTitle: 'Quick Navigation',
-                footerCoursesTitle: 'Our Programs',
-                footerContactTitle: '24/7 WhatsApp Admissions',
-                rightsReserved: 'All rights reserved.',
-                globalServe: 'Serving Students in USA, UK, Canada, Europe, Australia, UAE & Worldwide',
-                waWidgetHeader: 'Chat with Admissions',
-                waWidgetSub: 'Select a WhatsApp line below:',
-                courses: [
-                    {
-                        id: 'qaida',
-                        icon: 'fa-spell-check',
-                        title: 'Noorani Qaida & Nazra Quran',
-                        shortDesc: 'Master Arabic letters, harakat, joining rules, and smooth sight-reading of the Holy Quran from the very beginning.',
-                        modules: [
-                            'Recognition & accurate pronunciation of Arabic Alphabet (Huroof-ul-Hija)',
-                            'Harakat (vowels), Tanween, Madd, Sukoon, and Tashdeed rules',
-                            'Step-by-step transition from word joining to fluent Nazra Quran recitation',
-                            'Daily recitation practice with live error correction'
-                        ]
-                    },
-                    {
-                        id: 'tajweed',
-                        icon: 'fa-microphone-lines',
-                        title: 'Quran with Tajweed & Masnoon Duas',
-                        shortDesc: 'Beautify your recitation with authentic Tajweed rules (Makharij & Sifaat) alongside essential daily Masnoon supplications.',
-                        modules: [
-                            'Exact articulation points (Makharij-ul-Huroof) and letter characteristics',
-                            'Rules of Noon Sakinah, Meem Sakinah, Qalqalah, Idgham, and Ikhfa',
-                            'Waqf (stopping rules) for melodious and accurate Quran recitation',
-                            'Memorization of daily Masnoon Duas and short Surahs for Salah'
-                        ]
-                    },
-                    {
-                        id: 'translation',
-                        icon: 'fa-language',
-                        title: 'Translation of Quran & Explanation (Urdu & English)',
-                        shortDesc: 'Connect deeply with the divine message through word-by-word translation and clear Tafseer explanation in Urdu & English.',
-                        modules: [
-                            'Word-for-word and idiomatic Quran translation in English and Urdu',
-                            'Context of revelation (Shan-e-Nuzool) and core Surah themes',
-                            'Practical moral and spiritual guidance for everyday life',
-                            'Interactive Q&A sessions to deepen comprehension'
-                        ]
-                    },
-                    {
-                        id: 'islamic-studies',
-                        icon: 'fa-mosque',
-                        title: 'Basics of Islamic Studies',
-                        shortDesc: 'Build a strong foundation in Aqeedah, Five Pillars of Islam, Wudu, complete Salah method, and Islamic manners (Adab).',
-                        modules: [
-                            'The Five Pillars of Islam and Six Articles of Faith (Iman)',
-                            'Step-by-step practical training in Wudu (ablution) and Five Daily Prayers',
-                            'Islamic etiquette (Adab), respect for parents, honesty, and character building',
-                            'Inspiring stories of the Prophets (Qasas-ul-Anbiya)'
-                        ]
-                    },
-                    {
-                        id: 'hadees',
-                        icon: 'fa-scroll',
-                        title: 'Hadees Shareef (Hadith Studies)',
-                        shortDesc: 'Study authentic sayings and Sunnah of Prophet Muhammad ﷺ to nurture prophetic wisdom, ethics, and daily Sunnah habits.',
-                        modules: [
-                            'Selected authentic Ahadith from Sahih Bukhari, Sahih Muslim & Riyad-us-Saliheen',
-                            'Understanding the Sunnah in worship, family life, and social conduct',
-                            'Memorization of concise Ahadith with Urdu and English meanings',
-                            'Applying prophetic guidance in modern daily routines'
-                        ]
-                    },
-                    {
-                        id: 'hifz',
-                        icon: 'fa-award',
-                        title: 'Hifz-ul-Quran (Quran Memorization)',
-                        shortDesc: 'Structured, disciplined memorization program for selected Surahs, Juz Amma, or complete Hifz with daily Sabaq & Manzil revision.',
-                        modules: [
-                            'Scientifically paced daily Sabaq (new lesson) memorization technique',
-                            'Sabaqi (recent revision) & Manzil (long-term retention) tracking system',
-                            'Strict adherence to Tajweed rules throughout memorization',
-                            'Flexible Hifz tracks: Juz Amma, Selected Surahs, or Full Quran Hifz'
-                        ]
-                    }
-                ],
-                faqs: [
-                    {
-                        q: 'How do the one-to-one online Quran classes work?',
-                        a: 'Classes are conducted live one-on-one via Zoom, Skype, or Google Meet with screen sharing. Your dedicated teacher listens to your recitation in real time and guides you step by step.'
-                    },
-                    {
-                        q: 'Is the Free Demo Class completely free with no obligation?',
-                        a: 'Yes! We offer a 100% free trial class so you or your child can meet the teacher, experience our interactive teaching style, and assess your starting level before enrolling.'
-                    },
-                    {
-                        q: 'Do you have qualified female teachers for sisters and young kids?',
-                        a: 'Yes, we have experienced, certified female Quran teachers available for sisters, adult women, and young children.'
-                    },
-                    {
-                        q: 'What time zones and countries do you support?',
-                        a: 'We operate 24/7 to accommodate students across the USA, UK, Canada, Europe, Australia, UAE, Saudi Arabia, and worldwide—including morning, evening, and weekend slots.'
-                    }
-                ]
-            },
-
-            ur: {
-                dir: 'rtl',
-                brandName: 'الصمد آن لائن قرآن اکیڈمی',
-                brandTagline: 'عالمی معیار کی قرآنی تعلیم',
-                navHome: 'ہوم',
-                navCourses: 'کورسز',
-                navWhyUs: 'ہمیں کیوں منتخب کریں',
-                navFreeDemo: 'فری ڈیمو',
-                navFaq: 'سوالات و جوابات',
-                btnBookDemo: 'فری ڈیمو کلاس بُک کریں',
-                btnChatWhatsapp: 'واٹس ایپ پر رابطہ کریں',
-                heroBadge: 'فری ڈیمو کلاس دستیاب ہے!',
-                heroTitle: 'الصمد آن لائن قرآن اکیڈمی کے ساتھ قرآن مجید سیکھیں',
-                heroSubtitle: 'اپنے گھر کے آرام دہ ماحول میں قرآن سیکھنے کو آسان، دلچسپ اور بامقصد بنائیں۔',
-                heroDescription: 'چاہے آپ بنیادی قاعدہ سے آغاز کر رہے ہوں یا اپنی تلاوتِ قرآن کو بہتر بنانا چاہتے ہوں، ہم درست تلفظ اور اعتماد کے ساتھ سکھانے کے لیے موجود ہیں۔',
-                stat1: 'لائیو انفرادی کلاسز',
-                stat2: '24/7 لچکدار اوقات',
-                stat3: 'مرد و خواتین اساتذہ',
-                hadithQuote: '"تم میں سے بہترین شخص وہ ہے جو قرآن سیکھے اور سکھائے۔" — صحیح بخاری',
-                quickConnectLabel: 'براہِ راست داخلہ اور واٹس ایپ سپورٹ',
-                admissionDesk1: 'ایڈمیشن ڈیسک اول',
-                admissionDesk2: 'ایڈمیشن ڈیسک دوم',
-                coursesEyebrow: 'منظم نصاب',
-                coursesHeading: 'ہماری خدمات اور کورسز',
-                coursesSubheading: 'دنیا بھر کے بچوں، مبتدیوں اور بڑوں کے لیے جامع اور مرحلہ وار قرآنی و اسلامی کورسز۔',
-                btnViewSyllabus: 'نصاب دیکھیں',
-                btnEnrollDemo: 'داخلہ / فری ڈیمو',
-                syllabusBadge: 'کورس کا نصاب اور تفصیل',
-                syllabusHighlightsTitle: 'اہم تعلیمی مراحل',
-                syllabusFormatLabel: 'کلاس کا طریقہ کار',
-                syllabusFormatVal: 'ون ٹو ون لائیو (زوم / میٹ / اسکائپ)',
-                syllabusEligibilityLabel: 'اہلیت',
-                syllabusEligibilityVal: 'بچے اور بڑے (تمام درجات)',
-                btnClose: 'بند کریں',
-                whyEyebrow: 'اکیڈمی کا امتیاز',
-                whyHeading: 'الصمد اکیڈمی ہی کیوں؟',
-                whySubheading: 'روایتی تجوید کی مہارت اور جدید آن لائن تدریسی سہولیات کا بہترین امتزاج۔',
-                feat1Title: 'ون ٹو ون لائیو آن لائن کلاسز',
-                feat1Desc: 'زوم، اسکائپ یا گوگل میٹ پر انفرادی توجہ کے ساتھ کلاسز تاکہ ہر طالب علم اپنی رفتار سے سیکھ سکے اور فوری اصلاح ہو۔',
-                feat2Title: 'بچوں اور بڑوں کے لیے علیحدہ کلاسز',
-                feat2Desc: 'عمر کے مطابق تدریسی انداز — بچوں کے لیے شفیق اور دلچسپ رہنمائی، اور مصروف بڑوں کے لیے باوقار اور منظم اسباق۔',
-                feat3Title: 'ماہر و مستند مرد اور خواتین اساتذہ',
-                feat3Desc: 'تجوید و قرات کے ماہر، تجربہ کار مرد و خواتین اساتذہ جو خواتین، بچیوں اور بچوں کو بہترین انداز میں پڑھاتے ہیں۔',
-                feat4Title: 'آسان، دوستانہ اور مؤثر طریقہ تدریس',
-                feat4Desc: 'حوصلہ افزا اور انٹرایکٹو اسباق جو بغیر کسی دباؤ کے مخارج اور روانی میں حقیقی اعتماد پیدا کرتے ہیں۔',
-                feat5Title: '24/7 لچکدار عالمی اوقات',
-                feat5Desc: 'امریکہ، برطانیہ، کینیڈا، یورپ، آسٹریلیا، متحدہ عرب امارات اور دنیا بھر کے طلباء کے لیے صبح، شام اور ویک اینڈ کے اوقات دستیاب ہیں۔',
-                demoHeading: 'فری ٹرائل کلاس کے ساتھ اپنے قرآنی سفر کا آغاز کریں',
-                demoSubheading: 'بغیر کسی فیس یا شرط کے ہمارے انفرادی طریقہ تدریس کا خود مشاہدہ کریں۔ فارم پُر کریں یا واٹس ایپ پر فوری رابطہ کریں۔',
-                whatsappDirectTitle: 'فوری واٹس ایپ داخلہ نمبرز',
-                whatsappLine1: 'پرائمری واٹس ایپ سپورٹ',
-                whatsappLine2: 'سیکنڈری واٹس ایپ سپورٹ',
-                chatNowBtn: 'ابھی بات کریں',
-                formTitle: 'اپنی فری ڈیمو کلاس بُک کریں',
-                formSubtitle: 'واٹس ایپ پر ہمارے تعلیمی کوآرڈینیٹر سے فوری رابطے کے لیے نیچے دی گئی معلومات درج کریں۔',
-                labelStudentName: 'طالب علم کا نام *',
-                phStudentName: 'طالب علم کا مکمل نام لکھیں',
-                labelAgeGroup: 'عمر کا گروپ *',
-                optKid: 'بچہ (4 تا 15 سال)',
-                optAdult: 'بڑے (16 سال یا زائد)',
-                labelCourse: 'کورس منتخب کریں *',
-                labelTeacher: 'پسندیدہ استاد *',
-                optMale: 'مرد استاد (قاری صاحب)',
-                optFemale: 'خاتون استانی (قاریہ صاحبہ)',
-                labelCountry: 'ملک / ٹائم زون *',
-                phCountry: 'مثلاً برطانیہ، امریکہ، دبئی',
-                labelWhatsapp: 'آپ کا واٹس ایپ نمبر *',
-                labelCoordinator: 'اکیڈمی کے کس واٹس ایپ نمبر پر پیغام بھیجیں:',
-                btnSubmitDemo: 'تصدیق کریں اور واٹس ایپ کھولیں',
-                confirmTitle: 'ڈیمو درخواست تیار ہے!',
-                confirmMsg: 'آپ کی فری ڈیمو کلاس کی تفصیلات واٹس ایپ کے لیے تیار کر دی گئی ہیں۔ اگر واٹس ایپ خودکار طور پر نہ کھلے تو نیچے کلک کریں:',
-                openWhatsappAgain: 'واٹس ایپ چیٹ کھولیں',
-                testiEyebrow: 'عالمی اعتماد',
-                testiHeading: 'دنیا بھر کے والدین کا اعتماد',
-                testi1Text: '"میرے دونوں بچوں نے نورانی قاعدہ سے آغاز کیا اور اب ماشاءاللہ درست تجوید کے ساتھ ناظرہ قرآن پڑھ رہے ہیں۔ استاد بے حد شفیق اور وقت کے پابند ہیں۔"',
-                testi1Author: 'آمنہ صدیقی',
-                testi1Loc: 'لندن، برطانیہ',
-                testi2Text: '"ٹیکساس میں ملازمت کے ساتھ شام کے لچکدار اوقات کی بدولت مجھے اپنی تجوید بہتر بنانے اور قرآن کا ترجمہ سمجھنے کا بہترین موقع ملا۔"',
-                testi2Author: 'طارق محمود',
-                testi2Loc: 'ہیوسٹن، امریکہ',
-                testi3Text: '"میرے اور میری بیٹی کے لیے خاتون استانی کی سہولت نے ہمیں مکمل اطمینان فراہم کیا۔ میں الصمد آن لائن قرآن اکیڈمی کی بھرپور سفارش کرتی ہوں۔"',
-                testi3Author: 'فاطمہ المنصور',
-                testi3Loc: 'دبئی، متحدہ عرب امارات',
-                faqEyebrow: 'سوالات',
-                faqHeading: 'اکثر پوچھے جانے والے سوالات',
-                footerDesc: 'دنیا بھر کے ماہر مرد و خواتین اساتذہ کے ذریعے گھر بیٹھے قرآن سیکھنے کو آسان، مؤثر اور بامقصد بنانا۔',
-                footerLinksTitle: 'اہم روابط',
-                footerCoursesTitle: 'ہمارے کورسز',
-                footerContactTitle: '24/7 واٹس ایپ ایڈمیشن',
-                rightsReserved: 'جملہ حقوق محفوظ ہیں۔',
-                globalServe: 'امریکہ، برطانیہ، کینیڈا، یورپ، آسٹریلیا، یو اے ای اور دنیا بھر میں خدمات',
-                waWidgetHeader: 'ایڈمیشن ٹیم سے بات کریں',
-                waWidgetSub: 'نیچے واٹس ایپ نمبر منتخب کریں:',
-                courses: [
-                    {
-                        id: 'qaida',
-                        icon: 'fa-spell-check',
-                        title: 'نورانی قاعدہ اور ناظرہ قرآن',
-                        shortDesc: 'حروفِ تہجی، حرکات، جوڑ توڑ کے اصول اور ابتدائی سطح سے روانی کے ساتھ ناظرہ قرآن مجید پڑھنا سیکھیں۔',
-                        modules: [
-                            'عربی حروفِ تہجی کی پہچان اور درست تلفظ',
-                            'حرکات، تنوین، مد، سکون اور تشدید کے بنیادی قواعد',
-                            'الفاظ جوڑنے سے لے کر رواں ناظرہ قرآن تک مرحلہ وار تربیت',
-                            'روزانہ تلاوت کی مشق اور فوری اصلاح'
-                        ]
-                    },
-                    {
-                        id: 'tajweed',
-                        icon: 'fa-microphone-lines',
-                        title: 'قرآن مع تجوید اور مسنون دعائیں',
-                        shortDesc: 'صحیح مخارج و صفات کے ساتھ خوبصورت تلاوت اور روزمرہ کی ضروری مسنون دعائیں سیکھیں۔',
-                        modules: [
-                            'حروف کے درست مخارج اور صفات کی عملی مشق',
-                            'نون ساکن، میم ساکن، قلقلہ، ادغام اور اخفاء کے قواعد',
-                            'تلاوت میں وقف (ٹھہرنے) کے درست اصول',
-                            'نماز اور روزمرہ زندگی کی مسنون دعائیں اور مختصر سورتیں'
-                        ]
-                    },
-                    {
-                        id: 'translation',
-                        icon: 'fa-language',
-                        title: 'ترجمہ قرآن و تفسیر (اردو اور انگریزی)',
-                        shortDesc: 'اردو اور انگریزی زبان میں لفظی و بامحاورہ ترجمہ اور آسان تشریح کے ذریعے کلامِ الٰہی کو سمجھیں۔',
-                        modules: [
-                            'اردو اور انگریزی میں لفظ بہ لفظ اور بامحاورہ ترجمہ',
-                            'سورتوں کا شانِ نزول اور بنیادی پیغام',
-                            'روزمرہ زندگی کے لیے اخلاقی اور روحانی رہنمائی',
-                            'فہمِ قرآن کے لیے سوال و جواب کی نشستیں'
-                        ]
-                    },
-                    {
-                        id: 'islamic-studies',
-                        icon: 'fa-mosque',
-                        title: 'بنیادی اسلامی تعلیمات',
-                        shortDesc: 'عقائد، ارکانِ اسلام، وضو، مکمل طریقہ نماز اور اسلامی آداب کی مضبوط بنیاد فراہم کرنے والا کورس۔',
-                        modules: [
-                            'ارکانِ اسلام اور ایمانیات کی بنیادی تعلیم',
-                            'وضو اور پانچ وقت کی نماز کا عملی طریقہ',
-                            'اسلامی آداب، والدین کا احترام اور کردار سازی',
-                            'انبیاء کرام علیہم السلام کے سبق آموز واقعات'
-                        ]
-                    },
-                    {
-                        id: 'hadees',
-                        icon: 'fa-scroll',
-                        title: 'حدیثِ شریف (مطالعہ حدیث)',
-                        shortDesc: 'نبی کریم ﷺ کی مستند احادیث اور سنتِ مبارکہ کا مطالعہ تاکہ زندگی سنت کے مطابق ڈھل سکے۔',
-                        modules: [
-                            'صحیح بخاری، صحیح مسلم اور ریاض الصالحین سے منتخب احادیث',
-                            'عبادات، خاندانی اور سماجی زندگی میں سنتِ نبوی ﷺ',
-                            'مختصر احادیث کا حفظ مع اردو و انگریزی ترجمہ',
-                            'روزمرہ معمولات میں نبوی تعلیمات پر عمل درآمد'
-                        ]
-                    },
-                    {
-                        id: 'hifz',
-                        icon: 'fa-award',
-                        title: 'حفظ القرآن (قرآن حفظ کورس)',
-                        shortDesc: 'منتخب سورتوں، عمّ پارہ یا مکمل قرآن مجید کے حفظ کے لیے سبق، سبقی اور منزل کے منظم نظام کے ساتھ کلاسز۔',
-                        modules: [
-                            'روزانہ نیا سبق یاد کرنے کا آسان اور مؤثر طریقہ',
-                            'سبقی اور منزل کی دہرائی کا باقاعدہ نظام',
-                            'حفظ کے دوران تجوید کے قواعد کی مکمل پابندی',
-                            'عمّ پارہ، منتخب سورتیں یا مکمل حفظِ قرآن کے اختیارات'
-                        ]
-                    }
-                ],
-                faqs: [
-                    {
-                        q: 'ون ٹو ون آن لائن قرآن کلاسز کیسے ہوتی ہیں؟',
-                        a: 'کلاسز زوم، اسکائپ یا گوگل میٹ پر اسکرین شیئرنگ کے ساتھ لائیو ہوتی ہیں۔ استاد براہِ راست آپ کی تلاوت سنتے ہیں اور فوری اصلاح کرتے ہیں۔'
-                    },
-                    {
-                        q: 'کیا فری ڈیمو کلاس واقعی مفت ہے؟',
-                        a: 'جی ہاں! ہم سو فیصد مفت آزمائشی کلاس فراہم کرتے ہیں تاکہ آپ داخلے سے قبل استاد کے طریقہ تدریس کا جائزہ لے سکیں۔'
-                    },
-                    {
-                        q: 'کیا خواتین اور بچیوں کے لیے خاتون اساتذہ دستیاب ہیں؟',
-                        a: 'جی ہاں، خواتین، بچیوں اور چھوٹے بچوں کے لیے مستند اور تجربہ کار خواتین اساتذہ (قاریہ صاحبات) دستیاب ہیں۔'
-                    },
-                    {
-                        q: 'کون سے ممالک اور ٹائم زونز کے طلباء داخلہ لے سکتے ہیں؟',
-                        a: 'ہم امریکہ، برطانیہ، کینیڈا، یورپ، آسٹریلیا، یو اے ای اور دنیا بھر کے طلباء کے لیے 24/7 کلاسز فراہم کرتے ہیں۔'
-                    }
-                ]
-            },
-
-            ar: {
-                dir: 'rtl',
-                brandName: 'أكاديمية الصمد لتعليم القرآن أونلاين',
-                brandTagline: 'التميز العالمي في تعليم القرآن الكريم',
-                navHome: 'الرئيسية',
-                navCourses: 'الدورات',
-                navWhyUs: 'لماذا تختارنا',
-                navFreeDemo: 'حصة تجريبية مجانية',
-                navFaq: 'الأسئلة الشائعة',
-                btnBookDemo: 'احجز حصة تجريبية مجانية',
-                btnChatWhatsapp: 'تواصل عبر واتساب',
-                heroBadge: 'حصة تجريبية مجانية متاحة الآن!',
-                heroTitle: 'تعلّم القرآن الكريم مع أكاديمية الصمد لتعليم القرآن أونلاين',
-                heroSubtitle: 'اجعل تعلّم القرآن سهلاً وتفاعلياً وذا أثر عميق وأنت في راحة منزلك.',
-                heroDescription: 'سواء كنت تبدأ من الأساسيات أو تسعى لتحسين تلاوتك للقرآن الكريم، نحن هنا لمساعدتك على التعلّم بنطق صحيح وثقة تامة.',
-                stat1: 'حصص مباشرة فردية',
-                stat2: 'مواعيد مرنة 24/7',
-                stat3: 'معلمون ومعلمات أكفاء',
-                hadithQuote: '«خَيْرُكُمْ مَنْ تَعَلَّمَ الْقُرْآنَ وَعَلَّمَهُ» — رواه البخاري',
-                quickConnectLabel: 'القبول المباشر ودعم واتساب',
-                admissionDesk1: 'مكتب القبول الأول',
-                admissionDesk2: 'مكتب القبول الثاني',
-                coursesEyebrow: 'منهج دراسي متكامل',
-                coursesHeading: 'البرامج والدورات التي نقدمها',
-                coursesSubheading: 'برامج قرآنية وإسلامية شاملة ومتدرجة مصممة للأطفال والمبتدئين والكبار في جميع أنحاء العالم.',
-                btnViewSyllabus: 'عرض المنهج',
-                btnEnrollDemo: 'التسجيل / حصة مجانية',
-                syllabusBadge: 'منهج الدورة وتفاصيلها',
-                syllabusHighlightsTitle: 'المحاور التعليمية الرئيسية',
-                syllabusFormatLabel: 'نظام الحصص',
-                syllabusFormatVal: 'مباشر فردي (زوم / ميت / سكايب)',
-                syllabusEligibilityLabel: 'الفئة المستهدفة',
-                syllabusEligibilityVal: 'الأطفال والكبار (جميع المستويات)',
-                btnClose: 'إغلاق',
-                whyEyebrow: 'تميز الأكاديمية',
-                whyHeading: 'لماذا تختار أكاديمية الصمد؟',
-                whySubheading: 'إشراف تعليمي متميز يجمع بين إتقان التجويد الأصيل وأحدث وسائل التعليم التفاعلي عن بُعد.',
-                feat1Title: 'حصص مباشرة فردية (معلم لطالب واحد)',
-                feat1Desc: 'اهتمام فردي كامل عبر زوم أو سكايب أو جوجل ميت ليتعلم كل طالب بالوتيرة التي تناسبه مع تصحيح فوري.',
-                feat2Title: 'حصص منفصلة للأطفال والكبار',
-                feat2Desc: 'أساليب تعليمية تناسب كل فئة عمرية؛ توجيه صبور وممتع للأطفال، ودروس منظمة وميسرة للكبار.',
-                feat3Title: 'معلمون ومعلمات مؤهلون',
-                feat3Desc: 'نخبة من المعلمين والمعلمات المجازين في التجويد والقراءات لتعليم الأخوات والأطفال والإخوة بكل كفاءة.',
-                feat4Title: 'أسلوب تعليمي سهل وودود وفعّال',
-                feat4Desc: 'دروس تفاعلية مشجعة تبني الثقة في مخارج الحروف وطلاقة التلاوة دون أي توتر.',
-                feat5Title: 'مواعيد مرنة على مدار الساعة 24/7',
-                feat5Desc: 'اختر مواعيدك الصباحية أو المسائية أو في عطلة نهاية الأسبوع لتناسب الطلاب في أمريكا وبريطانيا وكندا وأوروبا وأستراليا والإمارات والعالم.',
-                demoHeading: 'ابدأ رحلتك مع القرآن بحصة تجريبية مجانية',
-                demoSubheading: 'جرّب أسلوبنا التعليمي الفردي بنفسك دون أي التزام. املأ النموذج السريع أو راسلنا مباشرة عبر واتساب لتحديد موعدك.',
-                whatsappDirectTitle: 'خطوط التسجيل الفوري عبر واتساب',
-                whatsappLine1: 'دعم واتساب الرئيسي',
-                whatsappLine2: 'دعم واتساب الثانوي',
-                chatNowBtn: 'تحدث الآن',
-                formTitle: 'احجز حصتك التجريبية المجانية',
-                formSubtitle: 'أكمل البيانات أدناه للتواصل الفوري مع المنسق الأكاديمي عبر واتساب.',
-                labelStudentName: 'اسم الطالب *',
-                phStudentName: 'أدخل الاسم الكامل للطالب',
-                labelAgeGroup: 'الفئة العمرية *',
-                optKid: 'طفل (4 - 15 سنة)',
-                optAdult: 'بالغ (16+ سنة)',
-                labelCourse: 'اختر الدورة *',
-                labelTeacher: 'المعلم المفضل *',
-                optMale: 'معلم',
-                optFemale: 'معلمة',
-                labelCountry: 'الدولة / المنطقة الزمنية *',
-                phCountry: 'مثال: الإمارات، بريطانيا، أمريكا',
-                labelWhatsapp: 'رقم الواتساب الخاص بك *',
-                labelCoordinator: 'إرسال الطلب إلى واتساب الأكاديمية:',
-                btnSubmitDemo: 'تأكيد وفتح واتساب',
-                confirmTitle: 'تم تجهيز طلب الحصة التجريبية!',
-                confirmMsg: 'تم تنسيق بياناتك للإرسال عبر واتساب. إذا لم يفتح التطبيق تلقائياً، اضغط على الزر أدناه:',
-                openWhatsappAgain: 'فتح محادثة واتساب',
-                testiEyebrow: 'مجتمعنا العالمي',
-                testiHeading: 'ثقة العائلات حول العالم',
-                testi1Text: '"بدأ طفلاي من القاعدة النورانية وهما الآن يقرآن القرآن بطلاقة وتجويد سليم. المعلم صبور جداً ومنضبط في المواعيد."',
-                testi1Author: 'أمينة صديقي',
-                testi1Loc: 'لندن، المملكة المتحدة',
-                testi2Text: '"بصفتي موظفاً في تكساس، ساعدتني المواعيد المسائية المرنة على تحسين تجويدي وفهم معاني القرآن الكريم."',
-                testi2Author: 'طارق محمود',
-                testi2Loc: 'هيوستن، الولايات المتحدة',
-                testi3Text: '"وجود معلمة قرآن متخصصة لي ولابنتي منحنا راحة تامة. أنصح بشدة بأكاديمية الصمد لتعليم القرآن أونلاين."',
-                testi3Author: 'فاطمة المنصور',
-                testi3Loc: 'دبي، الإمارات العربية المتحدة',
-                faqEyebrow: 'لديك استفسار؟',
-                faqHeading: 'الأسئلة الشائعة',
-                footerDesc: 'نجعل تعلّم القرآن الكريم سهلاً وتفاعلياً ومثمراً من منزلك مع معلمين ومعلمات مؤهلين حول العالم.',
-                footerLinksTitle: 'روابط سريعة',
-                footerCoursesTitle: 'برامجنا التعليمية',
-                footerContactTitle: 'القبول عبر واتساب 24/7',
-                rightsReserved: 'جميع الحقوق محفوظة.',
-                globalServe: 'نخدم الطلاب في أمريكا وبريطانيا وكندا وأوروبا وأستراليا والإمارات وجميع أنحاء العالم',
-                waWidgetHeader: 'تحدث مع قسم القبول',
-                waWidgetSub: 'اختر رقم واتساب أدناه:',
-                courses: [
-                    {
-                        id: 'qaida',
-                        icon: 'fa-spell-check',
-                        title: 'القاعدة النورانية وتلاوة القرآن نظراً',
-                        shortDesc: 'إتقان الحروف العربية والحركات وقواعد الوصل والقراءة السلسة للقرآن الكريم من الصفر.',
-                        modules: [
-                            'التعرف على الحروف الهجائية ونطقها الصحيح',
-                            'قواعد الحركات والتنوين والمد والسكون والتشديد',
-                            'التدرج من تهجي الكلمات إلى التلاوة المسترسلة',
-                            'تدريب يومي على التلاوة مع التصحيح المباشر'
-                        ]
-                    },
-                    {
-                        id: 'tajweed',
-                        icon: 'fa-microphone-lines',
-                        title: 'القرآن بالتجويد والأدعية المسنونة',
-                        shortDesc: 'جمّل تلاوتك بأحكام التجويد الأصيلة (المخارج والصفات) مع حفظ الأدعية اليومية المسنونة.',
-                        modules: [
-                            'مخارج الحروف الصحيحة وصفاتها اللازمة والعارضة',
-                            'أحكام النون الساكنة والميم الساكنة والقلقلة والإدغام والإخفاء',
-                            'أحكام الوقف والابتداء لتلاوة متقنة',
-                            'حفظ الأدعية المسنونة اليومية وقصار السور للصلاة'
-                        ]
-                    },
-                    {
-                        id: 'translation',
-                        icon: 'fa-language',
-                        title: 'ترجمة القرآن وتفسيره (بالأردية والإنجليزية)',
-                        shortDesc: 'تعمّق في فهم الرسالة الربانية عبر الترجمة الدقيقة والتفسير الميسر باللغتين الأردية والإنجليزية.',
-                        modules: [
-                            'ترجمة مفردات وآيات القرآن الكريم بالإنجليزية والأردية',
-                            'أسباب النزول والمقاصد العامة للسور',
-                            'استنباط الدروس الأخلاقية والروحية للحياة اليومية',
-                            'جلسات تفاعلية للأسئلة والأجوبة لتعميق الفهم'
-                        ]
-                    },
-                    {
-                        id: 'islamic-studies',
-                        icon: 'fa-mosque',
-                        title: 'أساسيات الدراسات الإسلامية',
-                        shortDesc: 'بناء أساس متين في العقيدة وأركان الإسلام والوضوء وصفة الصلاة الكاملة والآداب الإسلامية.',
-                        modules: [
-                            'أركان الإسلام الخمسة وأركان الإيمان الستة',
-                            'التدريب العملي خطوة بخطوة على الوضوء والصلوات الخمس',
-                            'الآداب الإسلامية وبر الوالدين وبناء الأخلاق',
-                            'قصص الأنبياء عليهم السلام والدروس المستفادة'
-                        ]
-                    },
-                    {
-                        id: 'hadees',
-                        icon: 'fa-scroll',
-                        title: 'الحديث الشريف (دراسات الحديث)',
-                        shortDesc: 'دراسة الأحاديث النبوية الصحيحة والسنة المطهرة لغرس الحكمة النبوية والآداب في الحياة اليومية.',
-                        modules: [
-                            'أحاديث مختارة من صحيح البخاري ومسلم ورياض الصالحين',
-                            'فهم السنة النبوية في العبادات والأسرة والمجتمع',
-                            'حفظ أحاديث موجزة مع معانيها',
-                            'تطبيق الهدي النبوي في السلوك اليومي'
-                        ]
-                    },
-                    {
-                        id: 'hifz',
-                        icon: 'fa-award',
-                        title: 'حفظ القرآن الكريم',
-                        shortDesc: 'برنامج حفظ منظم للسور المختارة أو جزء عمّ أو القرآن كاملاً مع متابعة يومية للدرس الجديد والمراجعة.',
-                        modules: [
-                            'منهجية مدروسة لحفظ الدرس الجديد (السبق) يومياً',
-                            'نظام دقيق للمراجعة القريبة والبعيدة (المنزل)',
-                            'الالتزام التام بأحكام التجويد أثناء الحفظ',
-                            'مسارات مرنة: جزء عمّ أو سور مختارة أو حفظ القرآن كاملاً'
-                        ]
-                    }
-                ],
-                faqs: [
-                    {
-                        q: 'كيف تُعقد حصص القرآن الفردية أونلاين؟',
-                        a: 'تُعقد الحصص مباشرة فردياً عبر زوم أو سكايب أو جوجل ميت مع مشاركة الشاشة، حيث يستمع المعلم لتلاوتك ويصححها فوراً.'
-                    },
-                    {
-                        q: 'هل الحصة التجريبية مجانية بالكامل دون أي التزام؟',
-                        a: 'نعم، نقدم حصة تجريبية مجانية 100% للتعرف على المعلم وتجربة أسلوبنا التفاعلي قبل التسجيل.'
-                    },
-                    {
-                        q: 'هل تتوفر معلمات مؤهلات للأخوات والأطفال؟',
-                        a: 'نعم، لدينا معلمات قرآن مجازات وذوات خبرة لتعليم الأخوات والفتيات والأطفال الصغار.'
-                    },
-                    {
-                        q: 'ما هي الدول والمناطق الزمنية التي تغطونها؟',
-                        a: 'نعمل على مدار الساعة 24/7 لخدمة الطلاب في أمريكا وبريطانيا وكندا وأوروبا وأستراليا والإمارات والسعودية وجميع دول العالم.'
-                    }
-                ]
-            },
-
-            fr: {
-                dir: 'ltr',
-                brandName: 'Al Samad Online Quran Academy',
-                brandTagline: 'Excellence Coranique Mondiale',
-                navHome: 'Accueil',
-                navCourses: 'Cours',
-                navWhyUs: 'Pourquoi Nous',
-                navFreeDemo: 'Essai Gratuit',
-                navFaq: 'FAQ',
-                btnBookDemo: 'Réserver un Cours d\'Essai Gratuit',
-                btnChatWhatsapp: 'Discuter sur WhatsApp',
-                heroBadge: 'Cours d\'Essai Gratuit Disponible !',
-                heroTitle: 'Apprenez le Coran avec Al Samad Online Quran Academy',
-                heroSubtitle: 'Rendez l\'apprentissage du Coran facile, interactif et enrichissant depuis le confort de votre foyer.',
-                heroDescription: 'Que vous débutiez par les bases ou que vous souhaitiez perfectionner votre récitation, nous vous accompagnons avec une prononciation juste et en toute confiance.',
-                stat1: 'Cours Individuels en Direct',
-                stat2: 'Horaires Flexibles 24/7',
-                stat3: 'Enseignants Hommes & Femmes',
-                hadithQuote: '« Le meilleur d\'entre vous est celui qui apprend le Coran et l\'enseigne. » — Sahih al-Bukhari',
-                quickConnectLabel: 'Admissions Directes & Support WhatsApp',
-                admissionDesk1: 'Bureau des Admissions I',
-                admissionDesk2: 'Bureau des Admissions II',
-                coursesEyebrow: 'Programme Structuré',
-                coursesHeading: 'Ce Que Nous Proposons',
-                coursesSubheading: 'Des programmes islamiques et coraniques complets et progressifs adaptés aux enfants, débutants et adultes dans le monde entier.',
-                btnViewSyllabus: 'Voir le Programme',
-                btnEnrollDemo: 'S\'inscrire / Essai Gratuit',
-                syllabusBadge: 'Programme & Aperçu du Cours',
-                syllabusHighlightsTitle: 'Modules Clés d\'Apprentissage',
-                syllabusFormatLabel: 'Format du Cours',
-                syllabusFormatVal: '1-à-1 en Direct (Zoom / Meet / Skype)',
-                syllabusEligibilityLabel: 'Public',
-                syllabusEligibilityVal: 'Enfants & Adultes (Tous Niveaux)',
-                btnClose: 'Fermer',
-                whyEyebrow: 'Excellence Académique',
-                whyHeading: 'Pourquoi Choisir Al Samad Academy',
-                whySubheading: 'Un accompagnement dévoué alliant maîtrise traditionnelle du Tajwid et outils d\'enseignement en ligne modernes.',
-                feat1Title: 'Cours Individuels en Direct (1-à-1)',
-                feat1Desc: 'Une attention personnalisée via Zoom, Skype ou Google Meet pour que chaque élève progresse à son rythme avec des corrections immédiates.',
-                feat2Title: 'Cours Séparés pour Enfants & Adultes',
-                feat2Desc: 'Des méthodes adaptées à chaque âge : pédagogie ludique et patiente pour les enfants, et cours structurés pour les adultes.',
-                feat3Title: 'Enseignants Qualifiés Hommes & Femmes',
-                feat3Desc: 'Des professeurs certifiés et expérimentés, hommes et femmes, maîtrisant le Tajwid pour accompagner sœurs, enfants et frères.',
-                feat4Title: 'Enseignement Facile, Bienveillant & Efficace',
-                feat4Desc: 'Des leçons interactives avec partage d\'écran qui développent la confiance dans les points d\'articulation (Makharij) sans stress.',
-                feat5Title: 'Horaires Flexibles 24/7 dans le Monde Entier',
-                feat5Desc: 'Planifiez vos cours matin, soir ou week-end selon votre emploi du temps — États-Unis, Royaume-Uni, Canada, Europe, Australie, EAU et partout ailleurs.',
-                demoHeading: 'Commencez Votre Parcours Coranique avec un Cours d\'Essai Gratuit',
-                demoSubheading: 'Découvrez notre pédagogie individuelle sans aucun engagement. Remplissez le formulaire ou contactez-nous directement sur WhatsApp.',
-                whatsappDirectTitle: 'Lignes Directes d\'Inscription WhatsApp',
-                whatsappLine1: 'Support WhatsApp Principal',
-                whatsappLine2: 'Support WhatsApp Secondaire',
-                chatNowBtn: 'Discuter',
-                formTitle: 'Réservez Votre Cours d\'Essai Gratuit',
-                formSubtitle: 'Complétez les informations ci-dessous pour échanger instantanément avec notre coordinateur sur WhatsApp.',
-                labelStudentName: 'Nom de l\'Élève *',
-                phStudentName: 'Entrez le nom complet de l\'élève',
-                labelAgeGroup: 'Tranche d\'Âge *',
-                optKid: 'Enfant (4 - 15 ans)',
-                optAdult: 'Adulte (16+ ans)',
-                labelCourse: 'Choisir un Cours *',
-                labelTeacher: 'Enseignant Préféré *',
-                optMale: 'Enseignant Homme',
-                optFemale: 'Enseignante Femme',
-                labelCountry: 'Pays / Fuseau Horaire *',
-                phCountry: 'ex. France (CET), Canada (EST), UK',
-                labelWhatsapp: 'Votre Numéro WhatsApp *',
-                labelCoordinator: 'Envoyer la demande au WhatsApp de l\'Académie :',
-                btnSubmitDemo: 'Confirmer & Ouvrir WhatsApp',
-                confirmTitle: 'Demande d\'Essai Préparée !',
-                confirmMsg: 'Vos informations ont été formatées pour WhatsApp. Si WhatsApp ne s\'est pas ouvert automatiquement, cliquez ci-dessous :',
-                openWhatsappAgain: 'Ouvrir WhatsApp',
-                testiEyebrow: 'Communauté Mondiale',
-                testiHeading: 'La Confiance des Familles dans le Monde',
-                testi1Text: '« Mes deux enfants ont commencé par la Noorani Qaida et lisent maintenant le Coran couramment avec un bon Tajwid. Leur professeur est très patient. »',
-                testi1Author: 'Amina Siddiqui',
-                testi1Loc: 'Londres, Royaume-Uni',
-                testi2Text: '« En tant que professionnel au Texas, les horaires flexibles du soir m\'ont permis d\'améliorer mon Tajwid et de comprendre la traduction du Coran. »',
-                testi2Author: 'Tariq Mahmood',
-                testi2Loc: 'Houston, États-Unis',
-                testi3Text: '« Avoir une enseignante dédiée pour ma fille et moi nous a mises totalement à l\'aise. Je recommande vivement Al Samad Online Quran Academy. »',
-                testi3Author: 'Fatima Al-Mansoor',
-                testi3Loc: 'Dubaï, EAU',
-                faqEyebrow: 'Des Questions ?',
-                faqHeading: 'Questions Fréquemment Posées',
-                footerDesc: 'Rendre l\'apprentissage du Coran facile, interactif et enrichissant depuis chez vous avec des enseignants qualifiés partout dans le monde.',
-                footerLinksTitle: 'Navigation Rapide',
-                footerCoursesTitle: 'Nos Programmes',
-                footerContactTitle: 'Admissions WhatsApp 24/7',
-                rightsReserved: 'Tous droits réservés.',
-                globalServe: 'Au service des élèves aux USA, UK, Canada, Europe, Australie, EAU et dans le monde',
-                waWidgetHeader: 'Discuter avec les Admissions',
-                waWidgetSub: 'Sélectionnez une ligne WhatsApp :',
-                courses: [
-                    {
-                        id: 'qaida',
-                        icon: 'fa-spell-check',
-                        title: 'Noorani Qaida & Nazra Quran',
-                        shortDesc: 'Maîtrisez l\'alphabet arabe, les voyelles et la lecture fluide du Saint Coran dès les premières bases.',
-                        modules: [
-                            'Reconnaissance et prononciation précise de l\'alphabet arabe',
-                            'Règles des voyelles (Harakat), Tanween, Madd, Sukoon et Tashdeed',
-                            'Transition progressive vers la lecture fluide (Nazra Quran)',
-                            'Pratique quotidienne avec correction en direct'
-                        ]
-                    },
-                    {
-                        id: 'tajweed',
-                        icon: 'fa-microphone-lines',
-                        title: 'Coran avec Tajwid & Duas Masnoon',
-                        shortDesc: 'Embellissez votre récitation avec les règles authentiques du Tajwid et les invocations quotidiennes.',
-                        modules: [
-                            'Points d\'articulation (Makharij) et caractéristiques des lettres',
-                            'Règles de Noon Sakinah, Meem Sakinah, Qalqalah, Idgham et Ikhfa',
-                            'Règles d\'arrêt (Waqf) pour une récitation harmonieuse',
-                            'Mémorisation des Duas quotidiennes et courtes sourates pour la Salat'
-                        ]
-                    },
-                    {
-                        id: 'translation',
-                        icon: 'fa-language',
-                        title: 'Traduction & Explication du Coran (Ourdou & Anglais)',
-                        shortDesc: 'Comprenez profondément le message divin grâce à la traduction mot à mot et au Tafsir clair en ourdou et anglais.',
-                        modules: [
-                            'Traduction mot à mot et littéraire en anglais et en ourdou',
-                            'Contexte de révélation (Shan-e-Nuzool) et thèmes des sourates',
-                            'Enseignements moraux et spirituels pratiques au quotidien',
-                            'Sessions interactives de questions-réponses'
-                        ]
-                    },
-                    {
-                        id: 'islamic-studies',
-                        icon: 'fa-mosque',
-                        title: 'Bases des Études Islamiques',
-                        shortDesc: 'Construisez des bases solides : Aqeedah, cinq piliers de l\'Islam, ablutions (Wudu), Salat et bon comportement.',
-                        modules: [
-                            'Les cinq piliers de l\'Islam et les six articles de foi',
-                            'Apprentissage pratique du Wudu et des cinq prières quotidiennes',
-                            'Éthique islamique (Adab), respect des parents et bonnes manières',
-                            'Récits inspirants des Prophètes'
-                        ]
-                    },
-                    {
-                        id: 'hadees',
-                        icon: 'fa-scroll',
-                        title: 'Hadees Shareef (Études du Hadith)',
-                        shortDesc: 'Étudiez les paroles authentiques et la Sunnah du Prophète Muhammad ﷺ pour nourrir la sagesse au quotidien.',
-                        modules: [
-                            'Hadiths authentiques sélectionnés de Bukhari, Muslim et Riyad-us-Saliheen',
-                            'Compréhension de la Sunnah dans l\'adoration et la vie familiale',
-                            'Mémorisation de courts hadiths avec leur sens',
-                            'Application pratique des enseignements prophétiques'
-                        ]
-                    },
-                    {
-                        id: 'hifz',
-                        icon: 'fa-award',
-                        title: 'Hifz-ul-Quran (Mémorisation du Coran)',
-                        shortDesc: 'Programme structuré de mémorisation pour sourates choisies, Juz Amma ou Coran complet avec révision quotidienne.',
-                        modules: [
-                            'Méthode progressive pour la nouvelle leçon quotidienne (Sabaq)',
-                            'Suivi rigoureux de la révision récente et à long terme (Manzil)',
-                            'Respect strict des règles de Tajwid durant la mémorisation',
-                            'Parcours flexibles : Juz Amma, sourates choisies ou Hifz complet'
-                        ]
-                    }
-                ],
-                faqs: [
-                    {
-                        q: 'Comment se déroulent les cours de Coran individuels en ligne ?',
-                        a: 'Les cours ont lieu en direct (1-à-1) via Zoom, Skype ou Google Meet avec partage d\'écran et correction immédiate par votre professeur.'
-                    },
-                    {
-                        q: 'Le cours d\'essai est-il vraiment gratuit et sans engagement ?',
-                        a: 'Oui ! Nous offrons un cours d\'essai 100 % gratuit pour rencontrer l\'enseignant et découvrir notre méthode avant toute inscription.'
-                    },
-                    {
-                        q: 'Avez-vous des enseignantes qualifiées pour les femmes et les enfants ?',
-                        a: 'Oui, nous disposons d\'enseignantes certifiées et expérimentées pour les sœurs, les femmes adultes et les jeunes enfants.'
-                    },
-                    {
-                        q: 'Quels fuseaux horaires couvrez-vous ?',
-                        a: 'Nos cours sont disponibles 24h/24 et 7j/7 pour les élèves en Europe, Amérique du Nord, Royaume-Uni, Australie, EAU et dans le monde entier.'
-                    }
-                ]
-            },
-
-            es: {
-                dir: 'ltr',
-                brandName: 'Al Samad Online Quran Academy',
-                brandTagline: 'Excelencia Coránica Global',
-                navHome: 'Inicio',
-                navCourses: 'Cursos',
-                navWhyUs: 'Por Qué Elegirnos',
-                navFreeDemo: 'Clase Demo Gratis',
-                navFaq: 'Preguntas',
-                btnBookDemo: 'Reservar Clase Demo Gratis',
-                btnChatWhatsapp: 'Chatear en WhatsApp',
-                heroBadge: '¡Clase Demo Gratuita Disponible!',
-                heroTitle: 'Aprende el Corán con Al Samad Online Quran Academy',
-                heroSubtitle: 'Haz que aprender el Corán sea fácil, interactivo y significativo desde la comodidad de tu hogar.',
-                heroDescription: 'Ya sea que empieces desde lo básico o quieras mejorar tu recitación del Corán, estamos aquí para ayudarte a aprender con pronunciación correcta y confianza.',
-                stat1: 'Clases Individuales en Vivo',
-                stat2: 'Horarios Flexibles 24/7',
-                stat3: 'Maestros y Maestras',
-                hadithQuote: '«El mejor de vosotros es aquel que aprende el Corán y lo enseña.» — Sahih al-Bujari',
-                quickConnectLabel: 'Admisiones Directas y Soporte WhatsApp',
-                admissionDesk1: 'Oficina de Admisiones I',
-                admissionDesk2: 'Oficina de Admisiones II',
-                coursesEyebrow: 'Plan de Estudios Estructurado',
-                coursesHeading: 'Lo Que Ofrecemos',
-                coursesSubheading: 'Programas islámicos y coránicos completos y paso a paso diseñados para niños, principiantes y adultos en todo el mundo.',
-                btnViewSyllabus: 'Ver Programa',
-                btnEnrollDemo: 'Inscribirse / Demo Gratis',
-                syllabusBadge: 'Temario y Resumen del Curso',
-                syllabusHighlightsTitle: 'Módulos Clave de Aprendizaje',
-                syllabusFormatLabel: 'Formato de Clase',
-                syllabusFormatVal: '1 a 1 en Vivo (Zoom / Meet / Skype)',
-                syllabusEligibilityLabel: 'Dirigido a',
-                syllabusEligibilityVal: 'Niños y Adultos (Todos los Niveles)',
-                btnClose: 'Cerrar',
-                whyEyebrow: 'Excelencia Académica',
-                whyHeading: 'Por Qué Elegir Al Samad Academy',
-                whySubheading: 'Mentoría dedicada que combina el dominio tradicional del Tajweed con herramientas modernas de enseñanza en línea.',
-                feat1Title: 'Clases en Línea Individuales Uno a Uno',
-                feat1Desc: 'Atención personalizada a través de Zoom, Skype o Google Meet para que cada estudiante avance a su propio ritmo con corrección inmediata.',
-                feat2Title: 'Clases Separadas para Niños y Adultos',
-                feat2Desc: 'Metodologías adaptadas a cada edad: guía paciente y dinámica para niños, y lecciones estructuradas para adultos.',
-                feat3Title: 'Maestros y Maestras Calificados',
-                feat3Desc: 'Tutores certificados y con experiencia, hombres y mujeres, expertos en Tajweed para atender a hermanas, niños y hermanos.',
-                feat4Title: 'Enseñanza Fácil, Amigable y Efectiva',
-                feat4Desc: 'Lecciones interactivas con pantalla compartida que desarrollan confianza real en los puntos de articulación (Makharij) sin estrés.',
-                feat5Title: 'Horarios Globales Flexibles 24/7',
-                feat5Desc: 'Programa clases por la mañana, tarde o fines de semana alrededor de la escuela y el trabajo — EE. UU., Reino Unido, Canadá, Europa, Australia, EAU y todo el mundo.',
-                demoHeading: 'Comienza Tu Camino Coránico con una Clase de Prueba Gratuita',
-                demoSubheading: 'Experimenta nuestra enseñanza individual sin ningún compromiso. Completa el formulario o escríbenos por WhatsApp para agendar tu horario.',
-                whatsappDirectTitle: 'Líneas Instantáneas de Inscripción WhatsApp',
-                whatsappLine1: 'Soporte Principal WhatsApp',
-                whatsappLine2: 'Soporte Secundario WhatsApp',
-                chatNowBtn: 'Chatear Ahora',
-                formTitle: 'Reserva Tu Clase Demo Gratuita',
-                formSubtitle: 'Completa los datos a continuación para conectar al instante con nuestro coordinador académico en WhatsApp.',
-                labelStudentName: 'Nombre del Estudiante *',
-                phStudentName: 'Ingresa el nombre completo del estudiante',
-                labelAgeGroup: 'Grupo de Edad *',
-                optKid: 'Niño/a (4 - 15 años)',
-                optAdult: 'Adulto (16+ años)',
-                labelCourse: 'Seleccionar Curso *',
-                labelTeacher: 'Maestro Preferido *',
-                optMale: 'Maestro Hombre',
-                optFemale: 'Maestra Mujer',
-                labelCountry: 'País / Zona Horaria *',
-                phCountry: 'ej. España (CET), EE. UU. (EST), México',
-                labelWhatsapp: 'Tu Número de WhatsApp *',
-                labelCoordinator: 'Enviar solicitud al WhatsApp de la Academia:',
-                btnSubmitDemo: 'Confirmar y Abrir WhatsApp',
-                confirmTitle: '¡Solicitud de Demo Preparada!',
-                confirmMsg: 'Tus datos se han formateado para WhatsApp. Si WhatsApp no se abrió automáticamente, haz clic abajo:',
-                openWhatsappAgain: 'Abrir Chat de WhatsApp',
-                testiEyebrow: 'Comunidad Global',
-                testiHeading: 'La Confianza de Familias en Todo el Mundo',
-                testi1Text: '«Mis dos hijos comenzaron con Noorani Qaida y ahora leen Nazra Quran con fluidez y buen Tajweed. Su maestro es muy paciente y puntual.»',
-                testi1Author: 'Amina Siddiqui',
-                testi1Loc: 'Londres, Reino Unido',
-                testi2Text: '«Como profesional en Texas, los horarios flexibles por la tarde me permitieron mejorar mi Tajweed y comprender la traducción del Corán.»',
-                testi2Author: 'Tariq Mahmood',
-                testi2Loc: 'Houston, EE. UU.',
-                testi3Text: '«Contar con una maestra dedicada para mi hija y para mí nos dio total comodidad. Recomiendo ampliamente Al Samad Online Quran Academy.»',
-                testi3Author: 'Fatima Al-Mansoor',
-                testi3Loc: 'Dubái, EAU',
-                faqEyebrow: '¿Tienes Preguntas?',
-                faqHeading: 'Preguntas Frecuentes',
-                footerDesc: 'Haciendo que el aprendizaje del Corán sea fácil, interactivo y significativo desde casa con maestros y maestras calificados en todo el mundo.',
-                footerLinksTitle: 'Navegación Rápida',
-                footerCoursesTitle: 'Nuestros Programas',
-                footerContactTitle: 'Admisiones WhatsApp 24/7',
-                rightsReserved: 'Todos los derechos reservados.',
-                globalServe: 'Sirviendo a estudiantes en EE. UU., Reino Unido, Canadá, Europa, Australia, EAU y todo el mundo',
-                waWidgetHeader: 'Chatear con Admisiones',
-                waWidgetSub: 'Selecciona una línea de WhatsApp:',
-                courses: [
-                    {
-                        id: 'qaida',
-                        icon: 'fa-spell-check',
-                        title: 'Noorani Qaida y Nazra Quran',
-                        shortDesc: 'Domina las letras árabes, vocales y lectura fluida del Sagrado Corán desde cero.',
-                        modules: [
-                            'Reconocimiento y pronunciación precisa del alfabeto árabe',
-                            'Reglas de vocales (Harakat), Tanween, Madd, Sukoon y Tashdeed',
-                            'Transición paso a paso hacia la lectura fluida Nazra Quran',
-                            'Práctica diaria con corrección en vivo'
-                        ]
-                    },
-                    {
-                        id: 'tajweed',
-                        icon: 'fa-microphone-lines',
-                        title: 'Corán con Tajweed y Duas Masnoon',
-                        shortDesc: 'Embellece tu recitación con reglas auténticas de Tajweed y súplicas diarias esenciales.',
-                        modules: [
-                            'Puntos de articulación (Makharij) y características de las letras',
-                            'Reglas de Noon Sakinah, Meem Sakinah, Qalqalah, Idgham e Ikhfa',
-                            'Reglas de pausa (Waqf) para una recitación armoniosa',
-                            'Memorización de Duas diarias y suras cortas para el Salah'
-                        ]
-                    },
-                    {
-                        id: 'translation',
-                        icon: 'fa-language',
-                        title: 'Traducción y Explicación del Corán (Urdu e Inglés)',
-                        shortDesc: 'Conecta profundamente con el mensaje divino mediante traducción palabra por palabra y Tafsir claro en urdu e inglés.',
-                        modules: [
-                            'Traducción palabra por palabra e idiomática en inglés y urdu',
-                            'Contexto de revelación y temas principales de cada sura',
-                            'Guía moral y espiritual práctica para la vida diaria',
-                            'Sesiones interactivas de preguntas y respuestas'
-                        ]
-                    },
-                    {
-                        id: 'islamic-studies',
-                        icon: 'fa-mosque',
-                        title: 'Fundamentos de Estudios Islámicos',
-                        shortDesc: 'Construye una base sólida en Aqeedah, cinco pilares del Islam, Wudu, método completo de Salah y modales islámicos.',
-                        modules: [
-                            'Los cinco pilares del Islam y seis artículos de fe',
-                            'Entrenamiento práctico paso a paso en Wudu y las cinco oraciones diarias',
-                            'Etiqueta islámica (Adab), respeto a los padres y valores',
-                            'Historias inspiradoras de los Profetas'
-                        ]
-                    },
-                    {
-                        id: 'hadees',
-                        icon: 'fa-scroll',
-                        title: 'Hadees Shareef (Estudios de Hadiz)',
-                        shortDesc: 'Estudia dichos auténticos y la Sunnah del Profeta Muhammad ﷺ para cultivar sabiduría y hábitos proféticos.',
-                        modules: [
-                            'Hadices auténticos seleccionados de Bujari, Muslim y Riyad-us-Saliheen',
-                            'Comprensión de la Sunnah en la adoración y vida familiar',
-                            'Memorización de hadices breves con su significado',
-                            'Aplicación práctica en la rutina diaria'
-                        ]
-                    },
-                    {
-                        id: 'hifz',
-                        icon: 'fa-award',
-                        title: 'Hifz-ul-Quran (Memorización del Corán)',
-                        shortDesc: 'Programa estructurado de memorización para suras selectas, Juz Amma o Corán completo con repaso diario.',
-                        modules: [
-                            'Técnica progresiva para la nueva lección diaria (Sabaq)',
-                            'Sistema de seguimiento de repaso reciente y a largo plazo (Manzil)',
-                            'Estricto cumplimiento de las reglas de Tajweed',
-                            'Modalidades flexibles: Juz Amma, suras selectas o Hifz completo'
-                        ]
-                    }
-                ],
-                faqs: [
-                    {
-                        q: '¿Cómo funcionan las clases individuales de Corán en línea?',
-                        a: 'Las clases son en vivo uno a uno por Zoom, Skype o Google Meet con pantalla compartida y corrección inmediata del maestro.'
-                    },
-                    {
-                        q: '¿La Clase Demo es completamente gratuita y sin compromiso?',
-                        a: '¡Sí! Ofrecemos una clase de prueba 100 % gratuita para conocer al maestro y experimentar nuestro método antes de inscribirte.'
-                    },
-                    {
-                        q: '¿Tienen maestras calificadas para hermanas y niños pequeños?',
-                        a: 'Sí, contamos con maestras certificadas y con experiencia para hermanas, mujeres adultas y niños pequeños.'
-                    },
-                    {
-                        q: '¿Qué zonas horarias y países atienden?',
-                        a: 'Operamos 24/7 para estudiantes en EE. UU., Reino Unido, Canadá, Europa, Australia, EAU y todo el mundo.'
-                    }
-                ]
-            },
-
-            de: {
-                dir: 'ltr',
-                brandName: 'Al Samad Online Quran Academy',
-                brandTagline: 'Weltweite Koranische Exzellenz',
-                navHome: 'Startseite',
-                navCourses: 'Kurse',
-                navWhyUs: 'Warum Wir',
-                navFreeDemo: 'Gratis Probestunde',
-                navFaq: 'FAQ',
-                btnBookDemo: 'Kostenlose Probestunde Buchen',
-                btnChatWhatsapp: 'Auf WhatsApp Chatten',
-                heroBadge: 'Kostenlose Probestunde Verfügbar!',
-                heroTitle: 'Lernen Sie den Koran mit der Al Samad Online Quran Academy',
-                heroSubtitle: 'Machen Sie das Koranlernen einfach, interaktiv und bedeutungsvoll – bequem von zu Hause aus.',
-                heroDescription: 'Ob Sie mit den Grundlagen beginnen oder Ihre Koranrezitation verbessern möchten – wir helfen Ihnen, mit richtiger Aussprache und Selbstvertrauen zu lernen.',
-                stat1: 'Live-Einzelunterricht',
-                stat2: 'Flexible 24/7 Zeiten',
-                stat3: 'Lehrer & Lehrerinnen',
-                hadithQuote: '„Der Beste unter euch ist derjenige, der den Koran lernt und ihn lehrt.“ — Sahih al-Bukhari',
-                quickConnectLabel: 'Direkte Anmeldung & WhatsApp-Support',
-                admissionDesk1: 'Aufnahmebüro I',
-                admissionDesk2: 'Aufnahmebüro II',
-                coursesEyebrow: 'Strukturierter Lehrplan',
-                coursesHeading: 'Unser Kursangebot',
-                coursesSubheading: 'Umfassende, schrittweise islamische und koranische Programme für Kinder, Anfänger und Erwachsene weltweit.',
-                btnViewSyllabus: 'Lehrplan Ansehen',
-                btnEnrollDemo: 'Anmelden / Gratis Demo',
-                syllabusBadge: 'Kurslehrplan & Übersicht',
-                syllabusHighlightsTitle: 'Wichtige Lernmodule',
-                syllabusFormatLabel: 'Unterrichtsformat',
-                syllabusFormatVal: '1-zu-1 Live (Zoom / Meet / Skype)',
-                syllabusEligibilityLabel: 'Zielgruppe',
-                syllabusEligibilityVal: 'Kinder & Erwachsene (Alle Stufen)',
-                btnClose: 'Schließen',
-                whyEyebrow: 'Akademische Exzellenz',
-                whyHeading: 'Warum Al Samad Academy Wählen',
-                whySubheading: 'Engagierte Betreuung, die traditionelle Tajweed-Meisterschaft mit modernen Online-Lernmethoden verbindet.',
-                feat1Title: 'Live-Online-Einzelunterricht (1-zu-1)',
-                feat1Desc: 'Persönliche Betreuung über Zoom, Skype oder Google Meet, damit jeder Schüler im eigenen Tempo mit direktem Feedback lernt.',
-                feat2Title: 'Getrennte Klassen für Kinder & Erwachsene',
-                feat2Desc: 'Altersgerechte Lehrmethoden – geduldige und spielerische Anleitung für Kinder sowie strukturierter Unterricht für Erwachsene.',
-                feat3Title: 'Qualifizierte Lehrer & Lehrerinnen',
-                feat3Desc: 'Zertifizierte, erfahrene männliche und weibliche Koranlehrer mit Tajweed-Expertise für Schwestern, Kinder und Brüder.',
-                feat4Title: 'Einfacher, Freundlicher & Effektiver Unterricht',
-                feat4Desc: 'Ermutigende, interaktive Lektionen per Bildschirmfreigabe für sichere Aussprache (Makharij) und flüssiges Lesen ohne Druck.',
-                feat5Title: 'Flexible 24/7 Weltweite Unterrichtszeiten',
-                feat5Desc: 'Planen Sie Unterricht morgens, abends oder am Wochenende rund um Schule und Beruf – für Schüler in den USA, Großbritannien, Kanada, Europa, Australien, VAE und weltweit.',
-                demoHeading: 'Starten Sie Ihre Koranreise mit einer Kostenlosen Probestunde',
-                demoSubheading: 'Erleben Sie unseren Einzelunterricht unverbindlich. Füllen Sie das Formular aus oder schreiben Sie uns direkt auf WhatsApp.',
-                whatsappDirectTitle: 'Direkte WhatsApp-Anmeldeleitungen',
-                whatsappLine1: 'Primärer WhatsApp-Support',
-                whatsappLine2: 'Sekundärer WhatsApp-Support',
-                chatNowBtn: 'Jetzt Chatten',
-                formTitle: 'Kostenlose Probestunde Buchen',
-                formSubtitle: 'Füllen Sie die folgenden Angaben aus, um sich sofort über WhatsApp mit unserem Koordinator zu verbinden.',
-                labelStudentName: 'Name des Schülers *',
-                phStudentName: 'Vollständigen Namen eingeben',
-                labelAgeGroup: 'Altersgruppe *',
-                optKid: 'Kind (4 - 15 Jahre)',
-                optAdult: 'Erwachsener (16+ Jahre)',
-                labelCourse: 'Kurs Auswählen *',
-                labelTeacher: 'Bevorzugte Lehrkraft *',
-                optMale: 'Männlicher Lehrer',
-                optFemale: 'Weibliche Lehrerin',
-                labelCountry: 'Land / Zeitzone *',
-                phCountry: 'z.B. Deutschland (MEZ), UK, USA',
-                labelWhatsapp: 'Ihre WhatsApp-Nummer *',
-                labelCoordinator: 'Anfrage senden an Akademie-WhatsApp:',
-                btnSubmitDemo: 'Bestätigen & WhatsApp Öffnen',
-                confirmTitle: 'Probestunden-Anfrage Vorbereitet!',
-                confirmMsg: 'Ihre Daten wurden für WhatsApp vorbereitet. Falls sich WhatsApp nicht automatisch geöffnet hat, klicken Sie unten:',
-                openWhatsappAgain: 'WhatsApp-Chat Öffnen',
-                testiEyebrow: 'Globale Gemeinschaft',
-                testiHeading: 'Vertrauen von Familien Weltweit',
-                testi1Text: '„Meine beiden Kinder haben mit Noorani Qaida begonnen und lesen jetzt flüssig Nazra Quran mit richtigem Tajweed. Ihr Lehrer ist sehr geduldig und pünktlich.“',
-                testi1Author: 'Amina Siddiqui',
-                testi1Loc: 'London, Vereinigtes Königreich',
-                testi2Text: '„Als Berufstätiger in Texas ermöglichten mir die flexiblen Abendzeiten, endlich mein Tajweed zu verbessern und die Koranübersetzung zu verstehen.“',
-                testi2Author: 'Tariq Mahmood',
-                testi2Loc: 'Houston, USA',
-                testi3Text: '„Eine eigene Koranlehrerin für mich und meine Tochter zu haben, gab uns volles Vertrauen. Ich empfehle die Al Samad Online Quran Academy wärmstens.“',
-                testi3Author: 'Fatima Al-Mansoor',
-                testi3Loc: 'Dubai, VAE',
-                faqEyebrow: 'Haben Sie Fragen?',
-                faqHeading: 'Häufig Gestellte Fragen',
-                footerDesc: 'Koranlernen einfach, interaktiv und bedeutungsvoll von zu Hause aus – mit qualifizierten Lehrern und Lehrerinnen weltweit.',
-                footerLinksTitle: 'Schnellnavigation',
-                footerCoursesTitle: 'Unsere Programme',
-                footerContactTitle: '24/7 WhatsApp-Aufnahme',
-                rightsReserved: 'Alle Rechte vorbehalten.',
-                globalServe: 'Für Schüler in den USA, Großbritannien, Kanada, Europa, Australien, VAE & weltweit',
-                waWidgetHeader: 'Mit der Aufnahme Chatten',
-                waWidgetSub: 'Wählen Sie eine WhatsApp-Nummer:',
-                courses: [
-                    {
-                        id: 'qaida',
-                        icon: 'fa-spell-check',
-                        title: 'Noorani Qaida & Nazra Quran',
-                        shortDesc: 'Beherrschen Sie arabische Buchstaben, Vokale und flüssiges Lesen des Heiligen Korans von Grund auf.',
-                        modules: [
-                            'Erkennung und korrekte Aussprache des arabischen Alphabets',
-                            'Regeln für Vokale (Harakat), Tanween, Madd, Sukoon und Tashdeed',
-                            'Schrittweiser Übergang zum flüssigen Nazra-Koranlesen',
-                            'Tägliche Leseübung mit direkter Korrektur'
-                        ]
-                    },
-                    {
-                        id: 'tajweed',
-                        icon: 'fa-microphone-lines',
-                        title: 'Koran mit Tajweed & Masnoon Duas',
-                        shortDesc: 'Verschönern Sie Ihre Rezitation mit authentischen Tajweed-Regeln (Makharij & Sifaat) und täglichen Bittgebeten.',
-                        modules: [
-                            'Präzise Artikulationspunkte (Makharij) und Buchstabeneigenschaften',
-                            'Regeln von Noon Sakinah, Meem Sakinah, Qalqalah, Idgham und Ikhfa',
-                            'Pausenregeln (Waqf) für harmonische Koranrezitation',
-                            'Auswendiglernen täglicher Masnoon Duas und kurzer Suren für das Gebet'
-                        ]
-                    },
-                    {
-                        id: 'translation',
-                        icon: 'fa-language',
-                        title: 'Koranübersetzung & Erklärung (Urdu & Englisch)',
-                        shortDesc: 'Verstehen Sie die göttliche Botschaft tiefgehend durch Wort-für-Wort-Übersetzung und klaren Tafsir auf Urdu und Englisch.',
-                        modules: [
-                            'Wort-für-Wort- und sinngemäße Übersetzung auf Englisch und Urdu',
-                            'Offenbarungskontext und Hauptthemen der Suren',
-                            'Praktische moralische und spirituelle Orientierung für den Alltag',
-                            'Interaktive Frage-und-Antwort-Runden'
-                        ]
-                    },
-                    {
-                        id: 'islamic-studies',
-                        icon: 'fa-mosque',
-                        title: 'Grundlagen der Islamischen Studien',
-                        shortDesc: 'Schaffen Sie ein starkes Fundament in Aqeedah, fünf Säulen des Islam, Wudu, Gebetsablauf und islamischen Manieren.',
-                        modules: [
-                            'Die fünf Säulen des Islam und sechs Glaubensartikel',
-                            'Praktische Schritt-für-Schritt-Anleitung für Wudu und die fünf täglichen Gebete',
-                            'Islamische Etikette (Adab), Respekt vor den Eltern und Charakterbildung',
-                            'Inspirierende Geschichten der Propheten'
-                        ]
-                    },
-                    {
-                        id: 'hadees',
-                        icon: 'fa-scroll',
-                        title: 'Hadees Shareef (Hadith-Studien)',
-                        shortDesc: 'Studieren Sie authentische Überlieferungen und die Sunnah des Propheten Muhammad ﷺ für Weisheit im Alltag.',
-                        modules: [
-                            'Ausgewählte authentische Hadithe aus Bukhari, Muslim und Riyad-us-Saliheen',
-                            'Verständnis der Sunnah in Gottesdienst, Familie und Gesellschaft',
-                            'Auswendiglernen kurzer Hadithe samt Bedeutung',
-                            'Praktische Umsetzung prophetischer Lehren im Alltag'
-                        ]
-                    },
-                    {
-                        id: 'hifz',
-                        icon: 'fa-award',
-                        title: 'Hifz-ul-Quran (Koran-Auswendiglernen)',
-                        shortDesc: 'Strukturiertes Auswendiglern-Programm für ausgewählte Suren, Juz Amma oder den gesamten Koran mit täglicher Wiederholung.',
-                        modules: [
-                            'Systematische tägliche Lernmethode für neue Verse (Sabaq)',
-                            'Kontinuierliche Wiederholung von kürzlich und langfristig Gelerntem (Manzil)',
-                            'Strikte Einhaltung der Tajweed-Regeln beim Auswendiglernen',
-                            'Flexible Pfade: Juz Amma, ausgewählte Suren oder vollständiger Hifz'
-                        ]
-                    }
-                ],
-                faqs: [
-                    {
-                        q: 'Wie läuft der Online-Koran-Einzelunterricht ab?',
-                        a: 'Der Unterricht findet live 1-zu-1 über Zoom, Skype oder Google Meet mit Bildschirmfreigabe und direkter Korrektur durch die Lehrkraft statt.'
-                    },
-                    {
-                        q: 'Ist die Probestunde wirklich komplett kostenlos und unverbindlich?',
-                        a: 'Ja! Wir bieten eine 100 % kostenlose Probestunde an, damit Sie die Lehrkraft kennenlernen und unsere Methode vor der Anmeldung testen können.'
-                    },
-                    {
-                        q: 'Gibt es qualifizierte Lehrerinnen für Schwestern und Kinder?',
-                        a: 'Ja, wir verfügen über zertifizierte, erfahrene Koranlehrerinnen für Schwestern, erwachsene Frauen und junge Kinder.'
-                    },
-                    {
-                        q: 'Welche Zeitzonen und Länder werden unterstützt?',
-                        a: 'Wir unterrichten rund um die Uhr (24/7) für Schüler in Deutschland, Österreich, der Schweiz, UK, USA, Kanada, Australien, VAE und weltweit.'
-                    }
-                ]
-            }
+        // کلائنٹ کے لاگ ان کریڈینشلز (آپ انہیں یہاں سے تبدیل کر سکتے ہیں)
+        const CLIENT_CREDENTIALS = {
+            username: "alsamad_admin",
+            password: "quran_admin_2026"
         };
 
-        let currentLang = 'en';
+        // ڈیفالٹ ڈیٹا
+        const defaultSiteData = {
+            academyName: "Al Samad Online Quran Academy",
+            teemUrl: "https://teem.pk",
+            phone1: "+92 324 1745886",
+            phone2: "+92 316 0476714",
+            heroImage: "https://images.unsplash.com/photo-1609599006353-e629aaabfeae?auto=format&fit=crop&w=800&q=80",
+            experiences: [
+                {
+                    title: "Certified Qira'at & Tajweed Mentorship",
+                    desc: "Over 8+ years of online teaching experience across UK, USA, and Canada with 100% student satisfaction.",
+                    image: "https://images.unsplash.com/photo-1584286595398-a59f21d313f5?auto=format&fit=crop&w=600&q=80"
+                }
+            ]
+        };
 
-        // Initialize Page
-        document.addEventListener('DOMContentLoaded', () => {
-            document.getElementById('currentYear').textContent = new Date().getFullYear();
-            setLanguage('en');
+        const defaultCourses = [
+            { title: "Noorani Qaida & Nazra Quran", desc: "Master Arabic letters, harakat, and fluent Quran reading from the basics." },
+            { title: "Quran with Tajweed & Masnoon Duas", desc: "Beautify your recitation with proper Makharij rules and daily supplications." },
+            { title: "Translation & Tafseer (Urdu & English)", desc: "Understand the divine message with word-for-word translation and explanation." },
+            { title: "Basics of Islamic Studies", desc: "Learn Five Pillars of Islam, Wudu, complete Salah method, and Islamic manners." },
+            { title: "Hadees Shareef Studies", desc: "Study authentic sayings of Prophet Muhammad ﷺ for daily ethical guidance." },
+            { title: "Hifz-ul-Quran Program", desc: "Structured memorization of Juz Amma, selected Surahs, or complete Quran." }
+        ];
+
+        // ویب سائٹ لوڈ ہوتے ہی چیک کریں کہ کون سا انٹرفیس دکھانا ہے
+        document.addEventListener("DOMContentLoaded", () => {
+            loadSavedSiteContent();
+
+            // اگر لنک کے آخر میں ?admin=true لکھا ہو تو براہ راست کلائنٹ پورٹل کھلے
+            const urlParams = new URLSearchParams(window.location.search);
+            if (urlParams.get('admin') === 'true') {
+                switchToAdminPortal();
+            }
         });
 
-        // Master Multi-Language Switcher
-        function setLanguage(lang) {
-            if (!translations[lang]) lang = 'en';
-            currentLang = lang;
-            const data = translations[lang];
+        // محفوظ شدہ ڈیٹا کو پبلک ویب سائٹ پر دکھائیں
+        function loadSavedSiteContent() {
+            const saved = JSON.parse(localStorage.getItem("alsamad_site_data")) || defaultSiteData;
 
-            // 1. Update HTML lang & dir (LTR / RTL)
-            const htmlEl = document.documentElement;
-            htmlEl.setAttribute('lang', lang);
-            htmlEl.setAttribute('dir', data.dir);
+            document.getElementById("siteMainTitle").textContent = saved.academyName;
+            document.getElementById("footerAcademyName").textContent = saved.academyName;
+            document.getElementById("displayPhone1").textContent = saved.phone1;
+            document.getElementById("displayPhone2").textContent = saved.phone2;
+            document.getElementById("heroDisplayImage").src = saved.heroImage;
 
-            // 2. Highlight active language button
-            document.querySelectorAll('.lang-btn').forEach(btn => {
-                if (btn.getAttribute('data-lang-btn') === lang) {
-                    btn.classList.remove('text-ivoryWarm/85', 'hover:bg-emeraldDeep', 'hover:text-antiqueGold');
-                    btn.classList.add('bg-antiqueGold', 'text-midnightTeal', 'shadow-sm');
-                } else {
-                    btn.classList.remove('bg-antiqueGold', 'text-midnightTeal', 'shadow-sm');
-                    btn.classList.add('text-ivoryWarm/85', 'hover:bg-emeraldDeep', 'hover:text-antiqueGold');
-                }
+            // تمام Teem App بٹنز کو اپ ڈیٹ کریں
+            document.querySelectorAll("#topTeemLink1, #topTeemLink2, #headerTeemBtn, #heroTeemBtn").forEach(btn => {
+                btn.href = saved.teemUrl;
             });
 
-            // 3. Translate all elements with data-i18n
-            document.querySelectorAll('[data-i18n]').forEach(el => {
-                const key = el.getAttribute('data-i18n');
-                if (data[key]) {
-                    el.textContent = data[key];
-                }
-            });
+            // کورسز رینڈر کریں
+            const cGrid = document.getElementById("dynamicCoursesGrid");
+            cGrid.innerHTML = defaultCourses.map((c, i) => `
+                <div class="course-card bg-white rounded-3xl p-7 border border-antiqueGold/30 shadow-sm">
+                    <span class="text-xs font-bold text-antiqueGoldDark bg-antiqueGold/15 px-3 py-1 rounded-full">0${i + 1}</span>
+                    <h3 class="heading-font text-2xl font-bold text-midnightTeal mt-4 mb-2">${c.title}</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-5">${c.desc}</p>
+                    <a href="#demo-booking" class="inline-block px-4 py-2 rounded-xl bg-emeraldDeep text-white text-xs font-bold">Book Free Demo</a>
+                </div>
+            `).join("");
 
-            // 4. Translate placeholders
-            document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
-                const key = el.getAttribute('data-i18n-placeholder');
-                if (data[key]) {
-                    el.setAttribute('placeholder', data[key]);
-                }
-            });
-
-            // 5. Render Courses Grid, Footer Course Links, Form Dropdowns, and FAQ
-            renderCourses(data);
-            renderCourseSelects(data);
-            renderFaq(data);
-        }
-
-        // Render 6 Course Cards & Footer Course Links
-        function renderCourses(data) {
-            const grid = document.getElementById('coursesGrid');
-            const footerList = document.getElementById('footerCoursesList');
-            grid.innerHTML = '';
-            footerList.innerHTML = '';
-
-            data.courses.forEach((course, index) => {
-                // Course Card
-                const card = document.createElement('div');
-                card.className = 'course-card bg-white rounded-3xl p-7 border border-antiqueGold/30 shadow-sm flex flex-col justify-between relative overflow-hidden group';
-                card.innerHTML = `
-                    <div>
-                        <div class="flex items-center justify-between mb-5">
-                            <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-emeraldDeep to-midnightTeal text-antiqueGold border border-antiqueGold/50 flex items-center justify-center text-2xl shadow-md group-hover:scale-105 transition-transform">
-                                <i class="fa-solid ${course.icon}"></i>
-                            </div>
-                            <span class="text-xs font-bold text-antiqueGoldDark/80 bg-antiqueGold/15 px-3 py-1 rounded-full">0${index + 1}</span>
-                        </div>
-                        <h3 class="heading-font text-2xl font-bold text-midnightTeal mb-3 group-hover:text-emeraldDeep transition-colors">
-                            ${course.title}
-                        </h3>
-                        <p class="text-slate-600 text-sm sm:text-base leading-relaxed mb-6">
-                            ${course.shortDesc}
-                        </p>
+            // ایکسپیرینس کارڈز رینڈر کریں
+            const expGrid = document.getElementById("dynamicExperienceList");
+            expGrid.innerHTML = saved.experiences.map(exp => `
+                <div class="bg-ivoryWarm rounded-3xl overflow-hidden border border-antiqueGold/30 shadow-sm flex flex-col sm:flex-row">
+                    <img src="${exp.image}" alt="${exp.title}" class="w-full sm:w-48 h-48 object-cover">
+                    <div class="p-6 flex flex-col justify-center">
+                        <h3 class="heading-font text-2xl font-bold text-midnightTeal mb-2">${exp.title}</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">${exp.desc}</p>
                     </div>
-                    <div class="pt-4 border-t border-slate-100 flex flex-col sm:flex-row gap-2.5">
-                        <button onclick="openSyllabusModal('${course.id}')" class="flex-1 py-2.5 px-4 rounded-xl bg-ivoryWarm hover:bg-antiqueGold/20 text-midnightTeal border border-antiqueGold/40 font-semibold text-xs sm:text-sm transition-colors flex items-center justify-center gap-1.5">
-                            <i class="fa-solid fa-book-open text-antiqueGoldDark"></i>
-                            <span>${data.btnViewSyllabus}</span>
-                        </button>
-                        <button onclick="openDemoModalWithCourse('${course.id}')" class="flex-1 py-2.5 px-4 rounded-xl bg-emeraldDeep hover:bg-midnightTeal text-white font-semibold text-xs sm:text-sm transition-colors flex items-center justify-center gap-1.5 shadow-sm">
-                            <i class="fa-solid fa-calendar-check text-antiqueGold"></i>
-                            <span>${data.btnEnrollDemo}</span>
-                        </button>
-                    </div>
-                `;
-                grid.appendChild(card);
-
-                // Footer Link
-                const li = document.createElement('li');
-                li.innerHTML = `<button onclick="openSyllabusModal('${course.id}')" class="text-start hover:text-antiqueGold transition-colors">${course.title}</button>`;
-                footerList.appendChild(li);
-            });
+                </div>
+            `).join("");
         }
 
-        // Populate Course Select Dropdowns in Inline & Modal Forms
-        function renderCourseSelects(data) {
-            document.querySelectorAll('.course-select-dropdown').forEach(select => {
-                const previousVal = select.value;
-                select.innerHTML = '';
-                data.courses.forEach(course => {
-                    const opt = document.createElement('option');
-                    opt.value = course.id;
-                    opt.textContent = course.title;
-                    select.appendChild(opt);
-                });
-                if (previousVal && data.courses.some(c => c.id === previousVal)) {
-                    select.value = previousVal;
-                }
-            });
-        }
+        // پبلک سائٹ چھپا کر الگ ایڈمن پورٹل دکھائیں
+        function switchToAdminPortal() {
+            document.getElementById("publicWebsiteView").classList.add("hidden");
+            document.getElementById("adminPortalView").classList.remove("hidden");
 
-        // Render Interactive FAQ Accordion
-        function renderFaq(data) {
-            const container = document.getElementById('faqContainer');
-            container.innerHTML = '';
-
-            data.faqs.forEach((item, idx) => {
-                const faqItem = document.createElement('div');
-                faqItem.className = 'bg-white rounded-2xl border border-antiqueGold/30 overflow-hidden shadow-sm';
-                faqItem.innerHTML = `
-                    <button onclick="toggleFaq(${idx})" class="w-full p-5 sm:p-6 text-start flex items-center justify-between gap-4 hover:bg-ivoryWarm/60 transition-colors">
-                        <span class="font-bold text-midnightTeal text-base sm:text-lg">${item.q}</span>
-                        <span id="faqIcon-${idx}" class="w-8 h-8 shrink-0 rounded-full bg-emeraldDeep/10 text-emeraldDeep flex items-center justify-center transition-transform duration-300">
-                            <i class="fa-solid fa-chevron-down text-xs"></i>
-                        </span>
-                    </button>
-                    <div id="faqAnswer-${idx}" class="hidden px-5 sm:px-6 pb-6 text-slate-600 text-sm sm:text-base leading-relaxed border-t border-slate-100 pt-4">
-                        ${item.a}
-                    </div>
-                `;
-                container.appendChild(faqItem);
-            });
-        }
-
-        function toggleFaq(idx) {
-            const answer = document.getElementById(`faqAnswer-${idx}`);
-            const icon = document.getElementById(`faqIcon-${idx}`);
-            const isHidden = answer.classList.contains('hidden');
-            if (isHidden) {
-                answer.classList.remove('hidden');
-                icon.classList.add('rotate-180', 'bg-emeraldDeep', 'text-antiqueGold');
+            if (sessionStorage.getItem("client_authenticated") === "true") {
+                showClientDashboard();
             } else {
-                answer.classList.add('hidden');
-                icon.classList.remove('rotate-180', 'bg-emeraldDeep', 'text-antiqueGold');
+                document.getElementById("clientLoginScreen").classList.remove("hidden");
+                document.getElementById("clientDashboardScreen").classList.add("hidden");
             }
         }
 
-        // Syllabus Modal Controls
-        function openSyllabusModal(courseId) {
-            const data = translations[currentLang];
-            const course = data.courses.find(c => c.id === courseId) || data.courses[0];
-
-            document.getElementById('modalCourseTitle').textContent = course.title;
-            document.getElementById('modalCourseDesc').textContent = course.shortDesc;
-
-            const modulesList = document.getElementById('modalCourseModules');
-            modulesList.innerHTML = '';
-            course.modules.forEach(mod => {
-                const li = document.createElement('li');
-                li.className = 'flex items-start gap-2.5';
-                li.innerHTML = `<i class="fa-solid fa-circle-check text-emeraldDeep mt-1 shrink-0"></i><span>${mod}</span>`;
-                modulesList.appendChild(li);
-            });
-
-            document.getElementById('modalEnrollBtn').onclick = () => {
-                closeSyllabusModal();
-                openDemoModalWithCourse(course.id);
-            };
-
-            const modal = document.getElementById('syllabusModal');
-            modal.classList.remove('hidden');
-            modal.classList.add('flex');
+        // ایڈمن پورٹل چھپا کر واپس عام لوگوں والی ویب سائٹ دکھائیں
+        function switchToPublicSite() {
+            document.getElementById("adminPortalView").classList.add("hidden");
+            document.getElementById("publicWebsiteView").classList.remove("hidden");
+            loadSavedSiteContent();
         }
 
-        function closeSyllabusModal() {
-            const modal = document.getElementById('syllabusModal');
-            modal.classList.add('hidden');
-            modal.classList.remove('flex');
+        // کلائنٹ لاگ ان چیک
+        function handleClientLogin(e) {
+            e.preventDefault();
+            const u = document.getElementById("loginUsername").value.trim();
+            const p = document.getElementById("loginPassword").value.trim();
+
+            if (u === CLIENT_CREDENTIALS.username && p === CLIENT_CREDENTIALS.password) {
+                sessionStorage.setItem("client_authenticated", "true");
+                showClientDashboard();
+            } else {
+                alert("غلط یوزر نیم یا پاس ورڈ! براہ کرم درست معلومات درج کریں۔");
+            }
         }
 
-        // Free Demo Booking Modal Controls
-        function openDemoModal() {
-            const modal = document.getElementById('demoModal');
-            modal.classList.remove('hidden');
-            modal.classList.add('flex');
+        // لاگ آؤٹ
+        function handleClientLogout() {
+            sessionStorage.removeItem("client_authenticated");
+            document.getElementById("clientDashboardScreen").classList.add("hidden");
+            document.getElementById("clientLoginScreen").classList.remove("hidden");
+            document.getElementById("loginUsername").value = "";
+            document.getElementById("loginPassword").value = "";
         }
 
-        function openDemoModalWithCourse(courseId) {
-            openDemoModal();
-            const select = document.getElementById('modalCourse');
-            if (select) select.value = courseId;
+        // ڈیش بورڈ میں موجودہ ڈیٹا لوڈ کریں
+        function showClientDashboard() {
+            document.getElementById("clientLoginScreen").classList.add("hidden");
+            document.getElementById("clientDashboardScreen").classList.remove("hidden");
+
+            const saved = JSON.parse(localStorage.getItem("alsamad_site_data")) || defaultSiteData;
+            document.getElementById("editAcademyName").value = saved.academyName;
+            document.getElementById("editTeemUrl").value = saved.teemUrl;
+            document.getElementById("editPhone1").value = saved.phone1;
+            document.getElementById("editPhone2").value = saved.phone2;
         }
 
-        function closeDemoModal() {
-            const modal = document.getElementById('demoModal');
-            modal.classList.add('hidden');
-            modal.classList.remove('flex');
+        // نیا ایکسپیرینس اور تصویر شامل کریں
+        function addNewExperienceItem() {
+            const title = document.getElementById("newExpTitle").value.trim();
+            const desc = document.getElementById("newExpDesc").value.trim();
+            const fileInput = document.getElementById("newExpImage");
+
+            if (!title || !desc) {
+                alert("براہ کرم تجربے کا عنوان اور تفصیل لکھیں۔");
+                return;
+            }
+
+            const saved = JSON.parse(localStorage.getItem("alsamad_site_data")) || defaultSiteData;
+
+            if (fileInput.files && fileInput.files[0]) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    saved.experiences.push({ title, desc, image: e.target.result });
+                    localStorage.setItem("alsamad_site_data", JSON.stringify(saved));
+                    alert("نیا تجربہ اور تصویر کامیابی سے شامل ہو گئی ہے!");
+                    document.getElementById("newExpTitle").value = "";
+                    document.getElementById("newExpDesc").value = "";
+                };
+                reader.readAsDataURL(fileInput.files[0]);
+            } else {
+                saved.experiences.push({
+                    title,
+                    desc,
+                    image: "https://images.unsplash.com/photo-1584286595398-a59f21d313f5?auto=format&fit=crop&w=600&q=80"
+                });
+                localStorage.setItem("alsamad_site_data", JSON.stringify(saved));
+                alert("نیا تجربہ کامیابی سے شامل ہو گیا ہے!");
+            }
         }
 
-        // Mobile Navigation & Floating WhatsApp Controls
-        function toggleMobileMenu() {
-            document.getElementById('mobileMenu').classList.toggle('hidden');
+        // تمام تبدیلیاں محفوظ کریں
+        function saveAllClientSettings() {
+            const saved = JSON.parse(localStorage.getItem("alsamad_site_data")) || defaultSiteData;
+            saved.academyName = document.getElementById("editAcademyName").value;
+            saved.teemUrl = document.getElementById("editTeemUrl").value;
+            saved.phone1 = document.getElementById("editPhone1").value;
+            saved.phone2 = document.getElementById("editPhone2").value;
+
+            const heroInput = document.getElementById("editHeroImage");
+            if (heroInput.files && heroInput.files[0]) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    saved.heroImage = e.target.result;
+                    localStorage.setItem("alsamad_site_data", JSON.stringify(saved));
+                    alert("تمام تبدیلیاں اور تصویر لائیو ویب سائٹ پر محفوظ ہو گئی ہیں!");
+                    switchToPublicSite();
+                };
+                reader.readAsDataURL(heroInput.files[0]);
+            } else {
+                localStorage.setItem("alsamad_site_data", JSON.stringify(saved));
+                alert("تمام تبدیلیاں لائیو ویب سائٹ پر محفوظ ہو گئی ہیں!");
+                switchToPublicSite();
+            }
         }
 
-        function toggleFloatingWa() {
-            document.getElementById('floatingWaMenu').classList.toggle('hidden');
+        // Teem App پر بکنگ بھیجنے کا فنکشن
+        function submitToTeemApp(e) {
+            e.preventDefault();
+            const saved = JSON.parse(localStorage.getItem("alsamad_site_data")) || defaultSiteData;
+            window.open(saved.teemUrl, "_blank");
         }
 
-        function openWhatsAppSelector() {
-            const menu = document.getElementById('floatingWaMenu');
-            menu.classList.remove('hidden');
+        function setLanguage(lang) {
+            document.documentElement.setAttribute("lang", lang);
+            document.documentElement.setAttribute("dir", (lang === "ur" || lang === "ar") ? "rtl" : "ltr");
         }
-
-        // Handle Free Demo Form Validation & Pre-filled WhatsApp Redirect
-        function handleBookingSubmit(event, source) {
-            event.preventDefault();
-            const prefix = source === 'modal' ? 'modal' : 'inline';
-
-            const name = document.getElementById(`${prefix}Name`).value.trim();
-            const ageSelect = document.getElementById(`${prefix}Age`);
-            const ageText = ageSelect.options[ageSelect.selectedIndex].text;
-            const courseSelect = document.getElementById(`${prefix}Course`);
-            const courseText = courseSelect.options[courseSelect.selectedIndex].text;
-            const teacherSelect = document.getElementById(`${prefix}Teacher`);
-            const teacherText = teacherSelect.options[teacherSelect.selectedIndex].text;
-            const country = document.getElementById(`${prefix}Country`).value.trim();
-            const studentWa = document.getElementById(`${prefix}Whatsapp`).value.trim();
-            const destPhone = document.querySelector(`input[name="${prefix}DestPhone"]:checked`).value;
-
-            const message =
-                `Assalam-o-Alaikum Al Samad Online Quran Academy!%0A%0A` +
-                `*New Free Demo Class Request*%0A` +
-                `• *Student Name:* ${encodeURIComponent(name)}%0A` +
-                `• *Age Group:* ${encodeURIComponent(ageText)}%0A` +
-                `• *Course:* ${encodeURIComponent(courseText)}%0A` +
-                `• *Preferred Teacher:* ${encodeURIComponent(teacherText)}%0A` +
-                `• *Country / Timezone:* ${encodeURIComponent(country)}%0A` +
-                `• *Student WhatsApp:* ${encodeURIComponent(studentWa)}`;
-
-            const waUrl = `https://wa.me/${destPhone}?text=${message}`;
-
-            // Show Confirmation State & Fallback Link
-            const successBox = document.getElementById(`${prefix}SuccessBox`);
-            const fallbackLink = document.getElementById(`${prefix}FallbackLink`);
-            fallbackLink.href = waUrl;
-            successBox.classList.remove('hidden');
-
-            // Open WhatsApp in new tab
-            window.open(waUrl, '_blank', 'noopener');
-        }
-
-        // Close modals on backdrop click
-        window.addEventListener('click', (e) => {
-            const syllabusModal = document.getElementById('syllabusModal');
-            const demoModal = document.getElementById('demoModal');
-            if (e.target === syllabusModal) closeSyllabusModal();
-            if (e.target === demoModal) closeDemoModal();
-        });
-
-        // ==========================================
-// SECURE ADMIN DASHBOARD & TEEM APP INTEGRATION
-// ==========================================
-
-// یہاں آپ اپنا مرضی کا یوزر نیم اور پاسورڈ سیٹ کر سکتے ہیں
-const ADMIN_USER = "alsamad_admin";
-const ADMIN_PASS = "quran_admin_2026"; 
-
-// چیک کریں کہ ایڈمن لاگ ان ہے یا نہیں
-function checkAdminSession() {
-    return localStorage.getItem("isAdminLoggedIn") === "true";
-}
-
-// ایڈمن لاگ ان اور ڈیش بورڈ کھولنے کا فنکشن
-function openAdminLogin() {
-    if (checkAdminSession()) {
-        openAdminDashboard();
-        return;
-    }
-
-    let username = prompt("Enter Admin Username:");
-    let password = prompt("Enter Admin Password:");
-
-    if (username === ADMIN_USER && password === ADMIN_PASS) {
-        localStorage.setItem("isAdminLoggedIn", "true");
-        alert("Login Successful! Welcome to Admin Dashboard.");
-        openAdminDashboard();
-    } else {
-        alert("Access Denied! Incorrect Username or Password.");
-    }
-}
-
-// ڈیش بورڈ جہاں سے بغیر کوڈنگ کے نمبرز اور Teem App لنک تبدیل ہوں گے
-function openAdminDashboard() {
-    let currentTeem = localStorage.getItem("adminTeemLink") || "https://teem.pk/your-link";
-    let currentPhone = localStorage.getItem("adminPhone") || "+923032549945";
-
-    let dashboardWindow = window.open("", "_blank", "width=800,height=700");
-    dashboardWindow.document.write(`
-        <html>
-        <head>
-            <title>Al Samad Academy - Admin Control Panel</title>
-            <script src="https://cdn.tailwindcss.com"></script>
-            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-        </head>
-        <body class="bg-slate-100 p-6 font-sans">
-            <div class="max-w-2xl mx-auto bg-white p-8 rounded-2xl shadow-xl border border-emerald-800">
-                <div class="flex items-center justify-between pb-4 border-b mb-6">
-                    <h2 class="text-2xl font-bold text-emerald-900"><i class="fa-solid fa-shield-halved text-amber-500 mr-2"></i> Admin Dashboard</h2>
-                    <button onclick="localStorage.removeItem('isAdminLoggedIn'); window.close();" class="px-4 py-2 bg-red-600 text-white rounded-lg text-sm font-semibold hover:bg-red-700">Logout</button>
-                </div>
-
-                <div class="space-y-4">
-                    <h3 class="font-bold text-lg text-slate-800">Teem App & Contact Settings</h3>
-                    <div>
-                        <label class="block text-sm font-semibold text-slate-700">Teem App Chat Link / Number:</label>
-                        <input type="text" id="teemInput" value="${currentTeem}" class="w-full p-3 border rounded-xl mt-1" placeholder="Enter Teem App link">
-                    </div>
-                    <div>
-                        <label class="block text-sm font-semibold text-slate-700">Official Mobile Number:</label>
-                        <input type="text" id="phoneInput" value="${currentPhone}" class="w-full p-3 border rounded-xl mt-1">
-                    </div>
-
-                    <h3 class="font-bold text-lg text-slate-800 pt-4">Upload Images / Experience Proof (No-Code)</h3>
-                    <div>
-                        <label class="block text-sm font-semibold text-slate-700">Select Image:</label>
-                        <input type="file" id="imageUploader" accept="image/*" class="w-full p-2 border rounded-xl mt-1 bg-slate-50">
-                    </div>
-
-                    <button onclick="saveAdminChanges()" class="w-full py-3 bg-emerald-800 text-white font-bold rounded-xl hover:bg-emerald-900 transition-all shadow-lg mt-4">
-                        Save Changes & Update Website
-                    </button>
-                </div>
-            </div>
-
-            <script>
-                function saveAdminChanges() {
-                    let teemVal = document.getElementById('teemInput').value;
-                    let phoneVal = document.getElementById('phoneInput').value;
-                    localStorage.setItem("adminTeemLink", teemVal);
-                    localStorage.setItem("adminPhone", phoneVal);
-
-                    let fileInput = document.getElementById('imageUploader');
-                    if (fileInput.files && fileInput.files[0]) {
-                        let reader = new FileReader();
-                        reader.onload = function(e) {
-                            localStorage.setItem("customUploadedImage", e.target.result);
-                            alert("Settings and Image successfully updated!");
-                            window.location.reload();
-                        };
-                        reader.readAsDataURL(fileInput.files[0]);
-                    } else {
-                        alert("Settings successfully updated!");
-                        window.location.reload();
-                    }
-                }
-            </script>
-        </body>
-        </html>
-    `);
-}
     </script>
-// ==========================================
-// SECURE ADMIN DASHBOARD & TEEM APP INTEGRATION (FIXED)
-// ==========================================
-
-const ADMIN_USER = "alsamad_admin";
-const ADMIN_PASS = "quran_admin_2026"; 
-
-function checkAdminSession() {
-    return localStorage.getItem("isAdminLoggedIn") === "true";
-}
-
-function openAdminLogin() {
-    if (checkAdminSession()) {
-        openAdminDashboard();
-        return;
-    }
-
-    let username = prompt("Enter Admin Username:");
-    let password = prompt("Enter Admin Password:");
-
-    if (username === ADMIN_USER && password === ADMIN_PASS) {
-        localStorage.setItem("isAdminLoggedIn", "true");
-        alert("Login Successful! Welcome to Admin Dashboard.");
-        openAdminDashboard();
-    } else {
-        alert("Access Denied! Incorrect Username or Password.");
-    }
-}
-
-function openAdminDashboard() {
-    let currentTeem = localStorage.getItem("adminTeemLink") || "https://teem.pk/your-link";
-    let currentPhone = localStorage.getItem("adminPhone") || "+923032549945";
-
-    let dashboardWindow = window.open("", "_blank", "width=800,height=700");
-    dashboardWindow.document.write(`
-        <html>
-        <head>
-            <title>Al Samad Academy - Admin Control Panel</title>
-            <script src="https://cdn.tailwindcss.com"></script>
-            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-        </head>
-        <body class="bg-slate-100 p-6 font-sans">
-            <div class="max-w-2xl mx-auto bg-white p-8 rounded-2xl shadow-xl border border-emerald-800">
-                <div class="flex items-center justify-between pb-4 border-b mb-6">
-                    <h2 class="text-2xl font-bold text-emerald-900"><i class="fa-solid fa-shield-halved text-amber-500 mr-2"></i> Admin Dashboard</h2>
-                    <button onclick="localStorage.removeItem('isAdminLoggedIn'); window.close();" class="px-4 py-2 bg-red-600 text-white rounded-lg text-sm font-semibold hover:bg-red-700">Logout</button>
-                </div>
-
-                <div class="space-y-4">
-                    <h3 class="font-bold text-lg text-slate-800">Teem App & Contact Settings</h3>
-                    <div>
-                        <label class="block text-sm font-semibold text-slate-700">Teem App Chat Link / Number:</label>
-                        <input type="text" id="teemInput" value="` + currentTeem + `" class="w-full p-3 border rounded-xl mt-1" placeholder="Enter Teem App link">
-                    </div>
-                    <div>
-                        <label class="block text-sm font-semibold text-slate-700">Official Mobile Number:</label>
-                        <input type="text" id="phoneInput" value="` + currentPhone + `" class="w-full p-3 border rounded-xl mt-1">
-                    </div>
-
-                    <h3 class="font-bold text-lg text-slate-800 pt-4">Upload Images / Experience Proof (No-Code)</h3>
-                    <div>
-                        <label class="block text-sm font-semibold text-slate-700">Select Image:</label>
-                        <input type="file" id="imageUploader" accept="image/*" class="w-full p-2 border rounded-xl mt-1 bg-slate-50">
-                    </div>
-
-                    <button onclick="saveAdminChanges()" class="w-full py-3 bg-emerald-800 text-white font-bold rounded-xl hover:bg-emerald-900 transition-all shadow-lg mt-4">
-                        Save Changes & Update Website
-                    </button>
-                </div>
-            </div>
-
-            <script>
-                function saveAdminChanges() {
-                    let teemVal = document.getElementById('teemInput').value;
-                    let phoneVal = document.getElementById('phoneInput,').value;
-                    localStorage.setItem("adminTeemLink", teemVal);
-                    localStorage.setItem("adminPhone", phoneVal);
-
-                    let fileInput = document.getElementById('imageUploader');
-                    if (fileInput.files && fileInput.files[0]) {
-                        let reader = new FileReader();
-                        reader.onload = function(e) {
-                            localStorage.setItem("customUploadedImage", e.target.result);
-                            alert("Settings and Image successfully updated!");
-                            window.location.reload();
-                        };
-                        reader.readAsDataURL(fileInput.files[0]);
-                    } else {
-                        alert("Settings successfully updated!");
-                        window.location.reload();
-                    }
-                }
-            </script>
-<button onclick="openAdminLogin()" class="text-xs text-antiqueGold underline">Admin Login</button>
-            
-        </body>
-        </html>
-    `);
-}
-
 </body>
 </html>
