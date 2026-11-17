@@ -1,117 +1,294 @@
-<!-- ========================================== -->
-<!-- PROPER ADMIN LOGIN & DASHBOARD SYSTEM      -->
-<!-- ========================================== -->
-<div id="adminSection" class="max-w-7xl mx-auto px-4 py-8 bg-slate-900 text-white border-t border-antiqueGold/30 mt-10">
-    <div class="max-w-md mx-auto bg-slate-800 p-6 rounded-2xl border border-antiqueGold/50 shadow-xl">
-        <h3 class="text-xl font-bold text-antiqueGold mb-4 text-center"><i class="fa-solid fa-lock mr-2"></i> Admin Portal Login</h3>
-        <div id="loginFormContainer" class="space-y-4">
-            <div>
-                <label class="block text-xs font-semibold text-slate-300 mb-1">Admin Username</label>
-                <input type="text" id="adminUserField" placeholder="Enter username" class="w-full p-3 rounded-xl bg-slate-700 border border-slate-600 text-white text-sm focus:outline-none focus:border-antiqueGold">
-            </div>
-            <div>
-                <label class="block text-xs font-semibold text-slate-300 mb-1">Admin Password</label>
-                <input type="password" id="adminPassField" placeholder="Enter password" class="w-full p-3 rounded-xl bg-slate-700 border border-slate-600 text-white text-sm focus:outline-none focus:border-antiqueGold">
-            </div>
-            <button onclick="processAdminLogin()" class="w-full py-3 bg-antiqueGold hover:bg-amber-500 text-slate-900 font-bold rounded-xl transition-all shadow-md text-sm">
-                Login to Dashboard
-            </button>
-        </div>
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Al Samad Online Quran Academy | Learn the Quran Online</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Cinzel, Cormorant Garamond, Plus Jakarta Sans, Noto Nastaliq Urdu, Amiri -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Cinzel:wght@500;600;700&family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=Noto+Nastaliq+Urdu:wght@400;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for crisp icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-        <!-- Dashboard Panel (Initially Hidden until login) -->
-        <div id="dashboardPanelContainer" class="hidden space-y-4">
-            <div class="flex items-center justify-between pb-3 border-b border-slate-700">
-                <span class="text-emerald-400 font-bold text-sm"><i class="fa-solid fa-circle-check mr-1"></i> Logged In Successfully</span>
-                <button onclick="processAdminLogout()" class="px-3 py-1 bg-red-600 hover:bg-red-700 text-white rounded-lg text-xs font-semibold">Logout</button>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        emeraldDeep: '#064E3B',
+                        midnightTeal: '#022C22',
+                        ivoryWarm: '#FAF8F3',
+                        antiqueGold: '#D4AF37',
+                        antiqueGoldDark: '#B59024',
+                        antiqueGoldSoft: '#C5A059',
+                    },
+                    fontFamily: {
+                        serifDisplay: ['"Cinzel"', '"Cormorant Garamond"', 'serif'],
+                        editorial: ['"Cormorant Garamond"', 'serif'],
+                        sansBody: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        urdu: ['"Noto Nastaliq Urdu"', 'serif'],
+                        arabic: ['"Amiri"', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Dynamic Typography based on active language */
+        html[lang="en"], html[lang="fr"], html[lang="es"], html[lang="de"] {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+        html[lang="en"] .heading-font,
+        html[lang="fr"] .heading-font,
+        html[lang="es"] .heading-font,
+        html[lang="de"] .heading-font {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            letter-spacing: -0.01em;
+        }
+        html[lang="en"] .brand-font,
+        html[lang="fr"] .brand-font,
+        html[lang="es"] .brand-font,
+        html[lang="de"] .brand-font {
+            font-family: 'Cinzel', serif;
+        }
+
+        /* Urdu RTL Typography adjustments for Nastaliq line-height & readability */
+        html[lang="ur"] {
+            font-family: 'Noto Nastaliq Urdu', serif;
+        }
+        html[lang="ur"] body, html[lang="ur"] p, html[lang="ur"] span, html[lang="ur"] button, html[lang="ur"] a, html[lang="ur"] input, html[lang="ur"] select, html[lang="ur"] textarea, html[lang="ur"] label {
+            font-family: 'Noto Nastaliq Urdu', serif !important;
+            line-height: 2.2 !important;
+        }
+        html[lang="ur"] .heading-font, html[lang="ur"] .brand-font {
+            font-family: 'Noto Nastaliq Urdu', serif !important;
+            line-height: 2.0 !important;
+        }
+
+        /* Arabic RTL Typography */
+        html[lang="ar"] {
+            font-family: 'Amiri', serif;
+        }
+        html[lang="ar"] body, html[lang="ar"] p, html[lang="ar"] span, html[lang="ar"] button, html[lang="ar"] a, html[lang="ar"] input, html[lang="ar"] select, html[lang="ar"] textarea, html[lang="ar"] label {
+            font-family: 'Amiri', serif !important;
+            line-height: 1.85 !important;
+        }
+        html[lang="ar"] .heading-font, html[lang="ar"] .brand-font {
+            font-family: 'Amiri', serif !important;
+            line-height: 1.65 !important;
+        }
+
+        /* Subtle Islamic Geometric Arabesque SVG Pattern Overlay */
+        .islamic-pattern {
+            background-image: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%23D4AF37' stroke-width='0.75' stroke-opacity='0.14'%3E%3Cpath d='M40 0L49.5 30.5L80 40L49.5 49.5L40 80L30.5 49.5L0 40L30.5 30.5Z'/%3E%3Ccircle cx='40' cy='40' r='14'/%3E%3Cpath d='M11.7 11.7L68.3 68.3M68.3 11.7L11.7 68.3'/%3E%3C/g%3E%3C/svg%3E");
+        }
+
+        .islamic-pattern-light {
+            background-image: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%23064E3B' stroke-width='0.75' stroke-opacity='0.06'%3E%3Cpath d='M40 0L49.5 30.5L80 40L49.5 49.5L40 80L30.5 49.5L0 40L30.5 30.5Z'/%3E%3Ccircle cx='40' cy='40' r='14'/%3E%3Crect x='20' y='20' width='40' height='40' transform='rotate(45 40 40)'/%3E%3C/g%3E%3C/svg%3E");
+        }
+
+        /* Course card luxury gold hover glow */
+        .course-card {
+            transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.35s ease, border-color 0.35s ease;
+        }
+        .course-card:hover {
+            transform: translateY(-6px);
+            border-color: #D4AF37;
+            box-shadow: 0 20px 35px -10px rgba(6, 78, 59, 0.12), 0 0 20px rgba(212, 175, 55, 0.18);
+        }
+
+        /* Custom subtle scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #FAF8F3;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #064E3B;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #D4AF37;
+        }
+    </style>
+</head>
+<body class="bg-ivoryWarm text-slate-800 antialiased selection:bg-antiqueGold selection:text-midnightTeal overflow-x-hidden">
+
+    <!-- TOP LANGUAGE & CONTACT BAR -->
+    <div class="bg-midnightTeal text-ivoryWarm/90 border-b border-antiqueGold/25 text-xs sm:text-sm relative z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2 flex flex-col md:flex-row items-center justify-between gap-2">
+            <!-- Quick Direct Numbers -->
+            <div class="flex flex-wrap items-center justify-center gap-4 text-xs">
+                <a id="topWaLink1" href="https://wa.me/923241745886" target="_blank" rel="noopener" class="inline-flex items-center gap-1.5 hover:text-antiqueGold transition-colors">
+                    <i class="fa-brands fa-whatsapp text-emerald-400 text-sm"></i>
+                    <span id="topWaNum1" dir="ltr">+92 324 1745886</span>
+                </a>
+                <span class="text-antiqueGold/40">|</span>
+                <a id="topWaLink2" href="https://wa.me/923160476714" target="_blank" rel="noopener" class="inline-flex items-center gap-1.5 hover:text-antiqueGold transition-colors">
+                    <i class="fa-brands fa-whatsapp text-emerald-400 text-sm"></i>
+                    <span id="topWaNum2" dir="ltr">+92 316 0476714</span>
+                </a>
             </div>
-            <div>
-                <label class="block text-xs font-semibold text-slate-300 mb-1">Teem App Chat Link / Number</label>
-                <input type="text" id="dbTeemInput" class="w-full p-3 rounded-xl bg-slate-700 border border-slate-600 text-white text-sm">
+
+            <!-- Interactive Multi-Language Switcher + Admin Login Trigger -->
+            <div class="flex flex-wrap items-center justify-center gap-1 sm:gap-1.5" role="group" aria-label="Language Selector">
+                <span class="text-antiqueGold/80 text-xs me-1 hidden sm:inline"><i class="fa-solid fa-globe me-1"></i></span>
+                <button onclick="setLanguage('en')" data-lang-btn="en" class="lang-btn px-2.5 py-1 rounded-md text-xs font-medium transition-all bg-antiqueGold text-midnightTeal shadow-sm">
+                    🇬🇧 EN
+                </button>
+                <button onclick="setLanguage('ur')" data-lang-btn="ur" class="lang-btn px-2.5 py-1 rounded-md text-xs font-medium transition-all text-ivoryWarm/85 hover:bg-emeraldDeep hover:text-antiqueGold">
+                    🇵🇰 اردو
+                </button>
+                <button onclick="setLanguage('ar')" data-lang-btn="ar" class="lang-btn px-2.5 py-1 rounded-md text-xs font-medium transition-all text-ivoryWarm/85 hover:bg-emeraldDeep hover:text-antiqueGold">
+                    🇸🇦 العربية
+                </button>
+                <button onclick="setLanguage('fr')" data-lang-btn="fr" class="lang-btn px-2.5 py-1 rounded-md text-xs font-medium transition-all text-ivoryWarm/85 hover:bg-emeraldDeep hover:text-antiqueGold">
+                    🇫🇷 FR
+                </button>
+                <button onclick="setLanguage('es')" data-lang-btn="es" class="lang-btn px-2.5 py-1 rounded-md text-xs font-medium transition-all text-ivoryWarm/85 hover:bg-emeraldDeep hover:text-antiqueGold">
+                    🇪🇸 ES
+                </button>
+                <button onclick="setLanguage('de')" data-lang-btn="de" class="lang-btn px-2.5 py-1 rounded-md text-xs font-medium transition-all text-ivoryWarm/85 hover:bg-emeraldDeep hover:text-antiqueGold">
+                    🇩🇪 DE
+                </button>
+                <span class="text-antiqueGold/40 mx-1">|</span>
+                <button onclick="openAdminAccess()" class="px-2.5 py-1 rounded-md text-xs font-semibold bg-emeraldDeep/80 hover:bg-antiqueGold hover:text-midnightTeal text-antiqueGold border border-antiqueGold/40 transition-all flex items-center gap-1">
+                    <i class="fa-solid fa-user-shield"></i>
+                    <span id="adminNavLabel">Admin</span>
+                </button>
             </div>
-            <div>
-                <label class="block text-xs font-semibold text-slate-300 mb-1">Official Mobile Number</label>
-                <input type="text" id="dbPhoneInput" class="w-full p-3 rounded-xl bg-slate-700 border border-slate-600 text-white text-sm">
-            </div>
-            <div>
-                <label class="block text-xs font-semibold text-slate-300 mb-1">Upload Image / Experience Proof (No-Code)</label>
-                <input type="file" id="dbImageUploader" accept="image/*" class="w-full p-2 rounded-xl bg-slate-700 border border-slate-600 text-xs text-slate-300">
-            </div>
-            <button onclick="saveDashboardChanges()" class="w-full py-3 bg-emerald-600 hover:bg-emerald-700 text-white font-bold rounded-xl transition-all shadow-md text-sm">
-                Save Changes & Update Website
-            </button>
         </div>
     </div>
-</div>
 
-<script>
-    const CORRECT_USER = "alsamad_admin";
-    const CORRECT_PASS = "quran_admin_2026";
+    <!-- STICKY NAVIGATION HEADER -->
+    <header class="sticky top-0 z-40 bg-ivoryWarm/95 backdrop-blur-md border-b border-antiqueGold/30 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Brand Emblem & Title -->
+                <a href="#home" class="flex items-center gap-3 group">
+                    <div id="brandLogoContainer" class="w-11 h-11 rounded-xl bg-gradient-to-br from-emeraldDeep to-midnightTeal border border-antiqueGold flex items-center justify-center shadow-md group-hover:scale-105 transition-transform overflow-hidden">
+                        <svg class="w-6 h-6 text-antiqueGold" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+                            <path d="M12 2L14.8 7.2L20.5 6.5L18.2 12L20.5 17.5L14.8 16.8L12 22L9.2 16.8L3.5 17.5L5.8 12L3.5 6.5L9.2 7.2L12 2Z"/>
+                            <circle cx="12" cy="12" r="3.5"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <span data-i18n="brandName" class="brand-font block text-base sm:text-lg font-bold text-midnightTeal tracking-wide">Al Samad Online Quran Academy</span>
+                        <span data-i18n="brandTagline" class="block text-[11px] uppercase tracking-widest text-antiqueGoldDark font-semibold">Global Quranic Excellence</span>
+                    </div>
+                </a>
 
-    // Page Load پر چیک کریں کہ آیا پہلے سے لاگ ان ہے یا نہیں
-    document.addEventListener("DOMContentLoaded", () => {
-        let isLoggedIn = localStorage.getItem("isAdminLoggedIn") === "true";
-        if (isLoggedIn) {
-            showDashboardView();
-        }
-        
-        // اگر لوکل اسسٹوری میں Teem لنک محفوظ ہے تو اسے ویب سائٹ پر اپڈیٹ کر دیں
-        let savedTeem = localStorage.getItem("adminTeemLink");
-        if(savedTeem) {
-            document.querySelectorAll('a[href*="teem.pk"], a[href*="wa.me"]').forEach(el => {
-                el.href = savedTeem;
-            });
-        }
-    });
+                <!-- Desktop Navigation Links -->
+                <nav class="hidden lg:flex items-center gap-6 text-sm font-medium text-slate-700">
+                    <a href="#home" data-i18n="navHome" class="hover:text-emeraldDeep transition-colors">Home</a>
+                    <a href="#live-classes" data-i18n="navLivePortals" class="hover:text-emeraldDeep transition-colors font-semibold text-emeraldDeep">Zoom & Teams</a>
+                    <a href="#courses" data-i18n="navCourses" class="hover:text-emeraldDeep transition-colors">Courses</a>
+                    <a href="#why-us" data-i18n="navWhyUs" class="hover:text-emeraldDeep transition-colors">Why Choose Us</a>
+                    <a href="#demo-booking" data-i18n="navFreeDemo" class="hover:text-emeraldDeep transition-colors">Free Demo</a>
+                    <a href="#faq" data-i18n="navFaq" class="hover:text-emeraldDeep transition-colors">FAQ</a>
+                </nav>
 
-    function processAdminLogin() {
-        let u = document.getElementById("adminUserField").value.trim();
-        let p = document.getElementById("adminPassField").value.trim();
+                <!-- Header CTA & Mobile Menu Toggle -->
+                <div class="flex items-center gap-3">
+                    <button onclick="openDemoModal()" class="hidden sm:inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-emeraldDeep hover:bg-midnightTeal text-ivoryWarm border border-antiqueGold/60 text-sm font-semibold shadow-md hover:shadow-lg transition-all">
+                        <i class="fa-solid fa-calendar-check text-antiqueGold"></i>
+                        <span data-i18n="btnBookDemo">Book Free Demo Class</span>
+                    </button>
+                    <button id="mobileMenuBtn" onclick="toggleMobileMenu()" class="lg:hidden p-2.5 rounded-xl text-midnightTeal hover:bg-emeraldDeep/10 transition-colors" aria-label="Toggle Menu">
+                        <i class="fa-solid fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
 
-        if (u === CORRECT_USER && p === CORRECT_PASS) {
-            localStorage.setItem("isAdminLoggedIn", "true");
-            alert("Login Successful!");
-            showDashboardView();
-        } else {
-            alert("Incorrect Username or Password!");
-        }
-    }
+        <!-- Mobile Dropdown Nav -->
+        <div id="mobileMenu" class="hidden lg:hidden bg-ivoryWarm border-t border-antiqueGold/20 px-4 pt-3 pb-5 space-y-2 shadow-lg">
+            <a href="#home" onclick="toggleMobileMenu()" data-i18n="navHome" class="block px-3 py-2 rounded-lg text-slate-800 hover:bg-emeraldDeep/10 font-medium">Home</a>
+            <a href="#live-classes" onclick="toggleMobileMenu()" data-i18n="navLivePortals" class="block px-3 py-2 rounded-lg text-emeraldDeep bg-emeraldDeep/5 font-bold">Zoom & Teams Live Classes</a>
+            <a href="#courses" onclick="toggleMobileMenu()" data-i18n="navCourses" class="block px-3 py-2 rounded-lg text-slate-800 hover:bg-emeraldDeep/10 font-medium">Courses</a>
+            <a href="#why-us" onclick="toggleMobileMenu()" data-i18n="navWhyUs" class="block px-3 py-2 rounded-lg text-slate-800 hover:bg-emeraldDeep/10 font-medium">Why Choose Us</a>
+            <a href="#demo-booking" onclick="toggleMobileMenu()" data-i18n="navFreeDemo" class="block px-3 py-2 rounded-lg text-slate-800 hover:bg-emeraldDeep/10 font-medium">Free Demo</a>
+            <a href="#faq" onclick="toggleMobileMenu()" data-i18n="navFaq" class="block px-3 py-2 rounded-lg text-slate-800 hover:bg-emeraldDeep/10 font-medium">FAQ</a>
+            <div class="pt-2">
+                <button onclick="toggleMobileMenu(); openDemoModal();" class="w-full py-3 rounded-xl bg-emeraldDeep text-ivoryWarm border border-antiqueGold font-semibold flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-calendar-check text-antiqueGold"></i>
+                    <span data-i18n="btnBookDemo">Book Free Demo Class</span>
+                </button>
+            </div>
+        </div>
+    </header>
 
-    function processAdminLogout() {
-        localStorage.setItem("isAdminLoggedIn", "false");
-        document.getElementById("loginFormContainer").classList.remove("hidden");
-        document.getElementById("dashboardPanelContainer").classList.add("hidden");
-        document.getElementById("adminUserField").value = "";
-        document.getElementById("adminPassField").value = "";
-        alert("Logged out successfully.");
-    }
+    <!-- 1. HERO SECTION -->
+    <section id="home" class="relative bg-gradient-to-br from-midnightTeal via-emeraldDeep to-midnightTeal text-ivoryWarm overflow-hidden">
+        <!-- Geometric Islamic Watermark Pattern -->
+        <div class="absolute inset-0 islamic-pattern opacity-90 pointer-events-none"></div>
+        <!-- Ambient Radial Gold Glow -->
+        <div class="absolute -top-24 -end-24 w-96 h-96 bg-antiqueGold/15 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute -bottom-24 -start-24 w-96 h-96 bg-emerald-400/10 rounded-full blur-3xl pointer-events-none"></div>
 
-    function showDashboardView() {
-        document.getElementById("loginFormContainer").classList.add("hidden");
-        document.getElementById("dashboardPanelContainer").classList.remove("hidden");
-        
-        // پرانی ویلیوز خانوں میں لوڈ کریں
-        document.getElementById("dbTeemInput").value = localStorage.getItem("adminTeemLink") || "https://teem.pk/your-link";
-        document.getElementById("dbPhoneInput").value = localStorage.getItem("adminPhone") || "+923032549945";
-    }
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 lg:py-28">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <!-- Left Editorial Content -->
+                <div class="lg:col-span-7 space-y-6">
+                    <!-- Bismillah Calligraphy Accent -->
+                    <div class="inline-flex items-center gap-3 px-4 py-1.5 rounded-full bg-white/10 border border-antiqueGold/40 backdrop-blur-sm">
+                        <span class="text-antiqueGold font-arabic text-lg">بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيم</span>
+                        <span class="w-1.5 h-1.5 rounded-full bg-antiqueGold"></span>
+                        <span data-i18n="heroBadge" class="text-xs font-semibold uppercase tracking-wider text-antiqueGold">Free Demo Class Available!</span>
+                    </div>
 
-    function saveDashboardChanges() {
-        let tVal = document.getElementById("dbTeemInput").value;
-        let pVal = document.getElementById("dbPhoneInput").value;
-        localStorage.setItem("adminTeemLink", tVal);
-        localStorage.setItem("adminPhone", pVal);
+                    <h1 data-i18n="heroTitle" class="heading-font text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight">
+                        Learn the Quran with Al Samad Online Quran Academy
+                    </h1>
 
-        let fileInput = document.getElementById("dbImageUploader");
-        if (fileInput.files && fileInput.files[0]) {
-            let reader = new FileReader();
-            reader.onload = function(e) {
-                localStorage.setItem("customUploadedImage", e.target.result);
-                alert("Settings and Image saved successfully!");
-                location.reload();
-            };
-            reader.readAsDataURL(fileInput.files[0]);
-        } else {
-            alert("Settings saved successfully!");
-            location.reload();
-        }
-    }
-    </script>
+                    <p data-i18n="heroSubtitle" class="text-lg sm:text-xl text-antiqueGold font-medium leading-relaxed">
+                        Make Quran learning easy, interactive, and meaningful from the comfort of your home.
+                    </p>
+
+                    <p data-i18n="heroDescription" class="text-base sm:text-lg text-ivoryWarm/85 leading-relaxed max-w-2xl">
+                        Whether you are starting from the basics or improving your Quran recitation, we are here to help you learn with proper pronunciation and confidence.
+                    </p>
+
+                    <!-- Custom Admin Uploaded Banner Image (If uploaded via Admin Panel) -->
+                    <div id="customHeroBannerWrapper" class="hidden">
+                        <img id="customHeroBannerImg" src="" alt="Academy Announcement" class="rounded-2xl border-2 border-antiqueGold/50 shadow-xl max-h-64 w-full object-cover">
+                    </div>
+
+                    <!-- Prominent CTA Buttons -->
+                    <div class="pt-3 flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
+                        <button onclick="openDemoModal()" class="px-7 py-4 rounded-xl bg-gradient-to-r from-antiqueGold to-antiqueGoldSoft hover:from-amber-400 hover:to-antiqueGold text-midnightTeal font-bold text-base shadow-xl shadow-black/25 hover:scale-[1.02] transition-all flex items-center justify-center gap-2.5">
+                            <i class="fa-solid fa-sparkles"></i>
+                            <span data-i18n="btnBookDemo">Book Free Demo Class</span>
+                        </button>
+
+                        <a href="#live-classes" class="px-7 py-4 rounded-xl bg-white/10 hover:bg-white/15 text-white border border-antiqueGold/60 font-semibold text-base backdrop-blur-sm transition-all flex items-center justify-center gap-2.5">
+                            <i class="fa-solid fa-video text-antiqueGold text-lg"></i>
+                            <span data-i18n="btnJoinLiveHero">Join Live Class (Zoom / Teams)</span>
+                        </a>
+                    </div>
+
+                    <!-- Trust Indicators -->
+                    <div class="pt-6 border-t border-white/15 grid grid-cols-3 gap-4 max-w-xl">
+                        <div>
+                            <div class="text-2xl sm:text-3xl font-bold text-antiqueGold heading-font">1-on-1</div>
+                            <div data-i18n="stat1" class="text-xs sm:text-sm text-ivoryWarm/80">Live Interactive Classes</div>
+                        </div>
+                        <div>
+                            <div class="text-2xl sm:text-3xl font-bold text-antiqueGold heading-font">24/7</div>
+                            <div data-i18n="stat2" class="text-xs sm:text-sm text-ivoryWarm/80">Flexible Global Timings</div>
+                        </div>
+                        <div>
+                            <div class="text-2xl sm:text-3xl font-bold text-antiqueGold heading-font">100%</div>
+                            <div data-i18n="stat3" class="text-xs sm:text-sm text-ivoryWarm/80">Male & Female Tutors</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Luxury Editorial Card Showcase -->
+                <div class="lg:col-span-5">
+                    <div class="relative rounded-3xl bg-gradient-to-b from-white/12 to
