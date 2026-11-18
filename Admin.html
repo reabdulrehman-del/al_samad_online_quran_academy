@@ -1,0 +1,93 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Al Samad Online Quran Academy</title>
+<style>
+:root{--g:#075b3b;--gd:#06452f;--gold:#d6ad50;--bg:#f3f7f4;--line:#dce7df;--muted:#68766f}
+*{box-sizing:border-box}body{margin:0;font-family:Arial,sans-serif;background:var(--bg);color:#1b2b22}button,input,textarea{font:inherit}button{border:0;border-radius:9px;padding:10px 14px;background:var(--g);color:white;font-weight:bold;cursor:pointer}button:hover{opacity:.9}.light{background:#e8f2ec;color:var(--g)}.red{background:#fff0ee;color:#a32d25}input,textarea{width:100%;padding:11px;border:1px solid var(--line);border-radius:8px;margin:5px 0 12px;background:#fff}textarea{min-height:90px}label{font-size:13px;font-weight:bold}.hide{display:none!important}
+#login{min-height:100vh;display:grid;place-items:center;padding:20px;background:linear-gradient(135deg,#06452f,#0b7952)}.loginbox{background:#fff;padding:30px;border-radius:18px;width:min(410px,100%);box-shadow:0 15px 50px #002b1b55}.loginbox h1{color:var(--gd);margin:0 0 8px}.loginbox button{width:100%;margin-top:8px}.note{font-size:12px;color:var(--muted);line-height:1.5}
+header{height:68px;background:#fff;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;padding:0 22px;position:sticky;top:0;z-index:2}.brand{font-weight:bold;color:var(--gd)}.brand small{display:block;color:var(--muted);font-size:11px;margin-top:4px}.layout{display:grid;grid-template-columns:225px 1fr;min-height:calc(100vh - 68px)}aside{background:var(--gd);padding:18px 12px}aside p{color:#b9d5c7;font-size:11px;padding:0 10px;text-transform:uppercase}nav button{width:100%;text-align:left;background:transparent;color:#fff;margin:3px 0}nav button.active,nav button:hover{background:#ffffff22}.main{padding:25px;max-width:1400px;width:100%;margin:auto}.welcome{padding:23px;border-radius:15px;background:linear-gradient(110deg,#e5f2e9,#fbfdfb);border:1px solid var(--line);margin-bottom:18px}.welcome h1{color:var(--gd);margin:0 0 8px}.muted{color:var(--muted)}.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:13px;margin-bottom:18px}.stat,.panel{background:#fff;border:1px solid var(--line);border-radius:13px;padding:17px}.stat b{display:block;font-size:25px;color:var(--gd);margin-top:8px}.panel{margin-bottom:16px}.panel h2{font-size:18px;color:var(--gd);margin:0 0 15px}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:15px}.page{display:none}.page.active{display:block}.actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}.course,.teacher{border:1px solid var(--line);border-radius:10px;padding:12px;margin:9px 0}.teacher{display:flex;gap:12px;align-items:center}.teacher img{width:72px;height:72px;object-fit:cover;border-radius:10px;background:#edf5ef}.teacher div{flex:1}.teacher small{display:block;color:var(--muted);margin:5px 0}.notice{background:#fff7e5;color:#74520a;padding:12px;border-radius:9px;font-size:13px;line-height:1.5;margin-top:12px}.upload{padding:22px;border:2px dashed #b8d1c1;border-radius:12px;text-align:center;background:#f9fcfa}.preview{max-width:120px;max-height:100px;display:block;margin-top:8px;border-radius:8px}.footer{text-align:center;color:var(--muted);font-size:12px;padding:15px}
+@media(max-width:800px){.layout{grid-template-columns:1fr}aside{padding:8px}aside p{display:none}nav{display:flex;overflow:auto;gap:4px}nav button{white-space:nowrap;width:auto}.main{padding:13px}.stats{grid-template-columns:repeat(2,1fr)}.grid{grid-template-columns:1fr}header{padding:0 12px}.brand{font-size:14px}}
+</style>
+</head>
+<body>
+<div id="login">
+ <div class="loginbox">
+  <div style="font-size:35px">📖</div><h1>Al Samad Academy</h1><p class="muted">Admin Dashboard Login</p>
+  <form id="loginForm">
+   <label>Username</label><input id="username" value="admin" required>
+   <label>Password</label><input id="password" type="password" placeholder="Enter password" required>
+   <button>Login</button>
+  </form>
+  <p class="note">Demo login: username <b>admin</b>, password <b>Quran@123</b>. Change the demo password in the JavaScript before testing. This is not secure production authentication.</p>
+ </div>
+</div>
+<div id="app" class="hide">
+ <header><div class="brand">📖 Al Samad Online Quran Academy<small>Administration Dashboard</small></div><div><span id="adminTitle" class="muted"></span> <button id="logout">Logout</button></div></header>
+ <div class="layout">
+  <aside><p>Management</p><nav id="nav">
+   <button class="active" data-page="dashboard">🏠 Dashboard</button>
+   <button data-page="content">📝 Website Content</button>
+   <button data-page="courses">🎓 Courses</button>
+   <button data-page="teachers">👨‍🏫 Teachers</button>
+   <button data-page="classes">🎥 Zoom & Teams</button>
+   <button data-page="uploads">📁 Uploads</button>
+   <button data-page="settings">⚙️ Settings</button>
+  </nav></aside>
+  <main class="main">
+   <section id="dashboard" class="page active">
+    <div class="welcome"><h1>Welcome to your Admin Dashboard</h1><div class="muted">Manage your academy content, teachers, courses and online class links.</div></div>
+    <div class="stats"><div class="stat">Courses<b id="courseCount">0</b></div><div class="stat">Teachers<b id="teacherCount">2</b></div><div class="stat">Online platforms<b>2</b></div><div class="stat">Admin access<b>Active</b></div></div>
+    <div class="grid"><div class="panel"><h2>Quick Actions</h2><div class="actions"><button data-go="content">Edit website text</button><button data-go="teachers">Manage teachers</button><button data-go="uploads">Upload files</button><button data-go="classes">Meeting links</button></div></div><div class="panel"><h2>Important</h2><p class="muted">This first version saves changes in this browser using local storage. For changes to appear for all website visitors and on other devices, we must connect Supabase database and storage.</p><div class="notice">GitHub Pages hosts static files. Never use this demo login to protect real private information.</div></div></div>
+   </section>
+   <section id="content" class="page"><div class="panel"><h2>Website Content</h2><label>Academy Name</label><input id="academyName"><label>Main Heading</label><input id="heroTitle"><label>About / Welcome Text</label><textarea id="aboutText"></textarea><label>Tagline</label><input id="tagline"><button id="saveContent">Save Content</button></div></section>
+   <section id="courses" class="page"><div class="panel"><h2>Courses</h2><div id="courseList"></div><hr style="border:0;border-top:1px solid var(--line);margin:18px 0"><h3>Add Course</h3><label>Course Name</label><input id="newCourse" placeholder="Quran Reading"><label>Description</label><input id="newCourseDesc" placeholder="Short course description"><button id="addCourse">Add Course</button></div></section>
+   <section id="teachers" class="page"><div class="panel"><h2>Teachers and Designations</h2><p class="muted">Edit sample names, designations and upload the correct photos.</p><div id="teacherList"></div></div></section>
+   <section id="classes" class="page"><div class="grid">
+    <div class="panel"><h2>🔵 Zoom Meeting</h2><label>Zoom meeting link</label><input id="zoomLink" type="url" placeholder="https://zoom.us/j/..."><label>Button text</label><input id="zoomText" value="Join Zoom Class"><button id="saveZoom">Save Zoom</button><p><a id="zoomPreview" target="_blank" rel="noopener">No link saved</a></p></div>
+    <div class="panel"><h2>🟣 Microsoft Teams</h2><label>Teams meeting link</label><input id="teamsLink" type="url" placeholder="https://teams.microsoft.com/..."><label>Button text</label><input id="teamsText" value="Join Teams Class"><button id="saveTeams">Save Teams</button><p><a id="teamsPreview" target="_blank" rel="noopener">No link saved</a></p></div>
+   </div><div class="notice">Add only trusted class meeting links. The links in this demo are saved in this browser only.</div></section>
+   <section id="uploads" class="page"><div class="panel"><h2>Upload Images and Files</h2><div class="upload">📤<p>Select images, PDFs or videos</p><input type="file" id="fileInput" multiple accept="image/*,.pdf,video/*"></div><div id="fileList" class="grid"></div><div class="notice">Files are previewed in this browser session only. Permanent uploads require cloud storage such as Supabase Storage.</div></div></section>
+   <section id="settings" class="page"><div class="panel"><h2>Admin Settings</h2><label>Admin display name</label><input id="adminName"><label>New demo username</label><input id="newUsername"><label>New demo password</label><input id="newPassword" type="password" placeholder="Enter a new demo password"><button id="saveSettings">Save Settings</button><div class="notice">Demo credentials are stored locally. Production login must use Supabase Auth.</div></div></section>
+   <div class="footer">© <span id="year"></span> Al Samad Online Quran Academy</div>
+  </main>
+ </div>
+</div>
+<script>
+const defaults={academyName:"Al Samad Online Quran Academy",heroTitle:"Learn Quran Online Anywhere, Anytime",aboutText:"We provide quality Quran education to students around the world with qualified teachers.",tagline:"Learn the Quran with qualified teachers",courses:[{name:"Quran Reading",desc:"Learn to read the Holy Quran."},{name:"Tajweed Course",desc:"Learn correct Quran pronunciation."},{name:"Islamic Studies",desc:"Learn Islamic knowledge and values."}],teachers:[{name:"Teacher One",designation:"Quran Teacher",photo:""},{name:"Teacher Two",designation:"Tajweed Teacher",photo:""}],zoomLink:"",zoomText:"Join Zoom Class",teamsLink:"",teamsText:"Join Teams Class",adminName:"Administrator"};
+let data;try{data={...defaults,...JSON.parse(localStorage.getItem("asamAcademyData")||"{}")}}catch(e){data={...defaults}}
+let auth;try{auth=JSON.parse(localStorage.getItem("asamAcademyAuth")||"null")||{username:"admin",password:"Quran@123"}}catch(e){auth={username:"admin",password:"Quran@123"}}
+const $=id=>document.getElementById(id);
+function safe(s){return String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]))}
+function save(){localStorage.setItem("asamAcademyData",JSON.stringify(data));render()}
+$("year").textContent=new Date().getFullYear();
+$("loginForm").onsubmit=e=>{e.preventDefault();if($("username").value===auth.username&&$("password").value===auth.password){$("login").classList.add("hide");$("app").classList.remove("hide");render()}else alert("Incorrect username or password.")};
+$("logout").onclick=()=>{$("app").classList.add("hide");$("login").classList.remove("hide");$("password").value=""};
+function show(page){document.querySelectorAll(".page").forEach(x=>x.classList.toggle("active",x.id===page));document.querySelectorAll("#nav button").forEach(x=>x.classList.toggle("active",x.dataset.page===page))}
+$("nav").onclick=e=>{let b=e.target.closest("[data-page]");if(b)show(b.dataset.page)};
+document.querySelectorAll("[data-go]").forEach(b=>b.onclick=()=>show(b.dataset.go));
+function render(){
+ $("courseCount").textContent=data.courses.length;$("teacherCount").textContent=data.teachers.length;
+ ["academyName","heroTitle","aboutText","tagline","zoomLink","zoomText","teamsLink","teamsText","adminName"].forEach(k=>$(k).value=data[k]||"");
+ $("adminTitle").textContent=data.adminName;
+ $("zoomPreview").textContent=data.zoomLink?data.zoomText:"No link saved";$("zoomPreview").href=data.zoomLink||"#";
+ $("teamsPreview").textContent=data.teamsLink?data.teamsText:"No link saved";$("teamsPreview").href=data.teamsLink||"#";
+ $("courseList").innerHTML=data.courses.map((c,i)=>`<div class="course"><b>${safe(c.name)}</b><p class="muted">${safe(c.desc)}</p><button class="light" onclick="editCourse(${i})">Edit</button> <button class="red" onclick="removeCourse(${i})">Delete</button></div>`).join("");
+ $("teacherList").innerHTML=data.teachers.map((t,i)=>`<div class="teacher"><img src="${t.photo||'data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2272%22 height=%2272%22%3E%3Crect width=%22100%25%22 height=%22100%25%22 fill=%22%23e8f2ec%22/%3E%3Ctext x=%2250%25%22 y=%2260%25%22 text-anchor=%22middle%22 font-size=%2240%22%3E👤%3C/text%3E%3C/svg%3E'}"><div><b>${safe(t.name)}</b><small>${safe(t.designation)}</small><button class="light" onclick="editTeacher(${i})">Edit profile / photo</button></div></div>`).join("");
+}
+$("saveContent").onclick=()=>{["academyName","heroTitle","aboutText","tagline"].forEach(k=>data[k]=$(k).value.trim());save();alert("Content saved in this browser.")};
+$("addCourse").onclick=()=>{let name=$("newCourse").value.trim();if(!name)return alert("Enter a course name.");data.courses.push({name,desc:$("newCourseDesc").value.trim()});$("newCourse").value="";$("newCourseDesc").value="";save()};
+window.editCourse=i=>{let n=prompt("Course name:",data.courses[i].name);if(n===null)return;let d=prompt("Course description:",data.courses[i].desc);if(d===null)return;data.courses[i]={name:n,desc:d};save()};
+window.removeCourse=i=>{if(confirm("Delete this course?")){data.courses.splice(i,1);save()}};
+window.editTeacher=i=>{let t=data.teachers[i],n=prompt("Teacher full name:",t.name);if(n===null)return;let d=prompt("Designation:",t.designation);if(d===null)return;let f=document.createElement("input");f.type="file";f.accept="image/*";f.onchange=()=>{let file=f.files[0];if(!file){t.name=n;t.designation=d;save();return}let r=new FileReader();r.onload=()=>{t.name=n;t.designation=d;t.photo=r.result;save()};r.readAsDataURL(file)};if(confirm("Choose a new teacher photo? Press Cancel to save name and designation only."))f.click();else{t.name=n;t.designation=d;save()}};
+$("saveZoom").onclick=()=>{data.zoomLink=$("zoomLink").value.trim();data.zoomText=$("zoomText").value.trim()||"Join Zoom Class";save();alert("Zoom link saved locally.")};
+$("saveTeams").onclick=()=>{data.teamsLink=$("teamsLink").value.trim();data.teamsText=$("teamsText").value.trim()||"Join Teams Class";save();alert("Teams link saved locally.")};
+$("fileInput").onchange=e=>{let list=$("fileList");list.innerHTML="";[...e.target.files].forEach(f=>{let box=document.createElement("div");box.className="course";box.textContent=f.name+" ("+Math.round(f.size/1024)+" KB)";if(f.type.startsWith("image/")){let img=document.createElement("img");img.className="preview";img.src=URL.createObjectURL(f);box.appendChild(img)}list.appendChild(box)})};
+$("saveSettings").onclick=()=>{data.adminName=$("adminName").value.trim()||"Administrator";let u=$("newUsername").value.trim(),p=$("newPassword").value;if(u)auth.username=u;if(p)auth.password=p;localStorage.setItem("asamAcademyAuth",JSON.stringify(auth));save();alert("Demo settings saved in this browser.")};
+$("newUsername").value=auth.username;render();
+</script>
+</body>
+</html>
